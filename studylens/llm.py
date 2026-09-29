@@ -32,7 +32,7 @@ def generate_answer(question: str, hits: list[Hit], config: ModelConfig) -> dict
     if not hits:
         return {"answer": "当前资料不足以回答。", "citations": [], "insufficient": True}
     if not config.api_key.strip() or not config.model.strip():
-        raise ModelError("请先配置 LLM_API_KEY 和 LLM_MODEL。")
+        raise ModelError("请先在左侧栏填写 API Key 和模型名称。")
     base = config.base_url.strip().rstrip("/")
     parsed = urlparse(base)
     if parsed.scheme != "https" or not parsed.netloc or parsed.query or parsed.fragment:
