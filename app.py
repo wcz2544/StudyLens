@@ -10,7 +10,7 @@ import streamlit as st
 from studylens.documents import load_documents
 from studylens.retrieval import Retriever
 from studylens.llm import ModelConfig, ModelError, generate_answer
-from studylens.ocr import extract_image_text, is_image
+from studylens.ocr import create_ocr_engine, extract_image_text, is_image
 from studylens.office import extract_docx_text, extract_pdf_text, is_office_document
 
 ROOT = Path(__file__).resolve().parent
@@ -21,8 +21,7 @@ st.set_page_config(page_title="StudyLens 笔记问答", page_icon="📚", layout
 @st.cache_resource
 def get_ocr_engine():
     """一个进程只加载一次 OCR 模型，避免每张图片重复初始化。"""
-    from rapidocr import RapidOCR
-    return RapidOCR()
+    return create_ocr_engine()
 
 
 st.title("StudyLens · 有出处的笔记问答")

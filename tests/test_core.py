@@ -9,7 +9,7 @@ from docx import Document
 from studylens.documents import load_documents, parse_document
 from studylens.retrieval import Retriever
 from studylens.llm import ModelConfig, ModelError, generate_answer, validate_answer
-from studylens.ocr import extract_image_text
+from studylens.ocr import create_ocr_engine, extract_image_text
 from studylens.office import extract_docx_text, extract_pdf_text
 
 
@@ -54,6 +54,20 @@ class CoreTests(unittest.TestCase):
         Image.new("RGB", (20, 20), "white").save(image, format="PNG")
         with self.assertRaisesRegex(ValueError, "未识别出文字"):
             extract_image_text("空白.png", image.getvalue(), Mock(return_value=Mock(txts=(), scores=())))
+
+    @patch("studylens.ocr.which", return_value="/usr/bin/tesseract")
+    @patch("pytesseract.image_to_data")
+    def test_tesseract_backend_groups_words_by_line(self, image_to_data, _which):
+        image_to_data.return_value = {
+            "text": ["极化码", "译码", "第二行"],
+            "conf": ["90", "80", "70"],
+            "block_num": [1, 1, 1], "par_num": [1, 1, 1], "line_num": [1, 1, 2],
+        }
+        image = BytesIO()
+        Image.new("RGB", (20, 20), "white").save(image, format="PNG")
+        result = create_ocr_engine()(image.getvalue())
+        self.assertEqual(result.txts, ("极化码 译码", "第二行"))
+        self.assertAlmostEqual(result.scores[0], 0.85)
 
     def test_docx_extracts_headings_paragraphs_and_tables(self):
         data = BytesIO()

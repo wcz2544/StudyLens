@@ -2,6 +2,8 @@
 from dataclasses import dataclass
 from io import BytesIO
 from pathlib import Path
+from shutil import which
+from types import SimpleNamespace
 
 from PIL import Image, UnidentifiedImageError
 
@@ -19,6 +21,39 @@ class OCRText:
 
 def is_image(name: str) -> bool:
     return Path(name).suffix.lower() in IMAGE_SUFFIXES
+
+
+def create_ocr_engine():
+    """云端优先使用轻量 Tesseract；本地未安装时兼容已有 RapidOCR。"""
+    if which("tesseract"):
+        import pytesseract
+        from pytesseract import Output
+
+        def tesseract_engine(data: bytes):
+            with Image.open(BytesIO(data)) as image:
+                result = pytesseract.image_to_data(
+                    image.convert("RGB"), lang="chi_sim+eng",
+                    config="--psm 6", output_type=Output.DICT,
+                )
+            grouped: dict[tuple[int, int, int], list[tuple[str, float]]] = {}
+            for index, text in enumerate(result["text"]):
+                text = text.strip()
+                if not text:
+                    continue
+                key = (result["block_num"][index], result["par_num"][index], result["line_num"][index])
+                confidence = max(float(result["conf"][index]), 0.0) / 100
+                grouped.setdefault(key, []).append((text, confidence))
+            lines = [" ".join(word for word, _ in words) for words in grouped.values()]
+            scores = [sum(score for _, score in words) / len(words) for words in grouped.values()]
+            return SimpleNamespace(txts=tuple(lines), scores=tuple(scores))
+
+        return tesseract_engine
+
+    try:
+        from rapidocr import RapidOCR
+        return RapidOCR()
+    except ImportError as exc:
+        raise ValueError("OCR 组件尚未安装，请联系应用维护者。") from exc
 
 
 def extract_image_text(name: str, data: bytes, engine=None) -> OCRText:
@@ -42,7 +77,10 @@ def extract_image_text(name: str, data: bytes, engine=None) -> OCRText:
         from rapidocr import RapidOCR
         engine = RapidOCR()
 
-    result = engine(data)
+    try:
+        result = engine(data)
+    except Exception as exc:
+        raise ValueError(f"{name} 文字识别失败，请稍后重试或改用文字版文件。") from exc
     lines = [text.strip() for text in (getattr(result, "txts", None) or ()) if text.strip()]
     if not lines:
         raise ValueError(f"{name} 未识别出文字，请换用更清晰、光线更均匀的图片。")
