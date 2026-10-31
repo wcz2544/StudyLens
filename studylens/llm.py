@@ -1,9 +1,9 @@
 """使用 Chat Completions 风格 HTTP 接口；协议兼容性以服务商为准。"""
 from dataclasses import dataclass
-from urllib.parse import urlparse
 import json
 import requests
 from .retrieval import Hit
+from .security import validate_model_base_url
 
 
 class ModelError(RuntimeError):
@@ -33,10 +33,10 @@ def generate_answer(question: str, hits: list[Hit], config: ModelConfig) -> dict
         return {"answer": "当前资料不足以回答。", "citations": [], "insufficient": True}
     if not config.api_key.strip() or not config.model.strip():
         raise ModelError("请先在左侧栏填写 API Key 和模型名称。")
-    base = config.base_url.strip().rstrip("/")
-    parsed = urlparse(base)
-    if parsed.scheme != "https" or not parsed.netloc or parsed.query or parsed.fragment:
-        raise ModelError("LLM_BASE_URL 必须是无查询参数的 HTTPS 接口基址。")
+    try:
+        base = validate_model_base_url(config.base_url)
+    except ValueError as exc:
+        raise ModelError(str(exc)) from exc
     payload = {
         "model": config.model,
         "messages": [
@@ -66,10 +66,18 @@ def generate_answer(question: str, hits: list[Hit], config: ModelConfig) -> dict
         # 不把服务商原始响应或请求头显示到网页中。
         raise ModelError(f"模型服务返回 HTTP {response.status_code}；请检查密钥、模型、额度和接口兼容性。")
     try:
-        choice = response.json()["choices"][0]
+        body = response.json()
+        if not isinstance(body, dict) or not isinstance(body.get("choices"), list):
+            raise ValueError("invalid choices")
+        choice = body["choices"][0]
+        if not isinstance(choice, dict):
+            raise ValueError("invalid choice")
         if choice.get("finish_reason") == "length":
             raise ModelError("模型输出被截断，请缩短问题或减少参考段落。")
-        result = json.loads(choice["message"]["content"])
+        message = choice["message"]
+        if not isinstance(message, dict) or not isinstance(message.get("content"), str):
+            raise ValueError("invalid message")
+        result = json.loads(message["content"])
     except (ValueError, KeyError, IndexError, TypeError) as exc:
         raise ModelError("模型未返回预期的 JSON 对象，请检查模型是否支持 JSON 模式。") from exc
     return validate_answer(result, {h.chunk.id for h in hits})

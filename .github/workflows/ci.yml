@@ -1,0 +1,45 @@
+name: StudyLens checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  foundation:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.10", "3.11"]
+    env:
+      PYTHONDONTWRITEBYTECODE: "1"
+      PYTHONUTF8: "1"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+      - name: Install declared base dependencies
+        run: python -m pip install -r requirements.txt
+      - name: Check installed dependency consistency
+        run: python -m pip check
+      - name: Core, page and security regression tests (no paid API)
+        run: |
+          python -B -m unittest discover -s tests -p "test_core.py" -v
+          python -B -m unittest discover -s tests -p "test_app.py" -v
+          python -B -m unittest discover -s tests -p "test_security.py" -v
+      - name: Compare 30-question retrieval baseline
+        run: python -B evaluate.py --output evaluation/ci_baseline.csv --summary evaluation/ci_baseline.json --check-baseline evaluation/baseline_2026-10-31.json --source-commit "${{ github.sha }}"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: baseline-python-${{ matrix.python-version }}
+          path: evaluation/ci_baseline.*
+          if-no-files-found: ignore

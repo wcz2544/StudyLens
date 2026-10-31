@@ -1,0 +1,111 @@
+{
+  "source_commit": "229de311a1190db9a28de1bc1cbf2956d222557c",
+  "configuration": {
+    "top_k": 3,
+    "min_score": 0.08
+  },
+  "corpus_sha256": "ee6ac9cce148fc61100e0b5de8fe2c69620fe60685c5ab068b3dca18332c8d30",
+  "questions_sha256": "c82a401c0402981b1bc10d26a90ce50f352ece8f479a46c92e573d479f565f92",
+  "question_count": 30,
+  "single_hit": {
+    "passed": 15,
+    "total": 15,
+    "rate": 1.0
+  },
+  "multi_all_evidence": {
+    "passed": 10,
+    "total": 10,
+    "rate": 1.0
+  },
+  "unanswerable_empty_retrieval": {
+    "passed": 0,
+    "total": 5,
+    "rate": 0.0
+  },
+  "answer_accuracy": null,
+  "citation_support_accuracy": null,
+  "model_refusal_accuracy": null,
+  "scope": "离线检索评测；未调用模型，未测回答正确率。三份教学示例构成开发集，不代表真实业务泛化效果。",
+  "failure_cases": [
+    {
+      "id": "Q26",
+      "kind": "unanswerable",
+      "question": "课程期末考试日期是哪一天？",
+      "expected_sections": "",
+      "top_k": 3,
+      "min_score": 0.08,
+      "retrieved_sections": "01_学习方法.md::课程学习笔记",
+      "scores": "0.1787",
+      "all_expected_found": "N/A",
+      "retrieval_empty": 0,
+      "answer_correct_manual": "",
+      "citation_supported_manual": "",
+      "refusal_correct_manual": "",
+      "manual_notes": ""
+    },
+    {
+      "id": "Q27",
+      "kind": "unanswerable",
+      "question": "这次 Polar 实验在 2 dB 时的 FER 具体是多少？",
+      "expected_sections": "",
+      "top_k": 3,
+      "min_score": 0.08,
+      "retrieved_sections": "03_译码入门.md::性能记录|01_学习方法.md::文件格式|02_检索实验.md::检索实验记录",
+      "scores": "0.2171|0.1239|0.1230",
+      "all_expected_found": "N/A",
+      "retrieval_empty": 0,
+      "answer_correct_manual": "",
+      "citation_supported_manual": "",
+      "refusal_correct_manual": "",
+      "manual_notes": ""
+    },
+    {
+      "id": "Q28",
+      "kind": "unanswerable",
+      "question": "列表大小为 32 时比 SC 提升多少 dB？",
+      "expected_sections": "",
+      "top_k": 3,
+      "min_score": 0.08,
+      "retrieved_sections": "03_译码入门.md::CRC 辅助|03_译码入门.md::SCL 译码|03_译码入门.md::SC 译码",
+      "scores": "0.2305|0.2202|0.1563",
+      "all_expected_found": "N/A",
+      "retrieval_empty": 0,
+      "answer_correct_manual": "",
+      "citation_supported_manual": "",
+      "refusal_correct_manual": "",
+      "manual_notes": ""
+    },
+    {
+      "id": "Q29",
+      "kind": "unanswerable",
+      "question": "本课程授课老师的邮箱是什么？",
+      "expected_sections": "",
+      "top_k": 3,
+      "min_score": 0.08,
+      "retrieved_sections": "01_学习方法.md::课程学习笔记|01_学习方法.md::复习卡片",
+      "scores": "0.2486|0.1698",
+      "all_expected_found": "N/A",
+      "retrieval_empty": 0,
+      "answer_correct_manual": "",
+      "citation_supported_manual": "",
+      "refusal_correct_manual": "",
+      "manual_notes": ""
+    },
+    {
+      "id": "Q30",
+      "kind": "unanswerable",
+      "question": "神经网络训练使用什么学习率？",
+      "expected_sections": "",
+      "top_k": 3,
+      "min_score": 0.08,
+      "retrieved_sections": "01_学习方法.md::课程学习笔记|01_学习方法.md::学习周期|03_译码入门.md::译码术语练习笔记",
+      "scores": "0.2219|0.1278|0.1248",
+      "all_expected_found": "N/A",
+      "retrieval_empty": 0,
+      "answer_correct_manual": "",
+      "citation_supported_manual": "",
+      "refusal_correct_manual": "",
+      "manual_notes": ""
+    }
+  ]
+}

@@ -8,6 +8,30 @@ APP = Path(__file__).resolve().parents[1] / "app.py"
 
 
 class AppTests(unittest.TestCase):
+    def test_failed_upload_can_return_to_last_valid_document(self):
+        class Uploaded:
+            name = "笔记.md"
+
+            def __init__(self, content):
+                self.content = content
+
+            def getvalue(self):
+                return self.content
+
+        valid = Uploaded("# 测试\n苹果是有效资料。".encode("utf-8"))
+        with patch("streamlit.file_uploader", return_value=[valid]) as uploader:
+            app = AppTest.from_file(str(APP)).run(timeout=30)
+            original_hash = app.session_state["corpus_hash"]
+            self.assertEqual(len(app.exception), 0)
+            uploader.return_value = [Uploaded(b"\xff")]
+            app.run(timeout=30)
+            self.assertTrue(any("UTF-8" in error.value for error in app.error))
+            uploader.return_value = [valid]
+            app.run(timeout=30)
+            self.assertEqual(len(app.exception), 0)
+            self.assertEqual(app.session_state["corpus_hash"], original_hash)
+            self.assertIn("index", app.session_state)
+
     def test_search_feedback_clear_and_switch(self):
         app = AppTest.from_file(str(APP)).run(timeout=30)
         self.assertEqual(len(app.exception), 0)

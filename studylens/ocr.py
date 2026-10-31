@@ -6,10 +6,11 @@ from shutil import which
 from types import SimpleNamespace
 
 from PIL import Image, UnidentifiedImageError
+from .limits import MAX_IMAGE_BYTES
 
 IMAGE_SUFFIXES = {".jpg", ".jpeg", ".png"}
-MAX_IMAGE_BYTES = 8 * 1024 * 1024
 MAX_IMAGE_PIXELS = 20_000_000
+OCR_TIMEOUT_SECONDS = 20
 
 
 @dataclass(frozen=True)
@@ -24,7 +25,7 @@ def is_image(name: str) -> bool:
 
 
 def create_ocr_engine():
-    """云端优先使用轻量 Tesseract；本地未安装时兼容已有 RapidOCR。"""
+    """统一使用可设定处理超时的 Tesseract，缺少系统组件时明确提示。"""
     if which("tesseract"):
         import pytesseract
         from pytesseract import Output
@@ -34,6 +35,7 @@ def create_ocr_engine():
                 result = pytesseract.image_to_data(
                     image.convert("RGB"), lang="chi_sim+eng",
                     config="--psm 6", output_type=Output.DICT,
+                    timeout=OCR_TIMEOUT_SECONDS,
                 )
             grouped: dict[tuple[int, int, int], list[tuple[str, float]]] = {}
             for index, text in enumerate(result["text"]):
@@ -49,11 +51,7 @@ def create_ocr_engine():
 
         return tesseract_engine
 
-    try:
-        from rapidocr import RapidOCR
-        return RapidOCR()
-    except ImportError as exc:
-        raise ValueError("OCR 组件尚未安装，请联系应用维护者。") from exc
+    raise ValueError("OCR 需要安装 Tesseract 以及 chi_sim、eng 语言包，请联系应用维护者。")
 
 
 def extract_image_text(name: str, data: bytes, engine=None) -> OCRText:
@@ -69,13 +67,12 @@ def extract_image_text(name: str, data: bytes, engine=None) -> OCRText:
             if width * height > MAX_IMAGE_PIXELS:
                 raise ValueError(f"{name} 像素过大，请缩小到 2000 万像素以内。")
             image.verify()
-    except (UnidentifiedImageError, OSError) as exc:
+    except (UnidentifiedImageError, OSError, Image.DecompressionBombError) as exc:
         raise ValueError(f"{name} 不是有效图片或文件已经损坏。") from exc
 
     if engine is None:
-        # 延迟导入可避免纯文本用户承担 OCR 模型的启动时间。
-        from rapidocr import RapidOCR
-        engine = RapidOCR()
+        # 默认路径与页面入口使用同一个工厂，避免依赖旧环境残留组件。
+        engine = create_ocr_engine()
 
     try:
         result = engine(data)

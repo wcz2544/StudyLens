@@ -2,6 +2,7 @@
 import json
 import unittest
 from io import BytesIO
+from zipfile import ZipFile
 from unittest.mock import Mock, patch
 import requests
 from PIL import Image
@@ -146,14 +147,14 @@ class CoreTests(unittest.TestCase):
         content = json.dumps({"answer": "苹果是目标。", "citations": [identifier], "insufficient": False})
         post.return_value = Mock(status_code=200)
         post.return_value.json.return_value = {"choices": [{"message": {"content": content}, "finish_reason": "stop"}]}
-        answer = generate_answer("苹果", self.hits, ModelConfig("test-only", "https://example.invalid/v1", "test"))
+        answer = generate_answer("苹果", self.hits, ModelConfig("test-only", "https://api.openai.com/v1", "test"))
         self.assertEqual(answer["citations"], [identifier])
         self.assertFalse(post.call_args.kwargs["allow_redirects"])
-        self.assertEqual(post.call_args.args[0], "https://example.invalid/v1/chat/completions")
+        self.assertEqual(post.call_args.args[0], "https://api.openai.com/v1/chat/completions")
 
     @patch("studylens.llm.requests.post")
     def test_http_and_timeout_errors(self, post):
-        config = ModelConfig("test-only", "https://example.invalid", "test")
+        config = ModelConfig("test-only", "https://api.deepseek.com", "test")
         post.return_value = Mock(status_code=401)
         with self.assertRaisesRegex(ModelError, "401"):
             generate_answer("苹果", self.hits, config)
@@ -163,7 +164,7 @@ class CoreTests(unittest.TestCase):
 
     @patch("studylens.llm.requests.post")
     def test_malformed_and_truncated_responses(self, post):
-        config = ModelConfig("test-only", "https://example.invalid", "test")
+        config = ModelConfig("test-only", "https://api.deepseek.com", "test")
         post.return_value = Mock(status_code=200)
         post.return_value.json.return_value = {"choices": [{"message": {"content": "not-json"}}]}
         with self.assertRaises(ModelError):
@@ -171,6 +172,62 @@ class CoreTests(unittest.TestCase):
         post.return_value.json.return_value = {"choices": [{"finish_reason": "length"}]}
         with self.assertRaisesRegex(ModelError, "截断"):
             generate_answer("苹果", self.hits, config)
+
+    @patch("studylens.llm.requests.post")
+    def test_unexpected_provider_shapes_are_user_errors(self, post):
+        post.return_value = Mock(status_code=200)
+        config = ModelConfig("test-only", "https://api.deepseek.com", "test")
+        for body in [None, [], {}, {"choices": []}, {"choices": ["invalid"]},
+                     {"choices": [{"message": None}]}, {"choices": [{"message": {"content": []}}]}]:
+            with self.subTest(body=body):
+                post.return_value.json.return_value = body
+                with self.assertRaisesRegex(ModelError, "JSON"):
+                    generate_answer("苹果", self.hits, config)
+
+    def test_corrupt_docx_xml_is_a_user_error(self):
+        original, broken = BytesIO(), BytesIO()
+        Document().save(original)
+        with ZipFile(original) as source, ZipFile(broken, "w") as target:
+            for item in source.infolist():
+                target.writestr(item, b"<broken" if item.filename == "word/document.xml" else source.read(item))
+        with self.assertRaisesRegex(ValueError, "有效的 DOCX"):
+            extract_docx_text("broken.docx", broken.getvalue())
+
+    @patch("studylens.office._render_pdf_page", return_value=b"fake-png")
+    @patch("studylens.office.pdfium.PdfDocument")
+    @patch("studylens.office.PdfReader")
+    @patch("studylens.office.extract_image_text", side_effect=ValueError("OCR failed"))
+    def test_pdf_ocr_failure_keeps_text_and_reports_missing_pages(self, _ocr, reader, _pdf, _render):
+        reader.return_value = Mock(is_encrypted=False, pages=[
+            Mock(extract_text=Mock(return_value="已有完整文字内容超过十个字符")),
+            Mock(extract_text=Mock(return_value="短文字")),
+            Mock(extract_text=Mock(return_value="")),
+        ])
+        extracted = extract_pdf_text("partial.pdf", b"mock-pdf", Mock())
+        self.assertIn("短文字", extracted.text)
+        self.assertIn("第 2 页", extracted.text)
+        self.assertEqual(extracted.skipped_pages, (3,))
+        self.assertEqual(len(extracted.warnings), 2)
+        self.assertIn("已提取 2 页", extracted.detail)
+        self.assertIn("未导入", extracted.detail)
+
+    def test_pdf_pixel_limit_precedes_bitmap_allocation(self):
+        from studylens.office import _render_pdf_page
+        page = Mock()
+        page.get_size.return_value = (10000, 10000)
+        renderer = {0: page}
+        with self.assertRaisesRegex(ValueError, "像素"):
+            _render_pdf_page(renderer, 0)
+        page.render.assert_not_called()
+        page.close.assert_called_once()
+
+    @patch("studylens.ocr.create_ocr_engine")
+    def test_default_ocr_uses_the_shared_factory(self, factory):
+        image = BytesIO()
+        Image.new("RGB", (10, 10), "white").save(image, format="PNG")
+        factory.return_value = Mock(return_value=Mock(txts=("示例",), scores=(0.9,)))
+        self.assertEqual(extract_image_text("a.png", image.getvalue()).text, "示例")
+        factory.assert_called_once()
 
 
 if __name__ == "__main__":

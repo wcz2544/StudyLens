@@ -1,5 +1,8 @@
 [server]
-maxUploadSize = 2
+# 框架先允许最大文件类型；各类型及总量由 limits.py 在处理前校验。
+maxUploadSize = 12
+enableCORS = true
+enableXsrfProtection = true
 
 [theme]
 primaryColor = "#2563EB"

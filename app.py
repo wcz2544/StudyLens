@@ -12,6 +12,7 @@ from studylens.retrieval import Retriever
 from studylens.llm import ModelConfig, ModelError, generate_answer
 from studylens.ocr import create_ocr_engine, extract_image_text, is_image
 from studylens.office import extract_docx_text, extract_pdf_text, is_office_document
+from studylens.limits import UPLOAD_HELP, validate_extracted_text, validate_uploads
 
 ROOT = Path(__file__).resolve().parent
 load_dotenv(ROOT / ".env", encoding="utf-8")
@@ -35,7 +36,7 @@ with st.sidebar:
     use_sample = source_mode == "使用内置示例笔记"
     uploaded = st.file_uploader("上传自己的笔记", type=["txt", "md", "jpg", "jpeg", "png", "pdf", "docx"],
                                 accept_multiple_files=True, disabled=use_sample)
-    st.caption("支持 TXT、Markdown、图片、PDF、DOCX；扫描页会在本地 OCR。最多 10 份。")
+    st.caption("支持 TXT、Markdown、图片、PDF、DOCX；扫描页会在应用服务器识别。" + UPLOAD_HELP)
     mode = st.radio("运行模式", ["只检索原文（无需 API）", "AI 问答（需要 API）"])
     top_k = st.slider(
         "最多参考段落数", 1, 5, 3,
@@ -73,12 +74,14 @@ raw_files = ([(p.name, p.read_bytes()) for p in sorted((ROOT / "data" / "sample_
              if use_sample else [(f.name, f.getvalue()) for f in (uploaded or [])])
 if not raw_files:
     # 删除资料时同时清除旧索引和旧答案，避免用户误以为旧内容属于新资料。
-    for key in ("index", "corpus_hash", "result", "result_context"):
+    for key in ("index", "corpus_hash", "result", "result_context", "import_previews", "import_warnings"):
         st.session_state.pop(key, None)
     st.info("请上传笔记，或在“笔记来源”中选择“使用内置示例笔记”。")
     st.stop()
-if len(raw_files) > 10:
-    st.error("一次最多上传 10 份笔记。")
+try:
+    validate_uploads(raw_files)
+except ValueError as exc:
+    st.error(str(exc))
     st.stop()
 
 # 只在当前用户会话中保留索引，不使用跨用户共享的全局缓存。
@@ -87,12 +90,12 @@ for name, data in raw_files:
     fingerprint.update(name.encode("utf-8") + b"\0")
     fingerprint.update(hashlib.sha256(data).digest())
 corpus_hash = fingerprint.hexdigest()
-if st.session_state.get("corpus_hash") != corpus_hash:
+if st.session_state.get("corpus_hash") != corpus_hash or "index" not in st.session_state:
     st.session_state.pop("result", None)
-    st.session_state.pop("index", None)
     try:
         files = []
         import_previews = []
+        import_warnings = []
         for name, data in raw_files:
             if is_image(name):
                 with st.spinner(f"正在识别图片：{name}"):
@@ -109,17 +112,24 @@ if st.session_state.get("corpus_hash") != corpus_hash:
                         extracted = extract_docx_text(name, data)
                 files.append((f"{name}.extracted.md", extracted.text.encode("utf-8")))
                 import_previews.append((name, extracted.text, extracted.detail))
+                import_warnings.extend(f"{name}：{warning}" for warning in extracted.warnings)
             else:
                 files.append((name, data))
-        st.session_state["index"] = Retriever(load_documents(files))
+        validate_extracted_text(files)
+        # 新索引完整生成后再统一替换；失败导入不会破坏原有可用资料。
+        new_index = Retriever(load_documents(files))
+        st.session_state["index"] = new_index
         st.session_state["corpus_hash"] = corpus_hash
         st.session_state["import_previews"] = import_previews
+        st.session_state["import_warnings"] = import_warnings
     except ValueError as exc:
         st.error(str(exc))
         st.stop()
 
 index = st.session_state["index"]
 st.caption(f"已载入 {len(raw_files)} 份笔记，共 {len(index.chunks)} 个段落。")
+for warning in st.session_state.get("import_warnings", []):
+    st.warning(warning)
 for name, text, detail in st.session_state.get("import_previews", []):
     with st.expander(f"检查文档提取结果：{name}"):
         st.code(text, language=None)
