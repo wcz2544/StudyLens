@@ -154,7 +154,8 @@ def extract_pdf_text(name: str, data: bytes, engine_factory) -> OfficeText:
             renderer.close()
 
     if not page_texts:
-        raise ValueError(f"{name} 没有识别出可用文字，请检查文件是否清晰。")
+        detail = " ".join(warnings)
+        raise ValueError(f"{name} 没有识别出可用文字，请检查 OCR 组件与文件清晰度。{detail}")
     detail = f"PDF 共 {page_count} 页，已提取 {len(page_texts)} 页"
     if pages_for_ocr:
         detail += f"；其中第 {', '.join(map(str, pages_for_ocr))} 页使用 OCR"

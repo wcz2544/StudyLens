@@ -19,6 +19,11 @@ def main() -> None:
     parser.add_argument("--source-commit", default="working-tree")
     parser.add_argument("--check-baseline", help="与已保存基线比较；检索覆盖回退时以非零状态退出。")
     args = parser.parse_args()
+    if args.check_baseline and args.summary:
+        # 比较时禁止把待比较结果写回参考文件，否则会变成结果与自身比较。
+        baseline_path = (ROOT / args.check_baseline).resolve()
+        if (ROOT / args.summary).resolve() == baseline_path or (ROOT / args.output).resolve() == baseline_path:
+            parser.error("比较基线时，输出路径不能覆盖基线文件。")
     files = [(p.name, p.read_bytes()) for p in sorted((ROOT / "data" / "sample_notes").glob("*.md"))]
     index = Retriever(load_documents(files))
     with (ROOT / "evaluation" / "questions.csv").open(encoding="utf-8-sig", newline="") as stream:

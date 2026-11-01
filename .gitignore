@@ -2,5 +2,17 @@
 __pycache__/
 *.py[cod]
 .env
+.env.*
+!.env.example
+!.env.rag.example
 .streamlit/secrets.toml
 evaluation/results.csv
+evaluation/ci_*
+evaluation/rag_results*
+evaluation/generated/*
+!evaluation/generated/rag_baseline.json
+var/
+volumes/
+.pytest_cache/
+.venv-*/
+笔记/

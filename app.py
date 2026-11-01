@@ -26,6 +26,12 @@ def get_ocr_engine():
 
 
 st.title("StudyLens · 有出处的笔记问答")
+experience = st.sidebar.radio("使用方式", ["临时笔记", "持久知识库"])
+if experience == "持久知识库":
+    # 独立服务负责持久化和模型费用，页面只传访问凭据与用户确认的数据。
+    from studylens.knowledge_ui import render_knowledge_workspace
+    render_knowledge_workspace()
+    st.stop()
 with st.sidebar:
     st.header("资料与设置")
     source_mode = st.radio(

@@ -1,0 +1,16 @@
+services:
+  gateway:
+    image: caddy:2.10.2-alpine
+    ports: ["80:80", "443:443"]
+    environment:
+      STUDYLENS_DOMAIN: ${STUDYLENS_DOMAIN:?Set STUDYLENS_DOMAIN}
+      STUDYLENS_API_DOMAIN: ${STUDYLENS_API_DOMAIN:?Set STUDYLENS_API_DOMAIN}
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+    depends_on: [web, api]
+    restart: unless-stopped
+volumes:
+  caddy_data:
+  caddy_config:

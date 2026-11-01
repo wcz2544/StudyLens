@@ -23,7 +23,8 @@ def _canonical_base_url(value: str) -> str:
         parsed = urlsplit(raw)
         host = parsed.hostname or ""
         if (parsed.scheme != "https" or not host or parsed.username is not None
-                or parsed.password is not None or parsed.port is not None):
+                or parsed.password is not None or parsed.port is not None
+                or parsed.netloc.lower() != host):
             raise ValueError
     except ValueError as exc:
         raise ValueError("模型接口必须使用 HTTPS 公共域名，且不能带账号或端口。") from exc

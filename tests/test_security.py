@@ -15,7 +15,7 @@ class SecurityTests(unittest.TestCase):
         invalid = [
             "http://api.deepseek.com", "https://127.0.0.1", "https://[::1]",
             "https://localhost", "https://service.internal", "https://169.254.169.254",
-            "https://user:secret@api.deepseek.com", "https://api.deepseek.com:443",
+            "https://user:secret@api.deepseek.com", "https://api.deepseek.com:443", "https://api.deepseek.com:",
             "https://api.deepseek.com.evil.com", "https://evil.com/api.deepseek.com",
             "https://api.deepseek.com/chat/completions", "https://api.deepseek.com/?x=1",
             "https://api.deepseek.com/#x", "https://api.deepseek.com/%2e%2e",

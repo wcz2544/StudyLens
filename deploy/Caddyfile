@@ -1,0 +1,9 @@
+{$STUDYLENS_DOMAIN} {
+    reverse_proxy web:8501
+}
+{$STUDYLENS_API_DOMAIN} {
+    request_body {
+        max_size 13MB
+    }
+    reverse_proxy api:8000
+}

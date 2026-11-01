@@ -1,0 +1,11 @@
+-r requirements.txt
+-c constraints-rag.txt
+langchain-core==1.7.3
+langchain-openai==1.7.3
+langchain-text-splitters==1.1.3
+pymilvus==2.6.17
+rank-bm25==0.2.2
+fastapi==0.162.0
+uvicorn==0.54.0
+httpx==0.28.1
+python-multipart==0.0.32
