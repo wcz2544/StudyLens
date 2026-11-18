@@ -124,7 +124,8 @@ def summarise(report: dict) -> dict:
 def digest(paths: list[Path]) -> str:
     hasher = hashlib.sha256()
     for path in paths:
-        hasher.update(path.name.encode("utf-8") + b"\0" + path.read_bytes())
+        content = path.read_bytes().replace(b"\r\n", b"\n").replace(b"\r", b"\n")
+        hasher.update(path.name.encode("utf-8") + b"\0" + content)
     return hasher.hexdigest()
 
 
@@ -163,7 +164,12 @@ def main() -> None:
             "sources": [str(directory.relative_to(ROOT)) for directory in NOTE_DIRS],
         },
         "question_sets": {
-            name: {"path": str(path.relative_to(ROOT)), "sha256": hashlib.sha256(path.read_bytes()).hexdigest()}
+            name: {
+                "path": str(path.relative_to(ROOT)),
+                "sha256": hashlib.sha256(
+                    path.read_bytes().replace(b"\r\n", b"\n").replace(b"\r", b"\n")
+                ).hexdigest(),
+            }
             for name, path in QUESTION_SETS
         },
         "summary": summary,

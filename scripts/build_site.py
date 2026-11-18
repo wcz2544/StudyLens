@@ -56,7 +56,7 @@ def _read_notes(directory: Path) -> list[dict]:
     files = [
         # 按字节读取再解码：避免 Windows 的 read_text 把 CRLF 改成 LF，导致浏览器
         # 分段的字符偏移与 Python 基线不一致。
-        {"name": path.name, "text": path.read_bytes().decode("utf-8")}
+        {"name": path.name, "text": path.read_bytes().decode("utf-8").replace("\r\n", "\n").replace("\r", "\n")}
         for path in sorted(directory.glob("*.md"))
         if path.name.lower() != "readme.md"
     ]

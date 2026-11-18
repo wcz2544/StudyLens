@@ -32,6 +32,8 @@ def parse_document(name: str, data: bytes, doc_id: str,
         raise ValueError(f"{name} 不是 UTF-8，请在编辑器中另存为 UTF-8。") from exc
     if not content.strip() or "\x00" in content:
         raise ValueError(f"{name} 为空或不是正常文本。")
+    # 统一换行，避免 CRLF 与 LF 检出让分段和字符偏移随平台变化。
+    content = content.replace("\r\n", "\n").replace("\r", "\n")
 
     chunks: list[Chunk] = []
     section = "正文"

@@ -680,8 +680,8 @@
           "section": "Rust 程序设计语言 · 什么是所有权",
           "start_line": 1,
           "end_line": 5,
-          "text_sha256": "f7386a872ff6d1932e4dff0ff8d9e31c309c38f50cd052ea35aac4ba653f1c53",
-          "chars": 149
+          "text_sha256": "cbe5f8e24b51b11251e0506f99f490a2b32a6d277dc55dd86be9e6c7ceeefa4c",
+          "chars": 143
         },
         {
           "id": "D1-2",
@@ -689,7 +689,7 @@
           "section": "什么是所有权？",
           "start_line": 7,
           "end_line": 19,
-          "text_sha256": "3ce2c57f84cff2964eef6c4b4f5f4047217aadb8c5bf660be6287f8a98f57417",
+          "text_sha256": "943e140abc4908006b251f49fe50c973995df529a40073708d19ea74e9087051",
           "chars": 500
         },
         {
@@ -698,7 +698,7 @@
           "section": "什么是所有权？",
           "start_line": 17,
           "end_line": 23,
-          "text_sha256": "4e7d920256d02f32736b8dff2f89d9e633e15ad20bfe97293f5218cb721645c7",
+          "text_sha256": "233f5550d14ef5a943c374462d270c1060910afe61618993f98375d116aa665b",
           "chars": 500
         },
         {
@@ -707,7 +707,7 @@
           "section": "什么是所有权？",
           "start_line": 23,
           "end_line": 29,
-          "text_sha256": "c8d9cce6b5711ae8f45d5430e383c2e2efaf91436edb75b90ddfaf00a341c245",
+          "text_sha256": "337d269618c4e86d52ededd1c6fa3f672e08f59b69e407f1e13cd2639f32719c",
           "chars": 500
         },
         {
@@ -716,8 +716,8 @@
           "section": "什么是所有权？",
           "start_line": 27,
           "end_line": 33,
-          "text_sha256": "bd59941f74b97267717ee55dca1712e77a123283bf919d7837f212f94a230ace",
-          "chars": 488
+          "text_sha256": "88a641af482014d64387b709212a05f765d3e3d9fe76b82ffea3df852e52b41f",
+          "chars": 460
         },
         {
           "id": "D1-6",
@@ -725,8 +725,8 @@
           "section": "所有权规则",
           "start_line": 35,
           "end_line": 41,
-          "text_sha256": "deb1c87525df12aca63d9abc6cc69d51f6f1ea4290198aa1b63178763ec20276",
-          "chars": 144
+          "text_sha256": "cd7fc4bd56bd32d0e87a9924af45cd777546f639cf810311f23f2b2e74ff110f",
+          "chars": 136
         },
         {
           "id": "D1-7",
@@ -734,7 +734,7 @@
           "section": "变量作用域",
           "start_line": 43,
           "end_line": 59,
-          "text_sha256": "d29aa77a936d7a3dac6518e4b4edda61264dcb5bab84f74c34a77253947e7d81",
+          "text_sha256": "52035e184421d6583651db91340b3cce341070ef786dba7a601798a666312618",
           "chars": 500
         },
         {
@@ -743,8 +743,8 @@
           "section": "变量作用域",
           "start_line": 56,
           "end_line": 66,
-          "text_sha256": "eb95de4eeeb6350e5bbd13c14560b8d4420965721e818c0f001411895a450cbd",
-          "chars": 248
+          "text_sha256": "ddc153f6d4bbb93e83983d9950af2123556776b468d4489b02ca77c2c4bd7de7",
+          "chars": 223
         },
         {
           "id": "D1-9",
@@ -752,7 +752,7 @@
           "section": "`String` 类型",
           "start_line": 68,
           "end_line": 74,
-          "text_sha256": "00a250ea1f9d383505a63527cae52f3494f8dd34ada54278b41933782684b61d",
+          "text_sha256": "6cfbdb422109e4d1828d6c97860f25ac9589ba61acdc809f154b8cdf47cef917",
           "chars": 500
         },
         {
@@ -761,7 +761,7 @@
           "section": "`String` 类型",
           "start_line": 74,
           "end_line": 85,
-          "text_sha256": "2b89ccc14f7f62a1934188a6ec31bf0b9805c90bf4d6b8c8a5a3da2a589f4652",
+          "text_sha256": "e1ccd96914d132a3a6af4794dab6eb2fe6e7c925e9e0413588d7c1b4291a4f31",
           "chars": 500
         },
         {
@@ -770,8 +770,8 @@
           "section": "`String` 类型",
           "start_line": 80,
           "end_line": 88,
-          "text_sha256": "2ced3705a0a44e54a547ccb8560a65586a95b39e8cee03e6c23ed424623c157e",
-          "chars": 221
+          "text_sha256": "43c4a8b4cd85a53345c5a8f8aa07a7f46fc43347074a9fe64bef4dc77e148519",
+          "chars": 199
         },
         {
           "id": "D1-12",
@@ -779,7 +779,7 @@
           "section": "内存与分配",
           "start_line": 90,
           "end_line": 101,
-          "text_sha256": "829886e262ce45ea37a9befffbbf630dadbd7553c6b068706a04a5c15677de0c",
+          "text_sha256": "852b6142829b2fb6f5dfe331c94bf45fc5327235cd2a86bfcd50a79d798e67f0",
           "chars": 500
         },
         {
@@ -788,7 +788,7 @@
           "section": "内存与分配",
           "start_line": 101,
           "end_line": 109,
-          "text_sha256": "6eb7aa68b5aacd707a28aeb23d3746c7fb08a1e2194a2cf3ef153c3958d7a379",
+          "text_sha256": "bb4ef6cb956d4844cc28d57c26bf665bf79a30eae9c431b88756103ec48b6110",
           "chars": 500
         },
         {
@@ -797,8 +797,8 @@
           "section": "内存与分配",
           "start_line": 109,
           "end_line": 113,
-          "text_sha256": "57c8f1e6121b177001fc0b014a82143812fcbf7c02c5a10b4177ff148e630cfb",
-          "chars": 405
+          "text_sha256": "b11f22acc00202815c5332f271c887d280f43666e3105e5068b1c24a38cc43bc",
+          "chars": 380
         },
         {
           "id": "D1-15",
@@ -806,7 +806,7 @@
           "section": "变量与数据交互的方式（一）：移动",
           "start_line": 115,
           "end_line": 130,
-          "text_sha256": "00aad07bb3f866e28663cc4c7433ff6ba15354e20b5d6177f3c00cf9d5891208",
+          "text_sha256": "80e4de945b857e66e92425d0e36e47cfbdde23428fdaef2bff4f50a78395b0c0",
           "chars": 500
         },
         {
@@ -815,7 +815,7 @@
           "section": "变量与数据交互的方式（一）：移动",
           "start_line": 130,
           "end_line": 141,
-          "text_sha256": "dded2dba84c3dd3ebdd4ae92c43ff7f065f01569ffbd85ba43e33ddbdc886f82",
+          "text_sha256": "02f661d3c69ccbeb59ebe38ca90fa4795b82fe6ef81563e7efae4d0c8a249503",
           "chars": 500
         },
         {
@@ -824,16 +824,16 @@
           "section": "变量与数据交互的方式（一）：移动",
           "start_line": 139,
           "end_line": 149,
-          "text_sha256": "1662dd6e8139ee1bb12ee86f1188a1d9ce63a0a29c83ad70ec398fd272d4b130",
+          "text_sha256": "3e50d6164b067fb0fddc82ffb5419267d6b87060aa59b6d23d481516a1ed33e7",
           "chars": 500
         },
         {
           "id": "D1-18",
           "source": "01_Rust_所有权.md",
           "section": "变量与数据交互的方式（一）：移动",
-          "start_line": 147,
+          "start_line": 148,
           "end_line": 155,
-          "text_sha256": "63545c90e2a7f62bc561279ed8f0d8b6f79ec60f9f333163fd3ca66f0ecf7a81",
+          "text_sha256": "3c82d06127d2f1489ab02e873f4b8a688457869c8cf0d086b1bf87ab2a350f3d",
           "chars": 500
         },
         {
@@ -842,26 +842,26 @@
           "section": "变量与数据交互的方式（一）：移动",
           "start_line": 155,
           "end_line": 166,
-          "text_sha256": "42e224c692d6af8220acdc73936b858b2830fe7f4ca38860a6d017fc7b176ae8",
+          "text_sha256": "7bd11df27b57c5faa4ee23381dafc2d15d6ac817d76e921d4a11eaeddeb0fb76",
           "chars": 500
         },
         {
           "id": "D1-20",
           "source": "01_Rust_所有权.md",
           "section": "变量与数据交互的方式（一）：移动",
-          "start_line": 162,
-          "end_line": 173,
-          "text_sha256": "5601c0826630a35d84be175565e5cfa5a2a3b733d3425a670eeb13bdf3403ee6",
+          "start_line": 166,
+          "end_line": 177,
+          "text_sha256": "9a761cb74bcd9b92eb37bd8a6f10a2e83a48b530f9d1f1be667b3b4309fb9840",
           "chars": 500
         },
         {
           "id": "D1-21",
           "source": "01_Rust_所有权.md",
           "section": "变量与数据交互的方式（一）：移动",
-          "start_line": 171,
+          "start_line": 173,
           "end_line": 177,
-          "text_sha256": "9308ac286e3f5ae7a74908e8bb5b682462d19d83dfa999e5a9e55f9eb83f462b",
-          "chars": 209
+          "text_sha256": "6118524290e98359e488200b9a141c2b69da904464f6810fe1d990a5e4fc2ac3",
+          "chars": 145
         },
         {
           "id": "D1-22",
@@ -869,8 +869,8 @@
           "section": "变量与数据交互的方式（二）：克隆",
           "start_line": 179,
           "end_line": 191,
-          "text_sha256": "955bc83464339a92c4f8494554ee77f1355e7d869e143f3550772674a1f1a918",
-          "chars": 405
+          "text_sha256": "147801166a0431c4e9f2655f67fdc17c4b2a56441fdfa181f1c24e9942e50243",
+          "chars": 391
         },
         {
           "id": "D1-23",
@@ -878,7 +878,7 @@
           "section": "只在栈上的数据：拷贝",
           "start_line": 193,
           "end_line": 205,
-          "text_sha256": "e85a0a91e622bbea1221d3d73a87aad079bf7d209d2aeb1c0b561e2f09ea4b98",
+          "text_sha256": "bf0786b7fbbc1fffa8dd79772f9eb4bad3e4da7827816fd9df469fca5a2b7706",
           "chars": 500
         },
         {
@@ -887,17 +887,17 @@
           "section": "只在栈上的数据：拷贝",
           "start_line": 205,
           "end_line": 213,
-          "text_sha256": "6ec15ef8ea36fa8ef4a130f780f27869b3c4ce163c03a663321be3a1719b3c37",
+          "text_sha256": "aaf517f2f86f1a9c7d6e7b2ae090bbb1ae9f1f18a12513d5aa8071c453c653c4",
           "chars": 500
         },
         {
           "id": "D1-25",
           "source": "01_Rust_所有权.md",
           "section": "只在栈上的数据：拷贝",
-          "start_line": 209,
+          "start_line": 210,
           "end_line": 213,
-          "text_sha256": "515d3272cc242f191df4f77cc02dc2ee41575a98bbd6f2a676d7a916a8358aa4",
-          "chars": 162
+          "text_sha256": "4174b0e988872cc7922f96d7541412aea3d22b7608e910c4beeb5558416f6197",
+          "chars": 140
         },
         {
           "id": "D1-26",
@@ -905,8 +905,8 @@
           "section": "所有权与函数",
           "start_line": 215,
           "end_line": 227,
-          "text_sha256": "2f569206b2a39d39a33b495c61ec6cfa97c2fc8eca22a7aa7f28aeb72bcbaa26",
-          "chars": 429
+          "text_sha256": "0ea8b471087c0e1e7a96047b14e752081d1e23af4de2348df949278adc93f15f",
+          "chars": 415
         },
         {
           "id": "D1-27",
@@ -914,7 +914,7 @@
           "section": "返回值与作用域",
           "start_line": 229,
           "end_line": 247,
-          "text_sha256": "671ca242b57ada45ae3eb53c648b9a5640571ad16a78e7296141a33303f8679a",
+          "text_sha256": "07a43fbf0e44f7ef480ce0445292711b599e0cd7997a46f6e29f0d4ea325f45c",
           "chars": 500
         },
         {
@@ -922,8 +922,8 @@
           "source": "01_Rust_所有权.md",
           "section": "返回值与作用域",
           "start_line": 243,
-          "end_line": 260,
-          "text_sha256": "707fbb81a796c7f7b5e03ddeae20da2f33127b26649e60fceb3621a8cc79b22e",
+          "end_line": 261,
+          "text_sha256": "5ec4bd098bc4c5ee9e099da6574cd8b80281b5ad070d4ca0f28c4fa9687d3397",
           "chars": 500
         },
         {
@@ -932,8 +932,8 @@
           "section": "返回值与作用域",
           "start_line": 259,
           "end_line": 262,
-          "text_sha256": "ec619434a7098f9cb32812d0e5a35b0d74c149ef17833aab570edc752f0acf95",
-          "chars": 262
+          "text_sha256": "e2f6a92bb8c8586c482e7d118729d2f06e61da80ac9f9e5ae6234f8fcc3e713c",
+          "chars": 228
         },
         {
           "id": "D2-1",
@@ -941,8 +941,8 @@
           "section": "Rust 程序设计语言 · 引用与借用",
           "start_line": 1,
           "end_line": 5,
-          "text_sha256": "4b5472b8d2c0e24ba7ad422a49bfa34e431fe5027d45ee5e89ab011cfa44310b",
-          "chars": 148
+          "text_sha256": "a742ac4da0f91426d0f88bd6259fd651f4523c69743996c258f4a03356e1d480",
+          "chars": 142
         },
         {
           "id": "D2-2",
@@ -950,7 +950,7 @@
           "section": "引用与借用",
           "start_line": 7,
           "end_line": 21,
-          "text_sha256": "c22345262b71fb326b8cbae86e46f751b56f51cb6552247e4a1f59531bb56140",
+          "text_sha256": "c85b426b96110f53efcca93e3509ef95a160a3b709779f690f2b90828982b5e7",
           "chars": 500
         },
         {
@@ -958,8 +958,8 @@
           "source": "02_Rust_借用与引用.md",
           "section": "引用与借用",
           "start_line": 19,
-          "end_line": 32,
-          "text_sha256": "8e3e1d754b1d2bb162b2f168175d514b3b842a6ae9c9c930c3dcfb610b1bcdf5",
+          "end_line": 35,
+          "text_sha256": "b6a31b78605e9a57a11480e1cff91e83bcb8ec55012c4c9cd9899f5663b925c2",
           "chars": 500
         },
         {
@@ -967,117 +967,108 @@
           "source": "02_Rust_借用与引用.md",
           "section": "引用与借用",
           "start_line": 32,
-          "end_line": 45,
-          "text_sha256": "f289e18ebbdc30dc312e7e3ec2a519e705ee5448510c87a57a3b58d63a011bac",
+          "end_line": 47,
+          "text_sha256": "f745a818da0df64cedc810355421c2f93bc333a8c79bb7481da8eac2b2a1862c",
           "chars": 500
         },
         {
           "id": "D2-5",
           "source": "02_Rust_借用与引用.md",
           "section": "引用与借用",
-          "start_line": 43,
+          "start_line": 45,
           "end_line": 63,
-          "text_sha256": "88c719a075a939dffde6688195d9666b813b8e0defdea10e7bd19fb5deaef3ac",
-          "chars": 500
+          "text_sha256": "21062e208be6deddf66823a6883fd00d6eadce242310329c3d5be6fe8d2a0ec6",
+          "chars": 481
         },
         {
           "id": "D2-6",
           "source": "02_Rust_借用与引用.md",
-          "section": "引用与借用",
-          "start_line": 60,
-          "end_line": 63,
-          "text_sha256": "25a85f7e78f09adc268e204a5d57cc9cf445ff3f07d890a9b500e6c0b1fbb509",
-          "chars": 119
+          "section": "可变引用",
+          "start_line": 65,
+          "end_line": 82,
+          "text_sha256": "c74bc66855c941f3064262594401e0658a1a8808890ae122368be2b6011d2a61",
+          "chars": 500
         },
         {
           "id": "D2-7",
           "source": "02_Rust_借用与引用.md",
           "section": "可变引用",
-          "start_line": 65,
-          "end_line": 81,
-          "text_sha256": "5c5ff176dac6466508f3114edde6253bdfe92802910604e38a7a9cc73c889581",
+          "start_line": 79,
+          "end_line": 93,
+          "text_sha256": "5d5dc213628a518bfb0c4a7d5a61ed4210bd62e83a4580c60e9daa64a5ec54f3",
           "chars": 500
         },
         {
           "id": "D2-8",
           "source": "02_Rust_借用与引用.md",
           "section": "可变引用",
-          "start_line": 79,
-          "end_line": 93,
-          "text_sha256": "a49e1c0d45153d9c6d8611f99614f0132c0ac3723b3b8ff9f4aade917d437d6a",
+          "start_line": 91,
+          "end_line": 108,
+          "text_sha256": "f52b55a0647ef2e34b25f240ec3d5698a1d69f72666a28239d866a4ca04807ab",
           "chars": 500
         },
         {
           "id": "D2-9",
           "source": "02_Rust_借用与引用.md",
           "section": "可变引用",
-          "start_line": 91,
-          "end_line": 108,
-          "text_sha256": "a033af9ae3780e313132d1ce5d4d89afcaec871e1340fb41021759c38cb9c92d",
+          "start_line": 108,
+          "end_line": 123,
+          "text_sha256": "4ee6cffb03019b3410543c5b6e6cc4c6e5b6af22744855ff6e947a1ffe109d8f",
           "chars": 500
         },
         {
           "id": "D2-10",
           "source": "02_Rust_借用与引用.md",
           "section": "可变引用",
-          "start_line": 105,
-          "end_line": 120,
-          "text_sha256": "55daaec62edacc349248b9a6324014f1c792251c8aa56e626900670ed60fce84",
+          "start_line": 120,
+          "end_line": 131,
+          "text_sha256": "eeead9337a183c3b0f1aabfa7ff54c9fc2493d01693d13bc1f67a4d8c618184a",
           "chars": 500
         },
         {
           "id": "D2-11",
           "source": "02_Rust_借用与引用.md",
           "section": "可变引用",
-          "start_line": 120,
-          "end_line": 131,
-          "text_sha256": "ce6c57e5d0ca3602a6a03d1c10f997e7f30b8d5177bf738079537aa2f877e4f3",
-          "chars": 500
+          "start_line": 131,
+          "end_line": 133,
+          "text_sha256": "e1211b9ab5befc3b4aca143110eac7ffdf0f2a6bcbf35c774fb878cdd1ccf4f4",
+          "chars": 235
         },
         {
           "id": "D2-12",
           "source": "02_Rust_借用与引用.md",
-          "section": "可变引用",
-          "start_line": 128,
-          "end_line": 133,
-          "text_sha256": "cd23dcbcc3abf511b7e1157d9e789e65d9bbd8e9eac687d5c0e5aea5e6cbcb3a",
-          "chars": 305
+          "section": "悬垂引用（Dangling References）",
+          "start_line": 135,
+          "end_line": 150,
+          "text_sha256": "53f6082d456bcebe76e2d510158a641f8771635512515139e293a60230dce2bf",
+          "chars": 500
         },
         {
           "id": "D2-13",
           "source": "02_Rust_借用与引用.md",
           "section": "悬垂引用（Dangling References）",
-          "start_line": 135,
-          "end_line": 150,
-          "text_sha256": "34be78681dd9f30be967884d9c64b38f908e2f4e9dacfadddf2fa33613cacfc7",
+          "start_line": 147,
+          "end_line": 164,
+          "text_sha256": "1956fd9853d273aa26a3cd6ad8176baeff9d8d4e969c802b303e9f10a4c2a762",
           "chars": 500
         },
         {
           "id": "D2-14",
           "source": "02_Rust_借用与引用.md",
           "section": "悬垂引用（Dangling References）",
-          "start_line": 144,
-          "end_line": 164,
-          "text_sha256": "6535c431090dfaf91ad67bb29c262de0a1fad4380c538430814d0144f652e3a7",
-          "chars": 500
+          "start_line": 163,
+          "end_line": 175,
+          "text_sha256": "44dca75585313c9ccd8e5d8ebb0c33bf8dd64287dc6c4ca4ff738195e62be7e5",
+          "chars": 442
         },
         {
           "id": "D2-15",
           "source": "02_Rust_借用与引用.md",
-          "section": "悬垂引用（Dangling References）",
-          "start_line": 161,
-          "end_line": 175,
-          "text_sha256": "55aa01dac7d0d666bd74bf6f98aea39922ee3c02b9dd616f68b2289f26395798",
-          "chars": 484
-        },
-        {
-          "id": "D2-16",
-          "source": "02_Rust_借用与引用.md",
           "section": "引用的规则",
           "start_line": 177,
           "end_line": 186,
-          "text_sha256": "e98a2f5b4352dc6c0a6ace987b9e168ece488267456172d20ea8b21b1ce9d617",
-          "chars": 223
+          "text_sha256": "64da66cab4a4a6d7ed71385b673e5b3eba061cb0309f5a0027c3ac0153f0fd14",
+          "chars": 213
         },
         {
           "id": "D3-1",
@@ -1085,8 +1076,8 @@
           "section": "Rust 程序设计语言 · 切片",
           "start_line": 1,
           "end_line": 5,
-          "text_sha256": "55d4b5dab6889e72ac26655dea56482bbfb891473e8d7b8ccb9c498eb1dc9dfe",
-          "chars": 145
+          "text_sha256": "dd6217002559a78be5ee261bd686f61b57097c35ea3b7780ecb1a3e40ea5cd1f",
+          "chars": 139
         },
         {
           "id": "D3-2",
@@ -1094,25 +1085,25 @@
           "section": "切片 Slice 类型",
           "start_line": 7,
           "end_line": 24,
-          "text_sha256": "ada2f909c3ae8e9f8afa74b47bce9786aca36d13840c6d7310236cdd120604fa",
+          "text_sha256": "d49bc6a34aa45aea06bbfa8a9c5bfbfd4e8b0df91efc9f89505af26c462d68c3",
           "chars": 500
         },
         {
           "id": "D3-3",
           "source": "03_Rust_切片.md",
           "section": "切片 Slice 类型",
-          "start_line": 23,
-          "end_line": 38,
-          "text_sha256": "b3a783e03871f4958db694a2a49b9e38fb4057df37b2e13472eaaf0a5c07e388",
+          "start_line": 24,
+          "end_line": 41,
+          "text_sha256": "319a5c1f210259465e6e169095091a0e2d714c5dd5884e5379520cc7d759b743",
           "chars": 500
         },
         {
           "id": "D3-4",
           "source": "03_Rust_切片.md",
           "section": "切片 Slice 类型",
-          "start_line": 37,
+          "start_line": 38,
           "end_line": 45,
-          "text_sha256": "3c28e05367edb6c6c4e4373fef913773064e5242ce32ec4a9204d85d4eef2013",
+          "text_sha256": "0b9e80f4c49624cd5c2b513aff3547f82323eadf0fceabaa51a36df370909ef6",
           "chars": 500
         },
         {
@@ -1121,26 +1112,26 @@
           "section": "切片 Slice 类型",
           "start_line": 43,
           "end_line": 56,
-          "text_sha256": "cac2eaa12a0b382c3c08d134976b99972ac18978620d112cb774ac56a8d5358e",
+          "text_sha256": "2e0ae261bf4ee60a473b3e46905e4a6cfc34c4f2a12f03b2b30a327b5f9509ae",
           "chars": 500
         },
         {
           "id": "D3-6",
           "source": "03_Rust_切片.md",
           "section": "切片 Slice 类型",
-          "start_line": 51,
-          "end_line": 63,
-          "text_sha256": "c38149746064dda006135dd450b90d54e3d3279de6ed37e1cae39c5b916dc7c9",
+          "start_line": 53,
+          "end_line": 66,
+          "text_sha256": "36a8351a20b1b59713288128c6f06b2b1c7f3a30c50474957534b69ab202ff10",
           "chars": 500
         },
         {
           "id": "D3-7",
           "source": "03_Rust_切片.md",
           "section": "切片 Slice 类型",
-          "start_line": 61,
+          "start_line": 63,
           "end_line": 71,
-          "text_sha256": "97127bb57faca33cb767ca9357de841b1479981804340dc2e2974171c6fd420a",
-          "chars": 320
+          "text_sha256": "e219af4406fe756b10b24374e271ec5a944c9c0e8c1a49277c0ede22669e353c",
+          "chars": 254
         },
         {
           "id": "D3-8",
@@ -1148,7 +1139,7 @@
           "section": "字符串 slice",
           "start_line": 73,
           "end_line": 83,
-          "text_sha256": "184347077a238f055e768f42d1c21eb8fb4ba04898b08faefd1c93ef6fa7fc64",
+          "text_sha256": "8728d8c0d3bf5f4757ccc133d4d53edaa965555373567e9fb33fa8a0a7054eb7",
           "chars": 500
         },
         {
@@ -1156,8 +1147,8 @@
           "source": "03_Rust_切片.md",
           "section": "字符串 slice",
           "start_line": 83,
-          "end_line": 94,
-          "text_sha256": "f470f08e8ca922143566ab951baa1b553501cc4fed5198ebeccc509dd9e5d39e",
+          "end_line": 96,
+          "text_sha256": "fc7adddcd126bf318873ab337eac8060ed96e7497e49f774bec411f7d7f6b4dd",
           "chars": 500
         },
         {
@@ -1166,16 +1157,16 @@
           "section": "字符串 slice",
           "start_line": 91,
           "end_line": 122,
-          "text_sha256": "3eec894dc8b82049a3af7c22365483520983356cd8e5ff13e7d010c5f48e73be",
+          "text_sha256": "36ee706c367201ff8153412ac8817dc53a131f7e8d5de6665df97638533c3c5f",
           "chars": 500
         },
         {
           "id": "D3-11",
           "source": "03_Rust_切片.md",
           "section": "字符串 slice",
-          "start_line": 118,
-          "end_line": 130,
-          "text_sha256": "7be415d8759ee5bac80bb08c9051b6d2dfa40d9b2750806f8db075ec0915c0a7",
+          "start_line": 120,
+          "end_line": 132,
+          "text_sha256": "da4734c8c8b905d627f516f97d18e8699bc0807627312b66c60c54e3ee2fd98a",
           "chars": 500
         },
         {
@@ -1184,7 +1175,7 @@
           "section": "字符串 slice",
           "start_line": 129,
           "end_line": 142,
-          "text_sha256": "4fb89723a0684b4b058b328e6f26b90bb9ae7900148028a165d6aa07478faa8b",
+          "text_sha256": "76d1fb4f25f201b646118123f65f276bab4d12116bc68b16977a3d8d497b593c",
           "chars": 500
         },
         {
@@ -1193,17 +1184,17 @@
           "section": "字符串 slice",
           "start_line": 142,
           "end_line": 156,
-          "text_sha256": "343359e010bba538d15c36c26dd47efdfdab0b05c30b8ef4a53052af3cde7bc9",
+          "text_sha256": "3d220fcb67a3a7d0b0f592ea73b56647de7a7b5252407a3b67f2c5ee15a1919c",
           "chars": 500
         },
         {
           "id": "D3-14",
           "source": "03_Rust_切片.md",
           "section": "字符串 slice",
-          "start_line": 153,
+          "start_line": 156,
           "end_line": 156,
-          "text_sha256": "55b2cff3396730cb259a5e813167dfec98a23f25e9b6e3b455c7e232fb405852",
-          "chars": 296
+          "text_sha256": "b5ab4a1412a8ee9fa5e5270e6f2d5f98c2ab7ef80530da8d03c5bcb259541f29",
+          "chars": 211
         },
         {
           "id": "D3-15",
@@ -1211,8 +1202,8 @@
           "section": "字符串字面量就是 slice",
           "start_line": 158,
           "end_line": 166,
-          "text_sha256": "8e883d67acd4db470bd29efb58b3f7dafaaa4c9d4282d7acf63d6cfdfce8cc10",
-          "chars": 207
+          "text_sha256": "79fd4db7a12b7d06fe96b1c06111ead6b8b303c41f0bd1ae781e4747f3cf4ca5",
+          "chars": 197
         },
         {
           "id": "D3-16",
@@ -1220,17 +1211,17 @@
           "section": "字符串 slice 作为参数",
           "start_line": 168,
           "end_line": 184,
-          "text_sha256": "98e9fbdd09d99ae06074769451aa7d3bdda8182e13687c29f3b2ed097f788439",
+          "text_sha256": "bb5525b45c8a8bfdb227925b392c364b792942b4255f2e2ab4291d12dbd96dfa",
           "chars": 500
         },
         {
           "id": "D3-17",
           "source": "03_Rust_切片.md",
           "section": "字符串 slice 作为参数",
-          "start_line": 182,
+          "start_line": 184,
           "end_line": 190,
-          "text_sha256": "9effdc48cbe3e88b2c6783d20f57fca1a664a8c4896664714e56a43c3523a9df",
-          "chars": 403
+          "text_sha256": "cba903e8bb06a02e7653df9a63e2f6bad9b3a7f227ed6bdd84fbf35b65dbc160",
+          "chars": 379
         },
         {
           "id": "D3-18",
@@ -1238,8 +1229,8 @@
           "section": "其他类型的 slice",
           "start_line": 192,
           "end_line": 208,
-          "text_sha256": "f7778082e84f4affaaf3a4a2419fc9c9539fa24357fe007a2d92ce50d80f9735",
-          "chars": 348
+          "text_sha256": "702674de76c7d508a0aad7ede528cf3214f0f24403e85d9980bd691e9889c5e2",
+          "chars": 330
         },
         {
           "id": "D3-19",
@@ -1247,8 +1238,8 @@
           "section": "总结",
           "start_line": 210,
           "end_line": 219,
-          "text_sha256": "a0bbbc8ccc23d2ea24ae0fa41eb37803c24a72bd98d119f99ad397261dcaa598",
-          "chars": 423
+          "text_sha256": "6cfdef8538f15efa63a4b8536c8f8f66c1060668c7804d15ba820a5149f5cfcd",
+          "chars": 413
         },
         {
           "id": "D4-1",
@@ -1256,8 +1247,8 @@
           "section": "Python 教程 · 数据结构",
           "start_line": 1,
           "end_line": 5,
-          "text_sha256": "89c8a3e06aa0312f072e41d096e4596e9dcfd288daa6c5e7f463b8ee1754923a",
-          "chars": 162
+          "text_sha256": "f7c68ae72f054139385302f56bced8c61bc4a78c0b72bcec62c118abfcc8a003",
+          "chars": 156
         },
         {
           "id": "D4-2",
@@ -1265,8 +1256,8 @@
           "section": "5. 数据结构",
           "start_line": 7,
           "end_line": 9,
-          "text_sha256": "1ca71a3dd0b8ee07feb23d6df61d3929ef820875cc5715b43042cb45bdbd0ffd",
-          "chars": 46
+          "text_sha256": "7650496bf950c2d4723eeb4b691add10df2ffeb3e87d9224f2b1a0733fff0114",
+          "chars": 42
         },
         {
           "id": "D4-3",
@@ -1274,7 +1265,7 @@
           "section": "5.1. 列表详解",
           "start_line": 11,
           "end_line": 33,
-          "text_sha256": "ef58231599d465ffe4d2b58eea007f2f3ffd11609264665fb3b2bee0dd98338d",
+          "text_sha256": "2011fa0e4c1370c26c99702ad775441bb0aca93cb4711363e8e97f92fa3845ba",
           "chars": 500
         },
         {
@@ -1282,36 +1273,36 @@
           "source": "04_Python_数据结构.md",
           "section": "5.1. 列表详解",
           "start_line": 31,
-          "end_line": 53,
-          "text_sha256": "bedb8430651603da3557624c9aecc8a67874ae70d422ab789dda7fdf9b5e47a8",
+          "end_line": 59,
+          "text_sha256": "3be386bfebd0a02ff6ee8d969b881ded905c51fc19689368533160aec6a02e5f",
           "chars": 500
         },
         {
           "id": "D4-5",
           "source": "04_Python_数据结构.md",
           "section": "5.1. 列表详解",
-          "start_line": 49,
-          "end_line": 76,
-          "text_sha256": "45f61ce781bb1c894b8e3e8bd68cab17f92bd0bcb40cc4532d8a14b7d085b4b5",
+          "start_line": 51,
+          "end_line": 78,
+          "text_sha256": "2c8afd896415c834ce4a9d0c601e02cdd9d6646677707a9f2f6cea703f76c8ad",
           "chars": 500
         },
         {
           "id": "D4-6",
           "source": "04_Python_数据结构.md",
           "section": "5.1. 列表详解",
-          "start_line": 74,
+          "start_line": 75,
           "end_line": 89,
-          "text_sha256": "09b2b9cbaa3a3579c09df1a08d40c7713252db51d45af15423bf13448cd1cfd6",
+          "text_sha256": "4d84b834c5dee643c807648359b369b50d0d02a7151d248967898ef2c2c62dcb",
           "chars": 500
         },
         {
           "id": "D4-7",
           "source": "04_Python_数据结构.md",
           "section": "5.1. 列表详解",
-          "start_line": 87,
+          "start_line": 89,
           "end_line": 89,
-          "text_sha256": "6c9008593b8fa786204b9e741981678d7701f0290ab4d703f8358d3c5f1c0de2",
-          "chars": 169
+          "text_sha256": "742cd845147f88e3d61abd05fc2a26399c1de4e13ead0e2f49034bf60a9629bd",
+          "chars": 89
         },
         {
           "id": "D4-8",
@@ -1319,8 +1310,8 @@
           "section": "5.1.1. 用列表实现堆栈",
           "start_line": 91,
           "end_line": 112,
-          "text_sha256": "6936bb91363e6fd57ab700095ce039538a010533d9356d0dc25c53b74722a14c",
-          "chars": 349
+          "text_sha256": "0b6a3760d972bd4ef73fa25cb392fbbc57ff110077393130cb0ea30e3b43726e",
+          "chars": 326
         },
         {
           "id": "D4-9",
@@ -1328,7 +1319,7 @@
           "section": "5.1.2. 用列表实现队列",
           "start_line": 114,
           "end_line": 129,
-          "text_sha256": "518dec99e0cdce63e27173e0dff5eb0b97223f9fcbedb487dc3ba6ea18fa7a08",
+          "text_sha256": "9c5ff9c82b86f048afb40775577190c2ec1a86148841e98deb25dbb38f1febe0",
           "chars": 500
         },
         {
@@ -1337,8 +1328,8 @@
           "section": "5.1.2. 用列表实现队列",
           "start_line": 125,
           "end_line": 132,
-          "text_sha256": "8c0c56427b13486c7484f24f822921d817cf963799d06000db0e9d320866247e",
-          "chars": 179
+          "text_sha256": "dd265d08a3bb71e8ea6e39a8667f5233e705fff4516ddd33417787bad0cc81c0",
+          "chars": 159
         },
         {
           "id": "D4-11",
@@ -1346,89 +1337,89 @@
           "section": "5.1.3. 列表推导式",
           "start_line": 134,
           "end_line": 166,
-          "text_sha256": "46b2b7a0c8d00720d9c6d364b5e024c5bc4486dff0143f89a7d4237b6b9b5c94",
+          "text_sha256": "0bc405f89fb860794d8f388ddc4e3211d0f3d7eb861d6a01b0b6c32e67b800e7",
           "chars": 500
         },
         {
           "id": "D4-12",
           "source": "04_Python_数据结构.md",
           "section": "5.1.3. 列表推导式",
-          "start_line": 160,
-          "end_line": 184,
-          "text_sha256": "8da2e418b19acdb3c7489df2e49bf68bd214f3413a21159fb0d6234194dbfc11",
+          "start_line": 164,
+          "end_line": 188,
+          "text_sha256": "7c371a81cf914443160e0699e0fc773babcdbf1cb41c9c57f5c9678ae1eafd4a",
           "chars": 500
         },
         {
           "id": "D4-13",
           "source": "04_Python_数据结构.md",
           "section": "5.1.3. 列表推导式",
-          "start_line": 180,
-          "end_line": 204,
-          "text_sha256": "57b623b605482be7c53d3059f62ba0e8ddcf3fbfde66e039c3857933856e19cc",
+          "start_line": 183,
+          "end_line": 206,
+          "text_sha256": "359d0d26f86f39828c62a8d5c7d5931d32062dddf531ad5015e822cc3e9b8ea5",
           "chars": 500
         },
         {
           "id": "D4-14",
           "source": "04_Python_数据结构.md",
           "section": "5.1.3. 列表推导式",
-          "start_line": 203,
-          "end_line": 216,
-          "text_sha256": "79b881fa183170690ffba2ec6f8f062793b692b938924f3e261ecab796d90118",
+          "start_line": 204,
+          "end_line": 218,
+          "text_sha256": "6990fe4497b4c77deb751e4a364c1b9d11e6a4c01f61c69cf199a8cb3be9d8cf",
           "chars": 500
         },
         {
           "id": "D4-15",
           "source": "04_Python_数据结构.md",
           "section": "5.1.3. 列表推导式",
-          "start_line": 214,
+          "start_line": 216,
           "end_line": 230,
-          "text_sha256": "871abf1d75b8c872f1ea3ec7295e94a06949e93ba15acc4576c37b6ea2a177d1",
-          "chars": 387
+          "text_sha256": "0b6a9eb1af8c58adf9bff1026b596d43d028c6e8f6cb121df913b37a724f2a85",
+          "chars": 289
         },
         {
           "id": "D4-16",
           "source": "04_Python_数据结构.md",
           "section": "5.1.4. 嵌套的列表推导式",
           "start_line": 232,
-          "end_line": 260,
-          "text_sha256": "a089d4f219b9a523c5652affc55d769dcb52b77bbdfd013c767ddffe0f533e3d",
+          "end_line": 262,
+          "text_sha256": "a67efb063976537c44954ab8f6ce4c7014a471ec34cb2e100e2a4a7ba6c97fdc",
           "chars": 500
         },
         {
           "id": "D4-17",
           "source": "04_Python_数据结构.md",
           "section": "5.1.4. 嵌套的列表推导式",
-          "start_line": 258,
-          "end_line": 283,
-          "text_sha256": "f27f0322efab743aca560c1fa2c9be3733bbb305c20fdaa34f568485fd87b9f2",
+          "start_line": 259,
+          "end_line": 286,
+          "text_sha256": "ba23a978419b04e73757fb30fc90d8c139c6e1aff8597178be88b1e850f0ecb3",
           "chars": 500
         },
         {
           "id": "D4-18",
           "source": "04_Python_数据结构.md",
           "section": "5.1.4. 嵌套的列表推导式",
-          "start_line": 278,
+          "start_line": 279,
           "end_line": 291,
-          "text_sha256": "539919f9707f83a780c7abd0f7503c0ff6b3cf26d490c21edb4d95b356bc2301",
-          "chars": 233
+          "text_sha256": "5c9a55694a732a9a0b8ccffd8d74d5dfd631f6e652c2b8d7d689c850beada934",
+          "chars": 172
         },
         {
           "id": "D4-19",
           "source": "04_Python_数据结构.md",
           "section": "5.1.5. 列表和列表推导式中的解包",
           "start_line": 293,
-          "end_line": 312,
-          "text_sha256": "125b2ab792bdccd158af4ab958e5baa2b9f1964c2b08b3bbdeb587be31e759bb",
+          "end_line": 316,
+          "text_sha256": "98a7a49061dffb321eb9fd3e1bb32abcba45d99378d15e0366df1af5f8d48125",
           "chars": 500
         },
         {
           "id": "D4-20",
           "source": "04_Python_数据结构.md",
           "section": "5.1.5. 列表和列表推导式中的解包",
-          "start_line": 310,
+          "start_line": 311,
           "end_line": 334,
-          "text_sha256": "c1a4ef72be8cd1941012cb43e2db978bed8ed0f11a67a4370898cece41935c60",
-          "chars": 494
+          "text_sha256": "ea1202c57f9e0a3e351688b82878945a262deb35b2208119014bda22807902ca",
+          "chars": 451
         },
         {
           "id": "D4-21",
@@ -1436,16 +1427,16 @@
           "section": "5.2. `del` 语句",
           "start_line": 336,
           "end_line": 361,
-          "text_sha256": "a78e596dc0540616fd1c22f68ea2d2bebd44cca748d47f0c3df0a7ba7e1fba19",
-          "chars": 417
+          "text_sha256": "4897a9a367561f6c22c0ce5ad33ad1f8121049e87aa4bbaa256b1d2afea7ab63",
+          "chars": 390
         },
         {
           "id": "D4-22",
           "source": "04_Python_数据结构.md",
           "section": "5.3. 元组和序列",
           "start_line": 363,
-          "end_line": 383,
-          "text_sha256": "e1f09eef2393ae39d82e1948c9904f32fb124bedc3b3dbe89a84cfd1962ecc5a",
+          "end_line": 384,
+          "text_sha256": "bbb4417d15026b4a9f5cd1cdf97cc3091438134df77c1acbd895988de90f4a59",
           "chars": 500
         },
         {
@@ -1453,8 +1444,8 @@
           "source": "04_Python_数据结构.md",
           "section": "5.3. 元组和序列",
           "start_line": 382,
-          "end_line": 397,
-          "text_sha256": "f8605e47d11cb1803eef7e00138d0b5104317bc8af66e880f51a28a35345cc28",
+          "end_line": 399,
+          "text_sha256": "c904eded8577272586acf3d90ba57ed02789ded8fd9a337cf683509d7ee250f7",
           "chars": 500
         },
         {
@@ -1463,170 +1454,152 @@
           "section": "5.3. 元组和序列",
           "start_line": 397,
           "end_line": 420,
-          "text_sha256": "b6c895d4ddab6385f8fcc0bd3b762500031d6904614cc5158951d61f56772e7f",
-          "chars": 500
+          "text_sha256": "9fe00a885dc1bdfca676f085f632f6a10892cad4ba8e77ac08877104aef27b7f",
+          "chars": 498
         },
         {
           "id": "D4-25",
           "source": "04_Python_数据结构.md",
-          "section": "5.3. 元组和序列",
-          "start_line": 413,
-          "end_line": 420,
-          "text_sha256": "077c8b12f0aa80b1d4d8ca3cf000f83f625e90a905ffc269fa86e558c637567f",
-          "chars": 137
+          "section": "5.4. 集合",
+          "start_line": 422,
+          "end_line": 441,
+          "text_sha256": "eb56320a91dbe5534a978f657ec406e45802677dd1481a02cdb2d2ac29c6f078",
+          "chars": 500
         },
         {
           "id": "D4-26",
           "source": "04_Python_数据结构.md",
           "section": "5.4. 集合",
-          "start_line": 422,
-          "end_line": 439,
-          "text_sha256": "34d6eb3b28197ffaeae141a261f695adf3584e2ddbc81969f781a7a63e1b2a4a",
+          "start_line": 436,
+          "end_line": 453,
+          "text_sha256": "2cc85569b13578bc47a28634e27e3ea4c82894083ceb56a45e2c930e4e166520",
           "chars": 500
         },
         {
           "id": "D4-27",
           "source": "04_Python_数据结构.md",
           "section": "5.4. 集合",
-          "start_line": 436,
-          "end_line": 452,
-          "text_sha256": "62cace1b703495f87906a3c61b2d9d76a6fb54e211d910c104647a94c9952408",
-          "chars": 500
+          "start_line": 451,
+          "end_line": 469,
+          "text_sha256": "af18d88297c0b617daf462a0afa023ce4cdb981085d50e8d28e3a20fa99424a5",
+          "chars": 431
         },
         {
           "id": "D4-28",
           "source": "04_Python_数据结构.md",
-          "section": "5.4. 集合",
-          "start_line": 450,
-          "end_line": 469,
-          "text_sha256": "73d55903576f73c19012cc7f64959051a4db98e0abe029c09a996a24fbaf2298",
-          "chars": 480
+          "section": "5.5. 字典",
+          "start_line": 471,
+          "end_line": 479,
+          "text_sha256": "bc7e1f7875aefb51b805631ead8a0995f1eed433a6e3c7a014c50d59eaa9efb9",
+          "chars": 500
         },
         {
           "id": "D4-29",
           "source": "04_Python_数据结构.md",
           "section": "5.5. 字典",
-          "start_line": 471,
-          "end_line": 479,
-          "text_sha256": "097c5c7a3ef7eafffe936dab66f401bda4d06b6a88642a1498b45aff14dfddbc",
+          "start_line": 477,
+          "end_line": 496,
+          "text_sha256": "9bebc8107bcc2aa78fc74a4e2aa7e57febd4c9a8f03f702b32b282fd29286e80",
           "chars": 500
         },
         {
           "id": "D4-30",
           "source": "04_Python_数据结构.md",
           "section": "5.5. 字典",
-          "start_line": 477,
-          "end_line": 495,
-          "text_sha256": "796a36aaeb9563edf24c604b473cb130079092d7112c3fee80141b7e5cc9e569",
+          "start_line": 493,
+          "end_line": 523,
+          "text_sha256": "b66a10198409c169d3b323042d528cac69bdbb3a43b0d63877bd8aa0acf4cf9f",
           "chars": 500
         },
         {
           "id": "D4-31",
           "source": "04_Python_数据结构.md",
           "section": "5.5. 字典",
-          "start_line": 493,
-          "end_line": 517,
-          "text_sha256": "4c3b7e3d6bd0b44c7ee71873621c477630a6a972ee61eb3de36d0f8666885515",
+          "start_line": 516,
+          "end_line": 546,
+          "text_sha256": "f28ec36838d9d74e41b14497fc4f400b722eed3e798ebfeef6bf744f76830751",
           "chars": 500
         },
         {
           "id": "D4-32",
           "source": "04_Python_数据结构.md",
           "section": "5.5. 字典",
-          "start_line": 516,
-          "end_line": 539,
-          "text_sha256": "30309183ef81ca6b11d8b44e641b7b02b39bc50ef3cea05505d51a162f5cc6cb",
-          "chars": 500
+          "start_line": 539,
+          "end_line": 549,
+          "text_sha256": "5bc054a3186b7b75f9d0201f117f009ce8985b3cd2c4b833b745ccfbcf19aad9",
+          "chars": 162
         },
         {
           "id": "D4-33",
           "source": "04_Python_数据结构.md",
-          "section": "5.5. 字典",
-          "start_line": 537,
-          "end_line": 549,
-          "text_sha256": "fa86bfaa80b309c43a69412c8dcb27a4065b0af9cea330302d210514935e9209",
-          "chars": 242
+          "section": "5.6. 循环的技巧",
+          "start_line": 551,
+          "end_line": 581,
+          "text_sha256": "e6d22d737d93a7c88821b9521eac8abb8eb78d918378a25ab50e39bf6661e9ba",
+          "chars": 500
         },
         {
           "id": "D4-34",
           "source": "04_Python_数据结构.md",
           "section": "5.6. 循环的技巧",
-          "start_line": 551,
-          "end_line": 580,
-          "text_sha256": "fd4a39f7bf11fca8c564cc8f008c58688fbcac4a7d35b36d113bee40d4765fa2",
+          "start_line": 580,
+          "end_line": 605,
+          "text_sha256": "c4fc32be2ecd3feaaf8a8704166f27e3a146ec9b528673534325afbe3ed4ff19",
           "chars": 500
         },
         {
           "id": "D4-35",
           "source": "04_Python_数据结构.md",
           "section": "5.6. 循环的技巧",
-          "start_line": 577,
-          "end_line": 596,
-          "text_sha256": "777dfaa5d284885ac14e5378bb57636a95ef00831ce0cd81f49d6f9195306a8a",
+          "start_line": 594,
+          "end_line": 631,
+          "text_sha256": "f3917f344ed32caf85b4a6fae392da97ef1ff2cf947826d89d2322a60852522f",
           "chars": 500
         },
         {
           "id": "D4-36",
           "source": "04_Python_数据结构.md",
           "section": "5.6. 循环的技巧",
-          "start_line": 591,
-          "end_line": 625,
-          "text_sha256": "bac82a88e266843e472ded109b37812002debbb120e831d983dbf86d76d8d0fc",
-          "chars": 500
+          "start_line": 624,
+          "end_line": 648,
+          "text_sha256": "5db8962f4ab9f725602ea8c895080d0165fb4c5285ca77677ff33cacc3fcc4be",
+          "chars": 405
         },
         {
           "id": "D4-37",
           "source": "04_Python_数据结构.md",
-          "section": "5.6. 循环的技巧",
-          "start_line": 623,
-          "end_line": 648,
-          "text_sha256": "0877de8bc9d0ba32a6ef791c0e1b8a381616b7f984405b2841884890a446b575",
+          "section": "5.7. 深入条件控制",
+          "start_line": 650,
+          "end_line": 660,
+          "text_sha256": "163cd9c42f95813e38c1dc706d707795f7523f932ca84eced2445ba23a13f4ce",
           "chars": 500
         },
         {
           "id": "D4-38",
           "source": "04_Python_数据结构.md",
-          "section": "5.6. 循环的技巧",
-          "start_line": 643,
-          "end_line": 648,
-          "text_sha256": "1ca2812691650af39a83dee0ee3218e89ebf7720eae110b91dbcdb0e1e940fd2",
-          "chars": 84
+          "section": "5.7. 深入条件控制",
+          "start_line": 660,
+          "end_line": 672,
+          "text_sha256": "69603362af1aa9d86067f20f7669039f23579d4dbf93f4ce269852bff9b369be",
+          "chars": 415
         },
         {
           "id": "D4-39",
           "source": "04_Python_数据结构.md",
-          "section": "5.7. 深入条件控制",
-          "start_line": 650,
-          "end_line": 660,
-          "text_sha256": "0e5b30f8f4915691618512f0da372c5c9b65be70e19486893cf1c098ea505343",
+          "section": "5.8. 序列和其他类型的比较",
+          "start_line": 674,
+          "end_line": 685,
+          "text_sha256": "51767eaef6209415d0549a7434a8ff10ee3687c3556a94bc72bd0075559a7a37",
           "chars": 500
         },
         {
           "id": "D4-40",
           "source": "04_Python_数据结构.md",
-          "section": "5.7. 深入条件控制",
-          "start_line": 658,
-          "end_line": 672,
-          "text_sha256": "3e2926ee5ba93d12638adbe3d09d52960bc145f75f75f7aa901ec136b9f9b537",
-          "chars": 439
-        },
-        {
-          "id": "D4-41",
-          "source": "04_Python_数据结构.md",
           "section": "5.8. 序列和其他类型的比较",
-          "start_line": 674,
-          "end_line": 684,
-          "text_sha256": "90f9ac01ce75d4f75f5335f88c20379e711e40d219238f6cd672211069d736f0",
-          "chars": 500
-        },
-        {
-          "id": "D4-42",
-          "source": "04_Python_数据结构.md",
-          "section": "5.8. 序列和其他类型的比较",
-          "start_line": 682,
+          "start_line": 683,
           "end_line": 693,
-          "text_sha256": "1b2e3495beb8dfd49eacf3fd533aa508534652daf9d7a64556c90bc96f75aaad",
-          "chars": 368
+          "text_sha256": "b622891b83aa1a79a83d12d11604d60604a834e90361c988e921c4d7c3c18be7",
+          "chars": 348
         },
         {
           "id": "D5-1",
@@ -1634,8 +1607,8 @@
           "section": "Python 教程 · 更多控制流工具",
           "start_line": 1,
           "end_line": 5,
-          "text_sha256": "f0c9acad080de2cf4ff5e795e8c5e1ff82b95a88d051be884f86a59ce16a913e",
-          "chars": 165
+          "text_sha256": "db5b88f10574016246b4a6acf467798f546b7c336c6431fa19defe705483eda1",
+          "chars": 159
         },
         {
           "id": "D5-2",
@@ -1643,8 +1616,8 @@
           "section": "4. 更多控制流工具",
           "start_line": 7,
           "end_line": 9,
-          "text_sha256": "da0781063be5c07b8be38870b4ee5550d55f5c76be21394c0e830004084a3cde",
-          "chars": 65
+          "text_sha256": "e63d335d811bbd5db949192f8678954921b769fcd98ce6fd8b7a05f31fe06a3e",
+          "chars": 61
         },
         {
           "id": "D5-3",
@@ -1652,7 +1625,7 @@
           "section": "4.1. `if` 语句",
           "start_line": 11,
           "end_line": 34,
-          "text_sha256": "e0ddd5009ad29e35df0d3bd17d806d0ee259cdf9a58df7003e92b799de4bf0ab",
+          "text_sha256": "9c7b3eb015e573628040476e7e2042987529bcdd11c0a0583ad3e6c0cda27015",
           "chars": 500
         },
         {
@@ -1661,8 +1634,8 @@
           "section": "4.1. `if` 语句",
           "start_line": 32,
           "end_line": 34,
-          "text_sha256": "e758b73fade413bf49204c885836ec914b5f119e54c52103ffae1937ab375b06",
-          "chars": 126
+          "text_sha256": "0416f27d1e95f9c2035506ddb5b35b6d7761230404523844ae27fac6cc976386",
+          "chars": 101
         },
         {
           "id": "D5-5",
@@ -1670,7 +1643,7 @@
           "section": "4.2. `for` 语句",
           "start_line": 36,
           "end_line": 59,
-          "text_sha256": "03168f1fdcf222bb58d15fb194f932f4c9ed483e0dd67573d1ac0f8cc44fc864",
+          "text_sha256": "54497ee625b8e5847c6af0d374cd49fca23dde7e7d131607040c17a3d41cbd1e",
           "chars": 500
         },
         {
@@ -1679,25 +1652,25 @@
           "section": "4.2. `for` 语句",
           "start_line": 56,
           "end_line": 69,
-          "text_sha256": "0944f1ac727c7406777863ae587386120dfa466d464d65edf9cfd8f0a76d3316",
-          "chars": 319
+          "text_sha256": "bbb70be7abdc2ddc7e5eaeeb197ad0a88f821740a5df4a7f51990f05379519f7",
+          "chars": 284
         },
         {
           "id": "D5-7",
           "source": "05_Python_控制流.md",
           "section": "4.3. `range()` 函数",
           "start_line": 71,
-          "end_line": 105,
-          "text_sha256": "0695e036e0e190aac95b59f7898fce7dc0684267cc27a5c9fb47fbff584b1d7f",
+          "end_line": 107,
+          "text_sha256": "30ebf9085a0da7614ac7fba378eba0f68fb2776939da36d22b5413f488e17677",
           "chars": 500
         },
         {
           "id": "D5-8",
           "source": "05_Python_控制流.md",
           "section": "4.3. `range()` 函数",
-          "start_line": 101,
-          "end_line": 128,
-          "text_sha256": "c8a3b8ab76261e191292f30ecde7b762d1bd7b0b06dcc9cca26cfc893762a705",
+          "start_line": 104,
+          "end_line": 136,
+          "text_sha256": "9112601185feba5cba38fd23a937035e5ce6e82ee34922cf617b8eaa59558bfe",
           "chars": 500
         },
         {
@@ -1706,8 +1679,8 @@
           "section": "4.3. `range()` 函数",
           "start_line": 128,
           "end_line": 136,
-          "text_sha256": "daf58d9098a55f1f994bfb7539cb2d7e6e538f93d59822dde1a948b76c1c931a",
-          "chars": 209
+          "text_sha256": "c3c1d91baad9a3aa72defa08488eb525f963136237338487d9e3fe07d91844f5",
+          "chars": 142
         },
         {
           "id": "D5-10",
@@ -1715,34 +1688,34 @@
           "section": "4.4. `break` 和 `continue` 语句",
           "start_line": 138,
           "end_line": 163,
-          "text_sha256": "b29c7f240ff0bd01ed1b64c091f1c64fe2718e5beb081f842b4f0b0337a6a69d",
+          "text_sha256": "c530ed002b75d1621c73b49e004e5ad34a74934ea8be26bca27eb9933650b25b",
           "chars": 500
         },
         {
           "id": "D5-11",
           "source": "05_Python_控制流.md",
           "section": "4.4. `break` 和 `continue` 语句",
-          "start_line": 160,
+          "start_line": 161,
           "end_line": 174,
-          "text_sha256": "5411bc33539927e6057e441d6d3ceeb7bfade14567d6775f7664d880059b6f87",
-          "chars": 320
+          "text_sha256": "edd3ce248a02c2c8bdfba088c7c4a258f983bd02a724ea30ae029dce0f7734f4",
+          "chars": 282
         },
         {
           "id": "D5-12",
           "source": "05_Python_控制流.md",
           "section": "4.5. 循环的 `else` 子句",
           "start_line": 176,
-          "end_line": 193,
-          "text_sha256": "b744165aa9cb45c40e3d7817c8b9f3ca793c47669dc6902b70aea676931e1327",
+          "end_line": 194,
+          "text_sha256": "87a4a88a24b3df3232482330bc59ee482595d5e4ae0ebc42a9c02ff2d092596e",
           "chars": 500
         },
         {
           "id": "D5-13",
           "source": "05_Python_控制流.md",
           "section": "4.5. 循环的 `else` 子句",
-          "start_line": 191,
-          "end_line": 211,
-          "text_sha256": "c628af3f31361c721a0da0c3e678e7838f3fc1228866bb5b2f2cffd827b90043",
+          "start_line": 192,
+          "end_line": 213,
+          "text_sha256": "2b1265a0952715fffd8b5ab934e3b8529be9399c7f41ab42e0bafc3df7260906",
           "chars": 500
         },
         {
@@ -1751,8 +1724,8 @@
           "section": "4.5. 循环的 `else` 子句",
           "start_line": 211,
           "end_line": 213,
-          "text_sha256": "bb03ab20ee25556ce184fd7b868bf2893b0f04783a681da2c726d640dee69c99",
-          "chars": 272
+          "text_sha256": "1ec541dfa604463a0d1e8404cffa6611240d81ba6db6c15886e85fd112771772",
+          "chars": 233
         },
         {
           "id": "D5-15",
@@ -1760,8 +1733,8 @@
           "section": "4.6. `pass` 语句",
           "start_line": 215,
           "end_line": 244,
-          "text_sha256": "89e96b5f86db545a94ff96adcb4ddb0e6928837a9176f999a593de2934beafe7",
-          "chars": 487
+          "text_sha256": "01d4fc5bbf22683bbcdd2d97cb91f18f1a773f27ab34d28b6723552b6a2df200",
+          "chars": 456
         },
         {
           "id": "D5-16",
@@ -1769,34 +1742,34 @@
           "section": "4.7. `match` 语句",
           "start_line": 246,
           "end_line": 262,
-          "text_sha256": "d543153307ac88a19ec3c6f418716d80e9d45c88538ad77aea3c25e3392dd168",
+          "text_sha256": "5e5b89d87be2470ac1791d0c8f625eb1f51ff4492e65c741e3c986ebae0fb538",
           "chars": 500
         },
         {
           "id": "D5-17",
           "source": "05_Python_控制流.md",
           "section": "4.7. `match` 语句",
-          "start_line": 259,
-          "end_line": 288,
-          "text_sha256": "94e46c8c277b238a133139d495a3991c13b364cd864e24a51396a40b5daf307e",
+          "start_line": 260,
+          "end_line": 290,
+          "text_sha256": "361fd7d5264f2f0531bffed8d718913170a9fdb299e1a857a0cf612f0742e3d3",
           "chars": 500
         },
         {
           "id": "D5-18",
           "source": "05_Python_控制流.md",
           "section": "4.7. `match` 语句",
-          "start_line": 284,
-          "end_line": 306,
-          "text_sha256": "d59d04640374fbeb29bbbd2e436620e8e0f7254284f97a60a6e9d644b148d47e",
+          "start_line": 286,
+          "end_line": 308,
+          "text_sha256": "b0f2aa087a0548e881fa910b4e9d2b4b7bf108d9a85f2e02dff102f121be0638",
           "chars": 500
         },
         {
           "id": "D5-19",
           "source": "05_Python_控制流.md",
           "section": "4.7. `match` 语句",
-          "start_line": 302,
-          "end_line": 319,
-          "text_sha256": "1aa2bf85e8a18b76518364d04f8ab647c8b1b9693e4eea174b88e084c1b626ef",
+          "start_line": 306,
+          "end_line": 325,
+          "text_sha256": "956f94f6fa34e24283191416c1ec0e10e9b8ba75c19f359bfa911748aee64326",
           "chars": 500
         },
         {
@@ -1804,45 +1777,45 @@
           "source": "05_Python_控制流.md",
           "section": "4.7. `match` 语句",
           "start_line": 319,
-          "end_line": 336,
-          "text_sha256": "37caadecfdedb66de06ef6e7fdc8df6e400fe6f8dcf8579e12316953f13a3809",
+          "end_line": 342,
+          "text_sha256": "f8cfd8796a2fc3708d3c77138aaedfcd047828f1bb77d25f152813c9bc34b243",
           "chars": 500
         },
         {
           "id": "D5-21",
           "source": "05_Python_控制流.md",
           "section": "4.7. `match` 语句",
-          "start_line": 331,
-          "end_line": 354,
-          "text_sha256": "f45c9f228e9dd245788e534e66db44a52f825d08258ff0c0047d3d057cbba027",
+          "start_line": 336,
+          "end_line": 359,
+          "text_sha256": "b913468f9811776916f839cfafd3df3b35bd500b2ec568ad03b37621630f6d8d",
           "chars": 500
         },
         {
           "id": "D5-22",
           "source": "05_Python_控制流.md",
           "section": "4.7. `match` 语句",
-          "start_line": 350,
+          "start_line": 354,
           "end_line": 374,
-          "text_sha256": "9733508ed00762657ec1ba295da6863cfcd4eb26f07b446dd3182804ed0b0efa",
+          "text_sha256": "6ad91fffd728e96c1ed0ebbc0b844cac78d10f94a5b616e20fa0a5464ddcfbbf",
           "chars": 500
         },
         {
           "id": "D5-23",
           "source": "05_Python_控制流.md",
           "section": "4.7. `match` 语句",
-          "start_line": 371,
-          "end_line": 394,
-          "text_sha256": "68737d52a5636c946ccb99c5003cf222d23a8eb33ba661119096f34de70bf106",
+          "start_line": 374,
+          "end_line": 402,
+          "text_sha256": "29501083063cadef23542f1e2a3d2bc7c61cecbbbf80963b56c273a9f199a72c",
           "chars": 500
         },
         {
           "id": "D5-24",
           "source": "05_Python_控制流.md",
           "section": "4.7. `match` 语句",
-          "start_line": 390,
+          "start_line": 399,
           "end_line": 411,
-          "text_sha256": "5ca6b78aecadc2b857513be1a9e7360f83959e301d8585a7ef1190e04a6d45a0",
-          "chars": 446
+          "text_sha256": "56f0e5edd486c19e2dfc47a12d8e40d99b082ce1a945530a9591f3b70e4feb1b",
+          "chars": 279
         },
         {
           "id": "D5-25",
@@ -1850,44 +1823,44 @@
           "section": "4.8. 定义函数",
           "start_line": 413,
           "end_line": 434,
-          "text_sha256": "1d18db9896b6a6dae014da0916f350736f98ec2eafc1fa816406ccc8631783ca",
+          "text_sha256": "2987d94ecbbf28b9ba86fcf273f4fcbf015c83b7efcab56129fd2cb3bfe9a49a",
           "chars": 500
         },
         {
           "id": "D5-26",
           "source": "05_Python_控制流.md",
           "section": "4.8. 定义函数",
-          "start_line": 432,
-          "end_line": 440,
-          "text_sha256": "0e247b3f89c8ecf8a87d5a89dfdf9c8291075946c1a5833abdb8c58067497932",
+          "start_line": 434,
+          "end_line": 444,
+          "text_sha256": "5e399c33496f262302df9e5c3c8c94a1f5723b557ae8907730c5eca966d84112",
           "chars": 500
         },
         {
           "id": "D5-27",
           "source": "05_Python_控制流.md",
           "section": "4.8. 定义函数",
-          "start_line": 438,
-          "end_line": 463,
-          "text_sha256": "1bfe1de387ce55695e39b9782d2a30697379754d617a400b999d2c2c494d18ad",
+          "start_line": 440,
+          "end_line": 464,
+          "text_sha256": "31605baf78f4990bf87f3c7fe90dee7615452ec22585d16cc2554ad5b2650ab2",
           "chars": 500
         },
         {
           "id": "D5-28",
           "source": "05_Python_控制流.md",
           "section": "4.8. 定义函数",
-          "start_line": 460,
-          "end_line": 481,
-          "text_sha256": "f2bbf88f022f31ecf802b03d901664efbb16a38eb6be18e2b8b14ce3b06f736d",
+          "start_line": 463,
+          "end_line": 484,
+          "text_sha256": "9ee7b561e6a760327afc89b0f3870380b49a847c5092e4110e9c8ff00c3f0fdf",
           "chars": 500
         },
         {
           "id": "D5-29",
           "source": "05_Python_控制流.md",
           "section": "4.8. 定义函数",
-          "start_line": 477,
+          "start_line": 481,
           "end_line": 484,
-          "text_sha256": "616202e4e92f5be8c3e3e43920de705196de212e1b4de6cb1bc5a9785b41ad22",
-          "chars": 398
+          "text_sha256": "626c9206cffb46aa0292bbccafc0b88130d094ba6e7f9ccdc4d86b9e8d6d17cb",
+          "chars": 325
         },
         {
           "id": "D5-30",
@@ -1895,8 +1868,8 @@
           "section": "4.9. 函数定义详解",
           "start_line": 486,
           "end_line": 488,
-          "text_sha256": "02a4febce84ddee0f434c133b0fca84b5873927b327f924c6099ab18c8675b24",
-          "chars": 52
+          "text_sha256": "9e5e578cec12dd8822081ba60837fc3f2cf13416021ce1a2d90adccb4f63a9f4",
+          "chars": 48
         },
         {
           "id": "D5-31",
@@ -1904,16 +1877,16 @@
           "section": "4.9.1. 默认值参数",
           "start_line": 490,
           "end_line": 512,
-          "text_sha256": "aa379bf810ca4f6ae7fa26dd4f7f50a8f24bcf985b7c90edf3493a7033cc4da7",
+          "text_sha256": "bc4dfe328ecf2b620ce052b39bf42f646506e80a778e693a4b6e53057449db80",
           "chars": 500
         },
         {
           "id": "D5-32",
           "source": "05_Python_控制流.md",
           "section": "4.9.1. 默认值参数",
-          "start_line": 504,
-          "end_line": 540,
-          "text_sha256": "eb3a2566d6c0b2f4138d5571d6803db7fd964ee049513d1d4aca164380a0115d",
+          "start_line": 505,
+          "end_line": 545,
+          "text_sha256": "9395d984c1b44e44d26e1f25078a549c7443090a31c6ec39eb807b868ca9555b",
           "chars": 500
         },
         {
@@ -1922,8 +1895,8 @@
           "section": "4.9.1. 默认值参数",
           "start_line": 537,
           "end_line": 568,
-          "text_sha256": "7a89bfeca48c44449823cf70bb860a8a2514234a601829bbbcaf8b904879d32c",
-          "chars": 356
+          "text_sha256": "c7ecc4254c978fce0807927b2882d6c94f724dacf474e007e56b0863ab0c3aff",
+          "chars": 276
         },
         {
           "id": "D5-34",
@@ -1931,53 +1904,53 @@
           "section": "4.9.2. 关键字参数",
           "start_line": 570,
           "end_line": 587,
-          "text_sha256": "c96f6dca64c5d141edcef1e0e083faa3948fe875310a60aae04eac3ad84297c7",
+          "text_sha256": "c49280d9249aacef2e3e3bd73301832a691c83f07c9d4e39c04d75b2edb2b7d5",
           "chars": 500
         },
         {
           "id": "D5-35",
           "source": "05_Python_控制流.md",
           "section": "4.9.2. 关键字参数",
-          "start_line": 583,
+          "start_line": 586,
           "end_line": 599,
-          "text_sha256": "c2570177a65f9fc68f055792e5206e8d0e184627cd789ab34e7290abea00ea4b",
+          "text_sha256": "00122dbd1c0515c1ee858d394bb3b9ac94fe9143e38ef3ec394e487622985072",
           "chars": 500
         },
         {
           "id": "D5-36",
           "source": "05_Python_控制流.md",
           "section": "4.9.2. 关键字参数",
-          "start_line": 593,
-          "end_line": 613,
-          "text_sha256": "f94e55806124c812e34f4c70dccb5f194f8c92483cc279da702aa4f3b5b26b2b",
+          "start_line": 597,
+          "end_line": 614,
+          "text_sha256": "4841b06a6eee6349f1397d9518d98e249b838b9bc5c02321315b1cc135b2471d",
           "chars": 500
         },
         {
           "id": "D5-37",
           "source": "05_Python_控制流.md",
           "section": "4.9.2. 关键字参数",
-          "start_line": 609,
-          "end_line": 623,
-          "text_sha256": "46d241478b055edf236314ab641d4d59f7712774d396693f9008faef11033102",
+          "start_line": 612,
+          "end_line": 625,
+          "text_sha256": "6ecdf067e8d48078e9a95cd51628aa6f06989a6b405abd8e14f18cde7c0c676f",
           "chars": 500
         },
         {
           "id": "D5-38",
           "source": "05_Python_控制流.md",
           "section": "4.9.2. 关键字参数",
-          "start_line": 621,
-          "end_line": 643,
-          "text_sha256": "ba14a2aa9bfa44cbcefdefb93de15f268f15a517af22f6d57409d65bf901c167",
+          "start_line": 623,
+          "end_line": 647,
+          "text_sha256": "38718571dcbdc9df066c09a78c5a031cabac9ab5f87d4fc3358dfd8f2251c6a3",
           "chars": 500
         },
         {
           "id": "D5-39",
           "source": "05_Python_控制流.md",
           "section": "4.9.2. 关键字参数",
-          "start_line": 638,
+          "start_line": 642,
           "end_line": 657,
-          "text_sha256": "02219d343014a4870c438690d28da0193c1243626cba6ba13e1e9a20db7102ca",
-          "chars": 390
+          "text_sha256": "04544c3dad39d5a3c284804964a1354f4c5625cf7debf402b32f009ab11addbc",
+          "chars": 301
         },
         {
           "id": "D5-40",
@@ -1985,8 +1958,8 @@
           "section": "4.9.3. 特殊参数",
           "start_line": 659,
           "end_line": 675,
-          "text_sha256": "e72df42ca0374666adcce0ec1d1fae1d4e810ce15ae25f4cdffa07017c783551",
-          "chars": 459
+          "text_sha256": "391b986417b3dc2b09d5955e88bd87107ba6affa8d91798e158ba6dda6dfe488",
+          "chars": 441
         },
         {
           "id": "D5-41",
@@ -1994,8 +1967,8 @@
           "section": "4.9.3.1. 位置或关键字参数",
           "start_line": 677,
           "end_line": 679,
-          "text_sha256": "4e1aebb0369d7ea8b730d13c88ce9507527720976b95cfaab578bc1596ba2e10",
-          "chars": 68
+          "text_sha256": "1c3cbdfcde589853b1d773cc5dd5a5b0a9932bbc5002ff64c195f4447113b273",
+          "chars": 64
         },
         {
           "id": "D5-42",
@@ -2003,8 +1976,8 @@
           "section": "4.9.3.2. 仅位置参数",
           "start_line": 681,
           "end_line": 685,
-          "text_sha256": "0ec2a18383e53aece2817158fd50fadc8fa6c4cf560ab1254b4794a45534f5a7",
-          "chars": 184
+          "text_sha256": "2fcb59f4a04325f28b50d3b13a784861b611727e81c4835bf68a718c3e63c470",
+          "chars": 178
         },
         {
           "id": "D5-43",
@@ -2012,179 +1985,161 @@
           "section": "4.9.3.3. 仅限关键字参数",
           "start_line": 687,
           "end_line": 689,
-          "text_sha256": "3e54de33f5f40b8c882fc6f2aaf448b593c901cd79385519907328cb502ca4e7",
-          "chars": 87
+          "text_sha256": "ef9424ba7ee7184a7011cf2b1419f6ffc35240d17e055caa91b4f5fdf5b939a9",
+          "chars": 83
         },
         {
           "id": "D5-44",
           "source": "05_Python_控制流.md",
           "section": "4.9.3.4. 函数示例",
           "start_line": 691,
-          "end_line": 721,
-          "text_sha256": "411d706d6392341232687819f2b8495fc715d7d4460222ef8b40cf6fcf6a2cce",
+          "end_line": 723,
+          "text_sha256": "0446a0eadffd9c298f3792b6e10b5a1be5da65f25f6694b6f3428152d025fbb0",
           "chars": 500
         },
         {
           "id": "D5-45",
           "source": "05_Python_控制流.md",
           "section": "4.9.3.4. 函数示例",
-          "start_line": 713,
-          "end_line": 739,
-          "text_sha256": "7df211f7819593d168bef111181542cfd71ab2057d02cfd8c7c61ff9d3d2806f",
+          "start_line": 716,
+          "end_line": 740,
+          "text_sha256": "49353d0d1dfb61bbf6fb5b34e353161f161e64c27292ab72a4f023c66a8870aa",
           "chars": 500
         },
         {
           "id": "D5-46",
           "source": "05_Python_控制流.md",
           "section": "4.9.3.4. 函数示例",
-          "start_line": 737,
-          "end_line": 758,
-          "text_sha256": "56646ad39158976d662ee5c28d2e1cbd3b5d31aad3b03447d079663b25dea5eb",
+          "start_line": 739,
+          "end_line": 761,
+          "text_sha256": "576a195a16cfdff81b5938db452ae3ec216cbce7cb2e1770704d6ea7af04fe29",
           "chars": 500
         },
         {
           "id": "D5-47",
           "source": "05_Python_控制流.md",
           "section": "4.9.3.4. 函数示例",
-          "start_line": 753,
-          "end_line": 776,
-          "text_sha256": "95a35ba80230a2a3b0fb349fd6f579d8786637ddd910ecc45d3d9934c8be1072",
+          "start_line": 758,
+          "end_line": 780,
+          "text_sha256": "6632de1ac465813d07dfa6677ecfdaeb2e97a4d8be275a9b0c9721eb1ce9916c",
           "chars": 500
         },
         {
           "id": "D5-48",
           "source": "05_Python_控制流.md",
           "section": "4.9.3.4. 函数示例",
-          "start_line": 770,
+          "start_line": 776,
           "end_line": 798,
-          "text_sha256": "83bd3b79e61d69b9a346830dff7f3de0f95702ebafd0a7440d8960ee0587da75",
-          "chars": 500
+          "text_sha256": "54f96b72cc519348d1fd9c7289da4abfc0777586d0e772aeb853bf5be25609a2",
+          "chars": 421
         },
         {
           "id": "D5-49",
           "source": "05_Python_控制流.md",
-          "section": "4.9.3.4. 函数示例",
-          "start_line": 791,
-          "end_line": 798,
-          "text_sha256": "77efa183fa9deee88134bb29a5750462a6dc8be9bfad8c890a477d3b26028fa6",
-          "chars": 110
+          "section": "4.9.3.5. 小结",
+          "start_line": 800,
+          "end_line": 818,
+          "text_sha256": "0ecec551d6009cdf88f657e160e1d26311439570a60376949b83605ee4cd092b",
+          "chars": 280
         },
         {
           "id": "D5-50",
           "source": "05_Python_控制流.md",
-          "section": "4.9.3.5. 小结",
-          "start_line": 800,
-          "end_line": 818,
-          "text_sha256": "dfb568fb768e9afb5718fc1a42b4cc6bd770df46e03bc19d052a983f98a986d7",
-          "chars": 300
+          "section": "4.9.4. 任意实参列表",
+          "start_line": 820,
+          "end_line": 841,
+          "text_sha256": "2f43e743882feaff556048d9592f3c4f7f59c6c71302b1f8cf9a0e54fcc08c4e",
+          "chars": 485
         },
         {
           "id": "D5-51",
           "source": "05_Python_控制流.md",
-          "section": "4.9.4. 任意实参列表",
-          "start_line": 820,
-          "end_line": 839,
-          "text_sha256": "0a8ad3ebdb2a618b8f77061f942edbd51cb91cf128931090d8f1d98f8dcb4fbe",
+          "section": "4.9.5. 解包实参列表",
+          "start_line": 843,
+          "end_line": 861,
+          "text_sha256": "3752cc7109947dc300eb4ec81c77390220e34537fdb26b8a22fc395edc16f3cc",
           "chars": 500
         },
         {
           "id": "D5-52",
           "source": "05_Python_控制流.md",
-          "section": "4.9.4. 任意实参列表",
-          "start_line": 837,
-          "end_line": 841,
-          "text_sha256": "aceb6152d2d5ca62b3affef2a0791d289690deefc5c4a5af52b075f953a89671",
-          "chars": 88
+          "section": "4.9.5. 解包实参列表",
+          "start_line": 860,
+          "end_line": 868,
+          "text_sha256": "1611db73469e69ddb2e5e67d132c1a062bd50823fcfac33bf03f26c9c04e2e95",
+          "chars": 325
         },
         {
           "id": "D5-53",
           "source": "05_Python_控制流.md",
-          "section": "4.9.5. 解包实参列表",
-          "start_line": 843,
-          "end_line": 861,
-          "text_sha256": "3bc8c7b5fc159b49616c68056b4e8b050c995b3c97b1217fa98b45324134a39a",
+          "section": "4.9.6. Lambda 表达式",
+          "start_line": 870,
+          "end_line": 890,
+          "text_sha256": "617815a70b44518a7b7858033e1d9545ca6664453b3ccf96be1e7d47ffde5d9f",
           "chars": 500
         },
         {
           "id": "D5-54",
           "source": "05_Python_控制流.md",
-          "section": "4.9.5. 解包实参列表",
-          "start_line": 860,
-          "end_line": 868,
-          "text_sha256": "53e7a8f2a90c612aea6adf8851ce16b073f3dba48baf163595432f8ba34e5be6",
-          "chars": 352
+          "section": "4.9.6. Lambda 表达式",
+          "start_line": 889,
+          "end_line": 894,
+          "text_sha256": "1e4b63cf8750ae4a5831a848f1352d8ff71c8f4107ae82d185291379eb3a946b",
+          "chars": 154
         },
         {
           "id": "D5-55",
           "source": "05_Python_控制流.md",
-          "section": "4.9.6. Lambda 表达式",
-          "start_line": 870,
-          "end_line": 890,
-          "text_sha256": "bec28c7ea72837c6b4d3f89f50ee69ef06bd0c066405f8e1538527b0b21c55e9",
+          "section": "4.9.7. 文档字符串",
+          "start_line": 896,
+          "end_line": 920,
+          "text_sha256": "3d81ca929fe7540748a7092a775951a07609c9459ab59517a8feb0c088d390d4",
           "chars": 500
         },
         {
           "id": "D5-56",
           "source": "05_Python_控制流.md",
-          "section": "4.9.6. Lambda 表达式",
-          "start_line": 889,
-          "end_line": 894,
-          "text_sha256": "ab4994f3c380df89e319537676f4af1ad1326acfa79163f2b5f9be56f2e50ddb",
-          "chars": 180
+          "section": "4.9.7. 文档字符串",
+          "start_line": 915,
+          "end_line": 927,
+          "text_sha256": "859ab92ae4c5fdd7f6bfa45052192282be2449a35c9f25718e2f9b8162788eec",
+          "chars": 170
         },
         {
           "id": "D5-57",
           "source": "05_Python_控制流.md",
-          "section": "4.9.7. 文档字符串",
-          "start_line": 896,
-          "end_line": 919,
-          "text_sha256": "8d433455800df323985db4dca6a878e0a24e80ec3aa43a367c994b35462ea802",
+          "section": "4.9.8. 函数注解",
+          "start_line": 929,
+          "end_line": 942,
+          "text_sha256": "a74bc0073a4cd891d8aa10068c10c383a4952c53ee8d60e9af8c3a746ed12070",
           "chars": 500
         },
         {
           "id": "D5-58",
           "source": "05_Python_控制流.md",
-          "section": "4.9.7. 文档字符串",
-          "start_line": 914,
-          "end_line": 927,
-          "text_sha256": "e0803f5bfb7d18d04da2628d102ede962425958c1d795edcb12a3917d225e15a",
-          "chars": 203
+          "section": "4.9.8. 函数注解",
+          "start_line": 939,
+          "end_line": 946,
+          "text_sha256": "e04853dd9633111e1ad353fcf6faee1df4937c6665614d99015c1e2148126efd",
+          "chars": 159
         },
         {
           "id": "D5-59",
           "source": "05_Python_控制流.md",
-          "section": "4.9.8. 函数注解",
-          "start_line": 929,
-          "end_line": 942,
-          "text_sha256": "fa443a50d22b6a76e2a1d710fd1ff451a623f15533c2a4fa4e415be050435239",
+          "section": "4.10. 小插曲：编码风格",
+          "start_line": 948,
+          "end_line": 977,
+          "text_sha256": "57506d1877b12dbca6293133cbea68a665743a6309ace89c1598b76c3c3008c3",
           "chars": 500
         },
         {
           "id": "D5-60",
           "source": "05_Python_控制流.md",
-          "section": "4.9.8. 函数注解",
-          "start_line": 939,
-          "end_line": 946,
-          "text_sha256": "281c32f2499e34c166ba58af5a77a0e0a3697ae8fd36f31c9ac1fb5531409a27",
-          "chars": 178
-        },
-        {
-          "id": "D5-61",
-          "source": "05_Python_控制流.md",
           "section": "4.10. 小插曲：编码风格",
-          "start_line": 948,
-          "end_line": 975,
-          "text_sha256": "09a2d8ecc5d5147f02744493a336e715eab512da2dcff42050492361da373893",
-          "chars": 500
-        },
-        {
-          "id": "D5-62",
-          "source": "05_Python_控制流.md",
-          "section": "4.10. 小插曲：编码风格",
-          "start_line": 968,
+          "start_line": 974,
           "end_line": 987,
-          "text_sha256": "e306eb3a3a212502617427db45ea21420b76f34e5454f381815f272ee30fb16d",
-          "chars": 379
+          "text_sha256": "f8d5ec02c3f0ff53c600bf8d4ff253dcd377b93b0ba506d85adbcdf96f09e10d",
+          "chars": 339
         }
       ],
       "queries": [
@@ -2195,15 +2150,15 @@
           "hits": [
             {
               "id": "D1-6",
-              "score": 0.13742291831651376
+              "score": 0.14114040807333283
             },
             {
               "id": "D1-27",
-              "score": 0.10438569993814421
+              "score": 0.10248406284399822
             },
             {
               "id": "D1-2",
-              "score": 0.09598017903194009
+              "score": 0.09694512603959825
             }
           ]
         },
@@ -2214,15 +2169,15 @@
           "hits": [
             {
               "id": "D3-14",
-              "score": 0.16162346000393618
+              "score": 0.18192442381953372
             },
             {
-              "id": "D2-9",
-              "score": 0.12487049378286404
+              "id": "D2-10",
+              "score": 0.12123012440238383
             },
             {
-              "id": "D2-11",
-              "score": 0.11555363193051109
+              "id": "D2-8",
+              "score": 0.11592566857244299
             }
           ]
         },
@@ -2233,11 +2188,11 @@
           "hits": [
             {
               "id": "D4-8",
-              "score": 0.2088744672954892
+              "score": 0.20628670878017835
             },
             {
               "id": "D4-9",
-              "score": 0.10812597241803859
+              "score": 0.10676807536465514
             }
           ]
         },
@@ -2248,15 +2203,15 @@
           "hits": [
             {
               "id": "D5-7",
-              "score": 0.14210021315155255
+              "score": 0.1356855725236385
             },
             {
               "id": "D5-8",
-              "score": 0.12257562283297131
+              "score": 0.12526980505362734
             },
             {
-              "id": "D4-36",
-              "score": 0.11545819288544672
+              "id": "D3-2",
+              "score": 0.109457703132879
             }
           ]
         },
@@ -2763,8 +2718,8 @@
           "section": "Rust 程序设计语言 · 什么是所有权",
           "start_line": 1,
           "end_line": 5,
-          "text_sha256": "f7386a872ff6d1932e4dff0ff8d9e31c309c38f50cd052ea35aac4ba653f1c53",
-          "chars": 149
+          "text_sha256": "cbe5f8e24b51b11251e0506f99f490a2b32a6d277dc55dd86be9e6c7ceeefa4c",
+          "chars": 143
         },
         {
           "id": "D9-2",
@@ -2772,7 +2727,7 @@
           "section": "什么是所有权？",
           "start_line": 7,
           "end_line": 19,
-          "text_sha256": "3ce2c57f84cff2964eef6c4b4f5f4047217aadb8c5bf660be6287f8a98f57417",
+          "text_sha256": "943e140abc4908006b251f49fe50c973995df529a40073708d19ea74e9087051",
           "chars": 500
         },
         {
@@ -2781,7 +2736,7 @@
           "section": "什么是所有权？",
           "start_line": 17,
           "end_line": 23,
-          "text_sha256": "4e7d920256d02f32736b8dff2f89d9e633e15ad20bfe97293f5218cb721645c7",
+          "text_sha256": "233f5550d14ef5a943c374462d270c1060910afe61618993f98375d116aa665b",
           "chars": 500
         },
         {
@@ -2790,7 +2745,7 @@
           "section": "什么是所有权？",
           "start_line": 23,
           "end_line": 29,
-          "text_sha256": "c8d9cce6b5711ae8f45d5430e383c2e2efaf91436edb75b90ddfaf00a341c245",
+          "text_sha256": "337d269618c4e86d52ededd1c6fa3f672e08f59b69e407f1e13cd2639f32719c",
           "chars": 500
         },
         {
@@ -2799,8 +2754,8 @@
           "section": "什么是所有权？",
           "start_line": 27,
           "end_line": 33,
-          "text_sha256": "bd59941f74b97267717ee55dca1712e77a123283bf919d7837f212f94a230ace",
-          "chars": 488
+          "text_sha256": "88a641af482014d64387b709212a05f765d3e3d9fe76b82ffea3df852e52b41f",
+          "chars": 460
         },
         {
           "id": "D9-6",
@@ -2808,8 +2763,8 @@
           "section": "所有权规则",
           "start_line": 35,
           "end_line": 41,
-          "text_sha256": "deb1c87525df12aca63d9abc6cc69d51f6f1ea4290198aa1b63178763ec20276",
-          "chars": 144
+          "text_sha256": "cd7fc4bd56bd32d0e87a9924af45cd777546f639cf810311f23f2b2e74ff110f",
+          "chars": 136
         },
         {
           "id": "D9-7",
@@ -2817,7 +2772,7 @@
           "section": "变量作用域",
           "start_line": 43,
           "end_line": 59,
-          "text_sha256": "d29aa77a936d7a3dac6518e4b4edda61264dcb5bab84f74c34a77253947e7d81",
+          "text_sha256": "52035e184421d6583651db91340b3cce341070ef786dba7a601798a666312618",
           "chars": 500
         },
         {
@@ -2826,8 +2781,8 @@
           "section": "变量作用域",
           "start_line": 56,
           "end_line": 66,
-          "text_sha256": "eb95de4eeeb6350e5bbd13c14560b8d4420965721e818c0f001411895a450cbd",
-          "chars": 248
+          "text_sha256": "ddc153f6d4bbb93e83983d9950af2123556776b468d4489b02ca77c2c4bd7de7",
+          "chars": 223
         },
         {
           "id": "D9-9",
@@ -2835,7 +2790,7 @@
           "section": "`String` 类型",
           "start_line": 68,
           "end_line": 74,
-          "text_sha256": "00a250ea1f9d383505a63527cae52f3494f8dd34ada54278b41933782684b61d",
+          "text_sha256": "6cfbdb422109e4d1828d6c97860f25ac9589ba61acdc809f154b8cdf47cef917",
           "chars": 500
         },
         {
@@ -2844,7 +2799,7 @@
           "section": "`String` 类型",
           "start_line": 74,
           "end_line": 85,
-          "text_sha256": "2b89ccc14f7f62a1934188a6ec31bf0b9805c90bf4d6b8c8a5a3da2a589f4652",
+          "text_sha256": "e1ccd96914d132a3a6af4794dab6eb2fe6e7c925e9e0413588d7c1b4291a4f31",
           "chars": 500
         },
         {
@@ -2853,8 +2808,8 @@
           "section": "`String` 类型",
           "start_line": 80,
           "end_line": 88,
-          "text_sha256": "2ced3705a0a44e54a547ccb8560a65586a95b39e8cee03e6c23ed424623c157e",
-          "chars": 221
+          "text_sha256": "43c4a8b4cd85a53345c5a8f8aa07a7f46fc43347074a9fe64bef4dc77e148519",
+          "chars": 199
         },
         {
           "id": "D9-12",
@@ -2862,7 +2817,7 @@
           "section": "内存与分配",
           "start_line": 90,
           "end_line": 101,
-          "text_sha256": "829886e262ce45ea37a9befffbbf630dadbd7553c6b068706a04a5c15677de0c",
+          "text_sha256": "852b6142829b2fb6f5dfe331c94bf45fc5327235cd2a86bfcd50a79d798e67f0",
           "chars": 500
         },
         {
@@ -2871,7 +2826,7 @@
           "section": "内存与分配",
           "start_line": 101,
           "end_line": 109,
-          "text_sha256": "6eb7aa68b5aacd707a28aeb23d3746c7fb08a1e2194a2cf3ef153c3958d7a379",
+          "text_sha256": "bb4ef6cb956d4844cc28d57c26bf665bf79a30eae9c431b88756103ec48b6110",
           "chars": 500
         },
         {
@@ -2880,8 +2835,8 @@
           "section": "内存与分配",
           "start_line": 109,
           "end_line": 113,
-          "text_sha256": "57c8f1e6121b177001fc0b014a82143812fcbf7c02c5a10b4177ff148e630cfb",
-          "chars": 405
+          "text_sha256": "b11f22acc00202815c5332f271c887d280f43666e3105e5068b1c24a38cc43bc",
+          "chars": 380
         },
         {
           "id": "D9-15",
@@ -2889,7 +2844,7 @@
           "section": "变量与数据交互的方式（一）：移动",
           "start_line": 115,
           "end_line": 130,
-          "text_sha256": "00aad07bb3f866e28663cc4c7433ff6ba15354e20b5d6177f3c00cf9d5891208",
+          "text_sha256": "80e4de945b857e66e92425d0e36e47cfbdde23428fdaef2bff4f50a78395b0c0",
           "chars": 500
         },
         {
@@ -2898,7 +2853,7 @@
           "section": "变量与数据交互的方式（一）：移动",
           "start_line": 130,
           "end_line": 141,
-          "text_sha256": "dded2dba84c3dd3ebdd4ae92c43ff7f065f01569ffbd85ba43e33ddbdc886f82",
+          "text_sha256": "02f661d3c69ccbeb59ebe38ca90fa4795b82fe6ef81563e7efae4d0c8a249503",
           "chars": 500
         },
         {
@@ -2907,16 +2862,16 @@
           "section": "变量与数据交互的方式（一）：移动",
           "start_line": 139,
           "end_line": 149,
-          "text_sha256": "1662dd6e8139ee1bb12ee86f1188a1d9ce63a0a29c83ad70ec398fd272d4b130",
+          "text_sha256": "3e50d6164b067fb0fddc82ffb5419267d6b87060aa59b6d23d481516a1ed33e7",
           "chars": 500
         },
         {
           "id": "D9-18",
           "source": "01_Rust_所有权.md",
           "section": "变量与数据交互的方式（一）：移动",
-          "start_line": 147,
+          "start_line": 148,
           "end_line": 155,
-          "text_sha256": "63545c90e2a7f62bc561279ed8f0d8b6f79ec60f9f333163fd3ca66f0ecf7a81",
+          "text_sha256": "3c82d06127d2f1489ab02e873f4b8a688457869c8cf0d086b1bf87ab2a350f3d",
           "chars": 500
         },
         {
@@ -2925,26 +2880,26 @@
           "section": "变量与数据交互的方式（一）：移动",
           "start_line": 155,
           "end_line": 166,
-          "text_sha256": "42e224c692d6af8220acdc73936b858b2830fe7f4ca38860a6d017fc7b176ae8",
+          "text_sha256": "7bd11df27b57c5faa4ee23381dafc2d15d6ac817d76e921d4a11eaeddeb0fb76",
           "chars": 500
         },
         {
           "id": "D9-20",
           "source": "01_Rust_所有权.md",
           "section": "变量与数据交互的方式（一）：移动",
-          "start_line": 162,
-          "end_line": 173,
-          "text_sha256": "5601c0826630a35d84be175565e5cfa5a2a3b733d3425a670eeb13bdf3403ee6",
+          "start_line": 166,
+          "end_line": 177,
+          "text_sha256": "9a761cb74bcd9b92eb37bd8a6f10a2e83a48b530f9d1f1be667b3b4309fb9840",
           "chars": 500
         },
         {
           "id": "D9-21",
           "source": "01_Rust_所有权.md",
           "section": "变量与数据交互的方式（一）：移动",
-          "start_line": 171,
+          "start_line": 173,
           "end_line": 177,
-          "text_sha256": "9308ac286e3f5ae7a74908e8bb5b682462d19d83dfa999e5a9e55f9eb83f462b",
-          "chars": 209
+          "text_sha256": "6118524290e98359e488200b9a141c2b69da904464f6810fe1d990a5e4fc2ac3",
+          "chars": 145
         },
         {
           "id": "D9-22",
@@ -2952,8 +2907,8 @@
           "section": "变量与数据交互的方式（二）：克隆",
           "start_line": 179,
           "end_line": 191,
-          "text_sha256": "955bc83464339a92c4f8494554ee77f1355e7d869e143f3550772674a1f1a918",
-          "chars": 405
+          "text_sha256": "147801166a0431c4e9f2655f67fdc17c4b2a56441fdfa181f1c24e9942e50243",
+          "chars": 391
         },
         {
           "id": "D9-23",
@@ -2961,7 +2916,7 @@
           "section": "只在栈上的数据：拷贝",
           "start_line": 193,
           "end_line": 205,
-          "text_sha256": "e85a0a91e622bbea1221d3d73a87aad079bf7d209d2aeb1c0b561e2f09ea4b98",
+          "text_sha256": "bf0786b7fbbc1fffa8dd79772f9eb4bad3e4da7827816fd9df469fca5a2b7706",
           "chars": 500
         },
         {
@@ -2970,17 +2925,17 @@
           "section": "只在栈上的数据：拷贝",
           "start_line": 205,
           "end_line": 213,
-          "text_sha256": "6ec15ef8ea36fa8ef4a130f780f27869b3c4ce163c03a663321be3a1719b3c37",
+          "text_sha256": "aaf517f2f86f1a9c7d6e7b2ae090bbb1ae9f1f18a12513d5aa8071c453c653c4",
           "chars": 500
         },
         {
           "id": "D9-25",
           "source": "01_Rust_所有权.md",
           "section": "只在栈上的数据：拷贝",
-          "start_line": 209,
+          "start_line": 210,
           "end_line": 213,
-          "text_sha256": "515d3272cc242f191df4f77cc02dc2ee41575a98bbd6f2a676d7a916a8358aa4",
-          "chars": 162
+          "text_sha256": "4174b0e988872cc7922f96d7541412aea3d22b7608e910c4beeb5558416f6197",
+          "chars": 140
         },
         {
           "id": "D9-26",
@@ -2988,8 +2943,8 @@
           "section": "所有权与函数",
           "start_line": 215,
           "end_line": 227,
-          "text_sha256": "2f569206b2a39d39a33b495c61ec6cfa97c2fc8eca22a7aa7f28aeb72bcbaa26",
-          "chars": 429
+          "text_sha256": "0ea8b471087c0e1e7a96047b14e752081d1e23af4de2348df949278adc93f15f",
+          "chars": 415
         },
         {
           "id": "D9-27",
@@ -2997,7 +2952,7 @@
           "section": "返回值与作用域",
           "start_line": 229,
           "end_line": 247,
-          "text_sha256": "671ca242b57ada45ae3eb53c648b9a5640571ad16a78e7296141a33303f8679a",
+          "text_sha256": "07a43fbf0e44f7ef480ce0445292711b599e0cd7997a46f6e29f0d4ea325f45c",
           "chars": 500
         },
         {
@@ -3005,8 +2960,8 @@
           "source": "01_Rust_所有权.md",
           "section": "返回值与作用域",
           "start_line": 243,
-          "end_line": 260,
-          "text_sha256": "707fbb81a796c7f7b5e03ddeae20da2f33127b26649e60fceb3621a8cc79b22e",
+          "end_line": 261,
+          "text_sha256": "5ec4bd098bc4c5ee9e099da6574cd8b80281b5ad070d4ca0f28c4fa9687d3397",
           "chars": 500
         },
         {
@@ -3015,8 +2970,8 @@
           "section": "返回值与作用域",
           "start_line": 259,
           "end_line": 262,
-          "text_sha256": "ec619434a7098f9cb32812d0e5a35b0d74c149ef17833aab570edc752f0acf95",
-          "chars": 262
+          "text_sha256": "e2f6a92bb8c8586c482e7d118729d2f06e61da80ac9f9e5ae6234f8fcc3e713c",
+          "chars": 228
         },
         {
           "id": "D10-1",
@@ -3024,8 +2979,8 @@
           "section": "Rust 程序设计语言 · 引用与借用",
           "start_line": 1,
           "end_line": 5,
-          "text_sha256": "4b5472b8d2c0e24ba7ad422a49bfa34e431fe5027d45ee5e89ab011cfa44310b",
-          "chars": 148
+          "text_sha256": "a742ac4da0f91426d0f88bd6259fd651f4523c69743996c258f4a03356e1d480",
+          "chars": 142
         },
         {
           "id": "D10-2",
@@ -3033,7 +2988,7 @@
           "section": "引用与借用",
           "start_line": 7,
           "end_line": 21,
-          "text_sha256": "c22345262b71fb326b8cbae86e46f751b56f51cb6552247e4a1f59531bb56140",
+          "text_sha256": "c85b426b96110f53efcca93e3509ef95a160a3b709779f690f2b90828982b5e7",
           "chars": 500
         },
         {
@@ -3041,8 +2996,8 @@
           "source": "02_Rust_借用与引用.md",
           "section": "引用与借用",
           "start_line": 19,
-          "end_line": 32,
-          "text_sha256": "8e3e1d754b1d2bb162b2f168175d514b3b842a6ae9c9c930c3dcfb610b1bcdf5",
+          "end_line": 35,
+          "text_sha256": "b6a31b78605e9a57a11480e1cff91e83bcb8ec55012c4c9cd9899f5663b925c2",
           "chars": 500
         },
         {
@@ -3050,117 +3005,108 @@
           "source": "02_Rust_借用与引用.md",
           "section": "引用与借用",
           "start_line": 32,
-          "end_line": 45,
-          "text_sha256": "f289e18ebbdc30dc312e7e3ec2a519e705ee5448510c87a57a3b58d63a011bac",
+          "end_line": 47,
+          "text_sha256": "f745a818da0df64cedc810355421c2f93bc333a8c79bb7481da8eac2b2a1862c",
           "chars": 500
         },
         {
           "id": "D10-5",
           "source": "02_Rust_借用与引用.md",
           "section": "引用与借用",
-          "start_line": 43,
+          "start_line": 45,
           "end_line": 63,
-          "text_sha256": "88c719a075a939dffde6688195d9666b813b8e0defdea10e7bd19fb5deaef3ac",
-          "chars": 500
+          "text_sha256": "21062e208be6deddf66823a6883fd00d6eadce242310329c3d5be6fe8d2a0ec6",
+          "chars": 481
         },
         {
           "id": "D10-6",
           "source": "02_Rust_借用与引用.md",
-          "section": "引用与借用",
-          "start_line": 60,
-          "end_line": 63,
-          "text_sha256": "25a85f7e78f09adc268e204a5d57cc9cf445ff3f07d890a9b500e6c0b1fbb509",
-          "chars": 119
+          "section": "可变引用",
+          "start_line": 65,
+          "end_line": 82,
+          "text_sha256": "c74bc66855c941f3064262594401e0658a1a8808890ae122368be2b6011d2a61",
+          "chars": 500
         },
         {
           "id": "D10-7",
           "source": "02_Rust_借用与引用.md",
           "section": "可变引用",
-          "start_line": 65,
-          "end_line": 81,
-          "text_sha256": "5c5ff176dac6466508f3114edde6253bdfe92802910604e38a7a9cc73c889581",
+          "start_line": 79,
+          "end_line": 93,
+          "text_sha256": "5d5dc213628a518bfb0c4a7d5a61ed4210bd62e83a4580c60e9daa64a5ec54f3",
           "chars": 500
         },
         {
           "id": "D10-8",
           "source": "02_Rust_借用与引用.md",
           "section": "可变引用",
-          "start_line": 79,
-          "end_line": 93,
-          "text_sha256": "a49e1c0d45153d9c6d8611f99614f0132c0ac3723b3b8ff9f4aade917d437d6a",
+          "start_line": 91,
+          "end_line": 108,
+          "text_sha256": "f52b55a0647ef2e34b25f240ec3d5698a1d69f72666a28239d866a4ca04807ab",
           "chars": 500
         },
         {
           "id": "D10-9",
           "source": "02_Rust_借用与引用.md",
           "section": "可变引用",
-          "start_line": 91,
-          "end_line": 108,
-          "text_sha256": "a033af9ae3780e313132d1ce5d4d89afcaec871e1340fb41021759c38cb9c92d",
+          "start_line": 108,
+          "end_line": 123,
+          "text_sha256": "4ee6cffb03019b3410543c5b6e6cc4c6e5b6af22744855ff6e947a1ffe109d8f",
           "chars": 500
         },
         {
           "id": "D10-10",
           "source": "02_Rust_借用与引用.md",
           "section": "可变引用",
-          "start_line": 105,
-          "end_line": 120,
-          "text_sha256": "55daaec62edacc349248b9a6324014f1c792251c8aa56e626900670ed60fce84",
+          "start_line": 120,
+          "end_line": 131,
+          "text_sha256": "eeead9337a183c3b0f1aabfa7ff54c9fc2493d01693d13bc1f67a4d8c618184a",
           "chars": 500
         },
         {
           "id": "D10-11",
           "source": "02_Rust_借用与引用.md",
           "section": "可变引用",
-          "start_line": 120,
-          "end_line": 131,
-          "text_sha256": "ce6c57e5d0ca3602a6a03d1c10f997e7f30b8d5177bf738079537aa2f877e4f3",
-          "chars": 500
+          "start_line": 131,
+          "end_line": 133,
+          "text_sha256": "e1211b9ab5befc3b4aca143110eac7ffdf0f2a6bcbf35c774fb878cdd1ccf4f4",
+          "chars": 235
         },
         {
           "id": "D10-12",
           "source": "02_Rust_借用与引用.md",
-          "section": "可变引用",
-          "start_line": 128,
-          "end_line": 133,
-          "text_sha256": "cd23dcbcc3abf511b7e1157d9e789e65d9bbd8e9eac687d5c0e5aea5e6cbcb3a",
-          "chars": 305
+          "section": "悬垂引用（Dangling References）",
+          "start_line": 135,
+          "end_line": 150,
+          "text_sha256": "53f6082d456bcebe76e2d510158a641f8771635512515139e293a60230dce2bf",
+          "chars": 500
         },
         {
           "id": "D10-13",
           "source": "02_Rust_借用与引用.md",
           "section": "悬垂引用（Dangling References）",
-          "start_line": 135,
-          "end_line": 150,
-          "text_sha256": "34be78681dd9f30be967884d9c64b38f908e2f4e9dacfadddf2fa33613cacfc7",
+          "start_line": 147,
+          "end_line": 164,
+          "text_sha256": "1956fd9853d273aa26a3cd6ad8176baeff9d8d4e969c802b303e9f10a4c2a762",
           "chars": 500
         },
         {
           "id": "D10-14",
           "source": "02_Rust_借用与引用.md",
           "section": "悬垂引用（Dangling References）",
-          "start_line": 144,
-          "end_line": 164,
-          "text_sha256": "6535c431090dfaf91ad67bb29c262de0a1fad4380c538430814d0144f652e3a7",
-          "chars": 500
+          "start_line": 163,
+          "end_line": 175,
+          "text_sha256": "44dca75585313c9ccd8e5d8ebb0c33bf8dd64287dc6c4ca4ff738195e62be7e5",
+          "chars": 442
         },
         {
           "id": "D10-15",
           "source": "02_Rust_借用与引用.md",
-          "section": "悬垂引用（Dangling References）",
-          "start_line": 161,
-          "end_line": 175,
-          "text_sha256": "55aa01dac7d0d666bd74bf6f98aea39922ee3c02b9dd616f68b2289f26395798",
-          "chars": 484
-        },
-        {
-          "id": "D10-16",
-          "source": "02_Rust_借用与引用.md",
           "section": "引用的规则",
           "start_line": 177,
           "end_line": 186,
-          "text_sha256": "e98a2f5b4352dc6c0a6ace987b9e168ece488267456172d20ea8b21b1ce9d617",
-          "chars": 223
+          "text_sha256": "64da66cab4a4a6d7ed71385b673e5b3eba061cb0309f5a0027c3ac0153f0fd14",
+          "chars": 213
         },
         {
           "id": "D11-1",
@@ -3168,8 +3114,8 @@
           "section": "Rust 程序设计语言 · 切片",
           "start_line": 1,
           "end_line": 5,
-          "text_sha256": "55d4b5dab6889e72ac26655dea56482bbfb891473e8d7b8ccb9c498eb1dc9dfe",
-          "chars": 145
+          "text_sha256": "dd6217002559a78be5ee261bd686f61b57097c35ea3b7780ecb1a3e40ea5cd1f",
+          "chars": 139
         },
         {
           "id": "D11-2",
@@ -3177,25 +3123,25 @@
           "section": "切片 Slice 类型",
           "start_line": 7,
           "end_line": 24,
-          "text_sha256": "ada2f909c3ae8e9f8afa74b47bce9786aca36d13840c6d7310236cdd120604fa",
+          "text_sha256": "d49bc6a34aa45aea06bbfa8a9c5bfbfd4e8b0df91efc9f89505af26c462d68c3",
           "chars": 500
         },
         {
           "id": "D11-3",
           "source": "03_Rust_切片.md",
           "section": "切片 Slice 类型",
-          "start_line": 23,
-          "end_line": 38,
-          "text_sha256": "b3a783e03871f4958db694a2a49b9e38fb4057df37b2e13472eaaf0a5c07e388",
+          "start_line": 24,
+          "end_line": 41,
+          "text_sha256": "319a5c1f210259465e6e169095091a0e2d714c5dd5884e5379520cc7d759b743",
           "chars": 500
         },
         {
           "id": "D11-4",
           "source": "03_Rust_切片.md",
           "section": "切片 Slice 类型",
-          "start_line": 37,
+          "start_line": 38,
           "end_line": 45,
-          "text_sha256": "3c28e05367edb6c6c4e4373fef913773064e5242ce32ec4a9204d85d4eef2013",
+          "text_sha256": "0b9e80f4c49624cd5c2b513aff3547f82323eadf0fceabaa51a36df370909ef6",
           "chars": 500
         },
         {
@@ -3204,26 +3150,26 @@
           "section": "切片 Slice 类型",
           "start_line": 43,
           "end_line": 56,
-          "text_sha256": "cac2eaa12a0b382c3c08d134976b99972ac18978620d112cb774ac56a8d5358e",
+          "text_sha256": "2e0ae261bf4ee60a473b3e46905e4a6cfc34c4f2a12f03b2b30a327b5f9509ae",
           "chars": 500
         },
         {
           "id": "D11-6",
           "source": "03_Rust_切片.md",
           "section": "切片 Slice 类型",
-          "start_line": 51,
-          "end_line": 63,
-          "text_sha256": "c38149746064dda006135dd450b90d54e3d3279de6ed37e1cae39c5b916dc7c9",
+          "start_line": 53,
+          "end_line": 66,
+          "text_sha256": "36a8351a20b1b59713288128c6f06b2b1c7f3a30c50474957534b69ab202ff10",
           "chars": 500
         },
         {
           "id": "D11-7",
           "source": "03_Rust_切片.md",
           "section": "切片 Slice 类型",
-          "start_line": 61,
+          "start_line": 63,
           "end_line": 71,
-          "text_sha256": "97127bb57faca33cb767ca9357de841b1479981804340dc2e2974171c6fd420a",
-          "chars": 320
+          "text_sha256": "e219af4406fe756b10b24374e271ec5a944c9c0e8c1a49277c0ede22669e353c",
+          "chars": 254
         },
         {
           "id": "D11-8",
@@ -3231,7 +3177,7 @@
           "section": "字符串 slice",
           "start_line": 73,
           "end_line": 83,
-          "text_sha256": "184347077a238f055e768f42d1c21eb8fb4ba04898b08faefd1c93ef6fa7fc64",
+          "text_sha256": "8728d8c0d3bf5f4757ccc133d4d53edaa965555373567e9fb33fa8a0a7054eb7",
           "chars": 500
         },
         {
@@ -3239,8 +3185,8 @@
           "source": "03_Rust_切片.md",
           "section": "字符串 slice",
           "start_line": 83,
-          "end_line": 94,
-          "text_sha256": "f470f08e8ca922143566ab951baa1b553501cc4fed5198ebeccc509dd9e5d39e",
+          "end_line": 96,
+          "text_sha256": "fc7adddcd126bf318873ab337eac8060ed96e7497e49f774bec411f7d7f6b4dd",
           "chars": 500
         },
         {
@@ -3249,16 +3195,16 @@
           "section": "字符串 slice",
           "start_line": 91,
           "end_line": 122,
-          "text_sha256": "3eec894dc8b82049a3af7c22365483520983356cd8e5ff13e7d010c5f48e73be",
+          "text_sha256": "36ee706c367201ff8153412ac8817dc53a131f7e8d5de6665df97638533c3c5f",
           "chars": 500
         },
         {
           "id": "D11-11",
           "source": "03_Rust_切片.md",
           "section": "字符串 slice",
-          "start_line": 118,
-          "end_line": 130,
-          "text_sha256": "7be415d8759ee5bac80bb08c9051b6d2dfa40d9b2750806f8db075ec0915c0a7",
+          "start_line": 120,
+          "end_line": 132,
+          "text_sha256": "da4734c8c8b905d627f516f97d18e8699bc0807627312b66c60c54e3ee2fd98a",
           "chars": 500
         },
         {
@@ -3267,7 +3213,7 @@
           "section": "字符串 slice",
           "start_line": 129,
           "end_line": 142,
-          "text_sha256": "4fb89723a0684b4b058b328e6f26b90bb9ae7900148028a165d6aa07478faa8b",
+          "text_sha256": "76d1fb4f25f201b646118123f65f276bab4d12116bc68b16977a3d8d497b593c",
           "chars": 500
         },
         {
@@ -3276,17 +3222,17 @@
           "section": "字符串 slice",
           "start_line": 142,
           "end_line": 156,
-          "text_sha256": "343359e010bba538d15c36c26dd47efdfdab0b05c30b8ef4a53052af3cde7bc9",
+          "text_sha256": "3d220fcb67a3a7d0b0f592ea73b56647de7a7b5252407a3b67f2c5ee15a1919c",
           "chars": 500
         },
         {
           "id": "D11-14",
           "source": "03_Rust_切片.md",
           "section": "字符串 slice",
-          "start_line": 153,
+          "start_line": 156,
           "end_line": 156,
-          "text_sha256": "55b2cff3396730cb259a5e813167dfec98a23f25e9b6e3b455c7e232fb405852",
-          "chars": 296
+          "text_sha256": "b5ab4a1412a8ee9fa5e5270e6f2d5f98c2ab7ef80530da8d03c5bcb259541f29",
+          "chars": 211
         },
         {
           "id": "D11-15",
@@ -3294,8 +3240,8 @@
           "section": "字符串字面量就是 slice",
           "start_line": 158,
           "end_line": 166,
-          "text_sha256": "8e883d67acd4db470bd29efb58b3f7dafaaa4c9d4282d7acf63d6cfdfce8cc10",
-          "chars": 207
+          "text_sha256": "79fd4db7a12b7d06fe96b1c06111ead6b8b303c41f0bd1ae781e4747f3cf4ca5",
+          "chars": 197
         },
         {
           "id": "D11-16",
@@ -3303,17 +3249,17 @@
           "section": "字符串 slice 作为参数",
           "start_line": 168,
           "end_line": 184,
-          "text_sha256": "98e9fbdd09d99ae06074769451aa7d3bdda8182e13687c29f3b2ed097f788439",
+          "text_sha256": "bb5525b45c8a8bfdb227925b392c364b792942b4255f2e2ab4291d12dbd96dfa",
           "chars": 500
         },
         {
           "id": "D11-17",
           "source": "03_Rust_切片.md",
           "section": "字符串 slice 作为参数",
-          "start_line": 182,
+          "start_line": 184,
           "end_line": 190,
-          "text_sha256": "9effdc48cbe3e88b2c6783d20f57fca1a664a8c4896664714e56a43c3523a9df",
-          "chars": 403
+          "text_sha256": "cba903e8bb06a02e7653df9a63e2f6bad9b3a7f227ed6bdd84fbf35b65dbc160",
+          "chars": 379
         },
         {
           "id": "D11-18",
@@ -3321,8 +3267,8 @@
           "section": "其他类型的 slice",
           "start_line": 192,
           "end_line": 208,
-          "text_sha256": "f7778082e84f4affaaf3a4a2419fc9c9539fa24357fe007a2d92ce50d80f9735",
-          "chars": 348
+          "text_sha256": "702674de76c7d508a0aad7ede528cf3214f0f24403e85d9980bd691e9889c5e2",
+          "chars": 330
         },
         {
           "id": "D11-19",
@@ -3330,8 +3276,8 @@
           "section": "总结",
           "start_line": 210,
           "end_line": 219,
-          "text_sha256": "a0bbbc8ccc23d2ea24ae0fa41eb37803c24a72bd98d119f99ad397261dcaa598",
-          "chars": 423
+          "text_sha256": "6cfdef8538f15efa63a4b8536c8f8f66c1060668c7804d15ba820a5149f5cfcd",
+          "chars": 413
         },
         {
           "id": "D12-1",
@@ -3339,8 +3285,8 @@
           "section": "Python 教程 · 数据结构",
           "start_line": 1,
           "end_line": 5,
-          "text_sha256": "89c8a3e06aa0312f072e41d096e4596e9dcfd288daa6c5e7f463b8ee1754923a",
-          "chars": 162
+          "text_sha256": "f7c68ae72f054139385302f56bced8c61bc4a78c0b72bcec62c118abfcc8a003",
+          "chars": 156
         },
         {
           "id": "D12-2",
@@ -3348,8 +3294,8 @@
           "section": "5. 数据结构",
           "start_line": 7,
           "end_line": 9,
-          "text_sha256": "1ca71a3dd0b8ee07feb23d6df61d3929ef820875cc5715b43042cb45bdbd0ffd",
-          "chars": 46
+          "text_sha256": "7650496bf950c2d4723eeb4b691add10df2ffeb3e87d9224f2b1a0733fff0114",
+          "chars": 42
         },
         {
           "id": "D12-3",
@@ -3357,7 +3303,7 @@
           "section": "5.1. 列表详解",
           "start_line": 11,
           "end_line": 33,
-          "text_sha256": "ef58231599d465ffe4d2b58eea007f2f3ffd11609264665fb3b2bee0dd98338d",
+          "text_sha256": "2011fa0e4c1370c26c99702ad775441bb0aca93cb4711363e8e97f92fa3845ba",
           "chars": 500
         },
         {
@@ -3365,36 +3311,36 @@
           "source": "04_Python_数据结构.md",
           "section": "5.1. 列表详解",
           "start_line": 31,
-          "end_line": 53,
-          "text_sha256": "bedb8430651603da3557624c9aecc8a67874ae70d422ab789dda7fdf9b5e47a8",
+          "end_line": 59,
+          "text_sha256": "3be386bfebd0a02ff6ee8d969b881ded905c51fc19689368533160aec6a02e5f",
           "chars": 500
         },
         {
           "id": "D12-5",
           "source": "04_Python_数据结构.md",
           "section": "5.1. 列表详解",
-          "start_line": 49,
-          "end_line": 76,
-          "text_sha256": "45f61ce781bb1c894b8e3e8bd68cab17f92bd0bcb40cc4532d8a14b7d085b4b5",
+          "start_line": 51,
+          "end_line": 78,
+          "text_sha256": "2c8afd896415c834ce4a9d0c601e02cdd9d6646677707a9f2f6cea703f76c8ad",
           "chars": 500
         },
         {
           "id": "D12-6",
           "source": "04_Python_数据结构.md",
           "section": "5.1. 列表详解",
-          "start_line": 74,
+          "start_line": 75,
           "end_line": 89,
-          "text_sha256": "09b2b9cbaa3a3579c09df1a08d40c7713252db51d45af15423bf13448cd1cfd6",
+          "text_sha256": "4d84b834c5dee643c807648359b369b50d0d02a7151d248967898ef2c2c62dcb",
           "chars": 500
         },
         {
           "id": "D12-7",
           "source": "04_Python_数据结构.md",
           "section": "5.1. 列表详解",
-          "start_line": 87,
+          "start_line": 89,
           "end_line": 89,
-          "text_sha256": "6c9008593b8fa786204b9e741981678d7701f0290ab4d703f8358d3c5f1c0de2",
-          "chars": 169
+          "text_sha256": "742cd845147f88e3d61abd05fc2a26399c1de4e13ead0e2f49034bf60a9629bd",
+          "chars": 89
         },
         {
           "id": "D12-8",
@@ -3402,8 +3348,8 @@
           "section": "5.1.1. 用列表实现堆栈",
           "start_line": 91,
           "end_line": 112,
-          "text_sha256": "6936bb91363e6fd57ab700095ce039538a010533d9356d0dc25c53b74722a14c",
-          "chars": 349
+          "text_sha256": "0b6a3760d972bd4ef73fa25cb392fbbc57ff110077393130cb0ea30e3b43726e",
+          "chars": 326
         },
         {
           "id": "D12-9",
@@ -3411,7 +3357,7 @@
           "section": "5.1.2. 用列表实现队列",
           "start_line": 114,
           "end_line": 129,
-          "text_sha256": "518dec99e0cdce63e27173e0dff5eb0b97223f9fcbedb487dc3ba6ea18fa7a08",
+          "text_sha256": "9c5ff9c82b86f048afb40775577190c2ec1a86148841e98deb25dbb38f1febe0",
           "chars": 500
         },
         {
@@ -3420,8 +3366,8 @@
           "section": "5.1.2. 用列表实现队列",
           "start_line": 125,
           "end_line": 132,
-          "text_sha256": "8c0c56427b13486c7484f24f822921d817cf963799d06000db0e9d320866247e",
-          "chars": 179
+          "text_sha256": "dd265d08a3bb71e8ea6e39a8667f5233e705fff4516ddd33417787bad0cc81c0",
+          "chars": 159
         },
         {
           "id": "D12-11",
@@ -3429,89 +3375,89 @@
           "section": "5.1.3. 列表推导式",
           "start_line": 134,
           "end_line": 166,
-          "text_sha256": "46b2b7a0c8d00720d9c6d364b5e024c5bc4486dff0143f89a7d4237b6b9b5c94",
+          "text_sha256": "0bc405f89fb860794d8f388ddc4e3211d0f3d7eb861d6a01b0b6c32e67b800e7",
           "chars": 500
         },
         {
           "id": "D12-12",
           "source": "04_Python_数据结构.md",
           "section": "5.1.3. 列表推导式",
-          "start_line": 160,
-          "end_line": 184,
-          "text_sha256": "8da2e418b19acdb3c7489df2e49bf68bd214f3413a21159fb0d6234194dbfc11",
+          "start_line": 164,
+          "end_line": 188,
+          "text_sha256": "7c371a81cf914443160e0699e0fc773babcdbf1cb41c9c57f5c9678ae1eafd4a",
           "chars": 500
         },
         {
           "id": "D12-13",
           "source": "04_Python_数据结构.md",
           "section": "5.1.3. 列表推导式",
-          "start_line": 180,
-          "end_line": 204,
-          "text_sha256": "57b623b605482be7c53d3059f62ba0e8ddcf3fbfde66e039c3857933856e19cc",
+          "start_line": 183,
+          "end_line": 206,
+          "text_sha256": "359d0d26f86f39828c62a8d5c7d5931d32062dddf531ad5015e822cc3e9b8ea5",
           "chars": 500
         },
         {
           "id": "D12-14",
           "source": "04_Python_数据结构.md",
           "section": "5.1.3. 列表推导式",
-          "start_line": 203,
-          "end_line": 216,
-          "text_sha256": "79b881fa183170690ffba2ec6f8f062793b692b938924f3e261ecab796d90118",
+          "start_line": 204,
+          "end_line": 218,
+          "text_sha256": "6990fe4497b4c77deb751e4a364c1b9d11e6a4c01f61c69cf199a8cb3be9d8cf",
           "chars": 500
         },
         {
           "id": "D12-15",
           "source": "04_Python_数据结构.md",
           "section": "5.1.3. 列表推导式",
-          "start_line": 214,
+          "start_line": 216,
           "end_line": 230,
-          "text_sha256": "871abf1d75b8c872f1ea3ec7295e94a06949e93ba15acc4576c37b6ea2a177d1",
-          "chars": 387
+          "text_sha256": "0b6a9eb1af8c58adf9bff1026b596d43d028c6e8f6cb121df913b37a724f2a85",
+          "chars": 289
         },
         {
           "id": "D12-16",
           "source": "04_Python_数据结构.md",
           "section": "5.1.4. 嵌套的列表推导式",
           "start_line": 232,
-          "end_line": 260,
-          "text_sha256": "a089d4f219b9a523c5652affc55d769dcb52b77bbdfd013c767ddffe0f533e3d",
+          "end_line": 262,
+          "text_sha256": "a67efb063976537c44954ab8f6ce4c7014a471ec34cb2e100e2a4a7ba6c97fdc",
           "chars": 500
         },
         {
           "id": "D12-17",
           "source": "04_Python_数据结构.md",
           "section": "5.1.4. 嵌套的列表推导式",
-          "start_line": 258,
-          "end_line": 283,
-          "text_sha256": "f27f0322efab743aca560c1fa2c9be3733bbb305c20fdaa34f568485fd87b9f2",
+          "start_line": 259,
+          "end_line": 286,
+          "text_sha256": "ba23a978419b04e73757fb30fc90d8c139c6e1aff8597178be88b1e850f0ecb3",
           "chars": 500
         },
         {
           "id": "D12-18",
           "source": "04_Python_数据结构.md",
           "section": "5.1.4. 嵌套的列表推导式",
-          "start_line": 278,
+          "start_line": 279,
           "end_line": 291,
-          "text_sha256": "539919f9707f83a780c7abd0f7503c0ff6b3cf26d490c21edb4d95b356bc2301",
-          "chars": 233
+          "text_sha256": "5c9a55694a732a9a0b8ccffd8d74d5dfd631f6e652c2b8d7d689c850beada934",
+          "chars": 172
         },
         {
           "id": "D12-19",
           "source": "04_Python_数据结构.md",
           "section": "5.1.5. 列表和列表推导式中的解包",
           "start_line": 293,
-          "end_line": 312,
-          "text_sha256": "125b2ab792bdccd158af4ab958e5baa2b9f1964c2b08b3bbdeb587be31e759bb",
+          "end_line": 316,
+          "text_sha256": "98a7a49061dffb321eb9fd3e1bb32abcba45d99378d15e0366df1af5f8d48125",
           "chars": 500
         },
         {
           "id": "D12-20",
           "source": "04_Python_数据结构.md",
           "section": "5.1.5. 列表和列表推导式中的解包",
-          "start_line": 310,
+          "start_line": 311,
           "end_line": 334,
-          "text_sha256": "c1a4ef72be8cd1941012cb43e2db978bed8ed0f11a67a4370898cece41935c60",
-          "chars": 494
+          "text_sha256": "ea1202c57f9e0a3e351688b82878945a262deb35b2208119014bda22807902ca",
+          "chars": 451
         },
         {
           "id": "D12-21",
@@ -3519,16 +3465,16 @@
           "section": "5.2. `del` 语句",
           "start_line": 336,
           "end_line": 361,
-          "text_sha256": "a78e596dc0540616fd1c22f68ea2d2bebd44cca748d47f0c3df0a7ba7e1fba19",
-          "chars": 417
+          "text_sha256": "4897a9a367561f6c22c0ce5ad33ad1f8121049e87aa4bbaa256b1d2afea7ab63",
+          "chars": 390
         },
         {
           "id": "D12-22",
           "source": "04_Python_数据结构.md",
           "section": "5.3. 元组和序列",
           "start_line": 363,
-          "end_line": 383,
-          "text_sha256": "e1f09eef2393ae39d82e1948c9904f32fb124bedc3b3dbe89a84cfd1962ecc5a",
+          "end_line": 384,
+          "text_sha256": "bbb4417d15026b4a9f5cd1cdf97cc3091438134df77c1acbd895988de90f4a59",
           "chars": 500
         },
         {
@@ -3536,8 +3482,8 @@
           "source": "04_Python_数据结构.md",
           "section": "5.3. 元组和序列",
           "start_line": 382,
-          "end_line": 397,
-          "text_sha256": "f8605e47d11cb1803eef7e00138d0b5104317bc8af66e880f51a28a35345cc28",
+          "end_line": 399,
+          "text_sha256": "c904eded8577272586acf3d90ba57ed02789ded8fd9a337cf683509d7ee250f7",
           "chars": 500
         },
         {
@@ -3546,170 +3492,152 @@
           "section": "5.3. 元组和序列",
           "start_line": 397,
           "end_line": 420,
-          "text_sha256": "b6c895d4ddab6385f8fcc0bd3b762500031d6904614cc5158951d61f56772e7f",
-          "chars": 500
+          "text_sha256": "9fe00a885dc1bdfca676f085f632f6a10892cad4ba8e77ac08877104aef27b7f",
+          "chars": 498
         },
         {
           "id": "D12-25",
           "source": "04_Python_数据结构.md",
-          "section": "5.3. 元组和序列",
-          "start_line": 413,
-          "end_line": 420,
-          "text_sha256": "077c8b12f0aa80b1d4d8ca3cf000f83f625e90a905ffc269fa86e558c637567f",
-          "chars": 137
+          "section": "5.4. 集合",
+          "start_line": 422,
+          "end_line": 441,
+          "text_sha256": "eb56320a91dbe5534a978f657ec406e45802677dd1481a02cdb2d2ac29c6f078",
+          "chars": 500
         },
         {
           "id": "D12-26",
           "source": "04_Python_数据结构.md",
           "section": "5.4. 集合",
-          "start_line": 422,
-          "end_line": 439,
-          "text_sha256": "34d6eb3b28197ffaeae141a261f695adf3584e2ddbc81969f781a7a63e1b2a4a",
+          "start_line": 436,
+          "end_line": 453,
+          "text_sha256": "2cc85569b13578bc47a28634e27e3ea4c82894083ceb56a45e2c930e4e166520",
           "chars": 500
         },
         {
           "id": "D12-27",
           "source": "04_Python_数据结构.md",
           "section": "5.4. 集合",
-          "start_line": 436,
-          "end_line": 452,
-          "text_sha256": "62cace1b703495f87906a3c61b2d9d76a6fb54e211d910c104647a94c9952408",
-          "chars": 500
+          "start_line": 451,
+          "end_line": 469,
+          "text_sha256": "af18d88297c0b617daf462a0afa023ce4cdb981085d50e8d28e3a20fa99424a5",
+          "chars": 431
         },
         {
           "id": "D12-28",
           "source": "04_Python_数据结构.md",
-          "section": "5.4. 集合",
-          "start_line": 450,
-          "end_line": 469,
-          "text_sha256": "73d55903576f73c19012cc7f64959051a4db98e0abe029c09a996a24fbaf2298",
-          "chars": 480
+          "section": "5.5. 字典",
+          "start_line": 471,
+          "end_line": 479,
+          "text_sha256": "bc7e1f7875aefb51b805631ead8a0995f1eed433a6e3c7a014c50d59eaa9efb9",
+          "chars": 500
         },
         {
           "id": "D12-29",
           "source": "04_Python_数据结构.md",
           "section": "5.5. 字典",
-          "start_line": 471,
-          "end_line": 479,
-          "text_sha256": "097c5c7a3ef7eafffe936dab66f401bda4d06b6a88642a1498b45aff14dfddbc",
+          "start_line": 477,
+          "end_line": 496,
+          "text_sha256": "9bebc8107bcc2aa78fc74a4e2aa7e57febd4c9a8f03f702b32b282fd29286e80",
           "chars": 500
         },
         {
           "id": "D12-30",
           "source": "04_Python_数据结构.md",
           "section": "5.5. 字典",
-          "start_line": 477,
-          "end_line": 495,
-          "text_sha256": "796a36aaeb9563edf24c604b473cb130079092d7112c3fee80141b7e5cc9e569",
+          "start_line": 493,
+          "end_line": 523,
+          "text_sha256": "b66a10198409c169d3b323042d528cac69bdbb3a43b0d63877bd8aa0acf4cf9f",
           "chars": 500
         },
         {
           "id": "D12-31",
           "source": "04_Python_数据结构.md",
           "section": "5.5. 字典",
-          "start_line": 493,
-          "end_line": 517,
-          "text_sha256": "4c3b7e3d6bd0b44c7ee71873621c477630a6a972ee61eb3de36d0f8666885515",
+          "start_line": 516,
+          "end_line": 546,
+          "text_sha256": "f28ec36838d9d74e41b14497fc4f400b722eed3e798ebfeef6bf744f76830751",
           "chars": 500
         },
         {
           "id": "D12-32",
           "source": "04_Python_数据结构.md",
           "section": "5.5. 字典",
-          "start_line": 516,
-          "end_line": 539,
-          "text_sha256": "30309183ef81ca6b11d8b44e641b7b02b39bc50ef3cea05505d51a162f5cc6cb",
-          "chars": 500
+          "start_line": 539,
+          "end_line": 549,
+          "text_sha256": "5bc054a3186b7b75f9d0201f117f009ce8985b3cd2c4b833b745ccfbcf19aad9",
+          "chars": 162
         },
         {
           "id": "D12-33",
           "source": "04_Python_数据结构.md",
-          "section": "5.5. 字典",
-          "start_line": 537,
-          "end_line": 549,
-          "text_sha256": "fa86bfaa80b309c43a69412c8dcb27a4065b0af9cea330302d210514935e9209",
-          "chars": 242
+          "section": "5.6. 循环的技巧",
+          "start_line": 551,
+          "end_line": 581,
+          "text_sha256": "e6d22d737d93a7c88821b9521eac8abb8eb78d918378a25ab50e39bf6661e9ba",
+          "chars": 500
         },
         {
           "id": "D12-34",
           "source": "04_Python_数据结构.md",
           "section": "5.6. 循环的技巧",
-          "start_line": 551,
-          "end_line": 580,
-          "text_sha256": "fd4a39f7bf11fca8c564cc8f008c58688fbcac4a7d35b36d113bee40d4765fa2",
+          "start_line": 580,
+          "end_line": 605,
+          "text_sha256": "c4fc32be2ecd3feaaf8a8704166f27e3a146ec9b528673534325afbe3ed4ff19",
           "chars": 500
         },
         {
           "id": "D12-35",
           "source": "04_Python_数据结构.md",
           "section": "5.6. 循环的技巧",
-          "start_line": 577,
-          "end_line": 596,
-          "text_sha256": "777dfaa5d284885ac14e5378bb57636a95ef00831ce0cd81f49d6f9195306a8a",
+          "start_line": 594,
+          "end_line": 631,
+          "text_sha256": "f3917f344ed32caf85b4a6fae392da97ef1ff2cf947826d89d2322a60852522f",
           "chars": 500
         },
         {
           "id": "D12-36",
           "source": "04_Python_数据结构.md",
           "section": "5.6. 循环的技巧",
-          "start_line": 591,
-          "end_line": 625,
-          "text_sha256": "bac82a88e266843e472ded109b37812002debbb120e831d983dbf86d76d8d0fc",
-          "chars": 500
+          "start_line": 624,
+          "end_line": 648,
+          "text_sha256": "5db8962f4ab9f725602ea8c895080d0165fb4c5285ca77677ff33cacc3fcc4be",
+          "chars": 405
         },
         {
           "id": "D12-37",
           "source": "04_Python_数据结构.md",
-          "section": "5.6. 循环的技巧",
-          "start_line": 623,
-          "end_line": 648,
-          "text_sha256": "0877de8bc9d0ba32a6ef791c0e1b8a381616b7f984405b2841884890a446b575",
+          "section": "5.7. 深入条件控制",
+          "start_line": 650,
+          "end_line": 660,
+          "text_sha256": "163cd9c42f95813e38c1dc706d707795f7523f932ca84eced2445ba23a13f4ce",
           "chars": 500
         },
         {
           "id": "D12-38",
           "source": "04_Python_数据结构.md",
-          "section": "5.6. 循环的技巧",
-          "start_line": 643,
-          "end_line": 648,
-          "text_sha256": "1ca2812691650af39a83dee0ee3218e89ebf7720eae110b91dbcdb0e1e940fd2",
-          "chars": 84
+          "section": "5.7. 深入条件控制",
+          "start_line": 660,
+          "end_line": 672,
+          "text_sha256": "69603362af1aa9d86067f20f7669039f23579d4dbf93f4ce269852bff9b369be",
+          "chars": 415
         },
         {
           "id": "D12-39",
           "source": "04_Python_数据结构.md",
-          "section": "5.7. 深入条件控制",
-          "start_line": 650,
-          "end_line": 660,
-          "text_sha256": "0e5b30f8f4915691618512f0da372c5c9b65be70e19486893cf1c098ea505343",
+          "section": "5.8. 序列和其他类型的比较",
+          "start_line": 674,
+          "end_line": 685,
+          "text_sha256": "51767eaef6209415d0549a7434a8ff10ee3687c3556a94bc72bd0075559a7a37",
           "chars": 500
         },
         {
           "id": "D12-40",
           "source": "04_Python_数据结构.md",
-          "section": "5.7. 深入条件控制",
-          "start_line": 658,
-          "end_line": 672,
-          "text_sha256": "3e2926ee5ba93d12638adbe3d09d52960bc145f75f75f7aa901ec136b9f9b537",
-          "chars": 439
-        },
-        {
-          "id": "D12-41",
-          "source": "04_Python_数据结构.md",
           "section": "5.8. 序列和其他类型的比较",
-          "start_line": 674,
-          "end_line": 684,
-          "text_sha256": "90f9ac01ce75d4f75f5335f88c20379e711e40d219238f6cd672211069d736f0",
-          "chars": 500
-        },
-        {
-          "id": "D12-42",
-          "source": "04_Python_数据结构.md",
-          "section": "5.8. 序列和其他类型的比较",
-          "start_line": 682,
+          "start_line": 683,
           "end_line": 693,
-          "text_sha256": "1b2e3495beb8dfd49eacf3fd533aa508534652daf9d7a64556c90bc96f75aaad",
-          "chars": 368
+          "text_sha256": "b622891b83aa1a79a83d12d11604d60604a834e90361c988e921c4d7c3c18be7",
+          "chars": 348
         },
         {
           "id": "D13-1",
@@ -3717,8 +3645,8 @@
           "section": "Python 教程 · 更多控制流工具",
           "start_line": 1,
           "end_line": 5,
-          "text_sha256": "f0c9acad080de2cf4ff5e795e8c5e1ff82b95a88d051be884f86a59ce16a913e",
-          "chars": 165
+          "text_sha256": "db5b88f10574016246b4a6acf467798f546b7c336c6431fa19defe705483eda1",
+          "chars": 159
         },
         {
           "id": "D13-2",
@@ -3726,8 +3654,8 @@
           "section": "4. 更多控制流工具",
           "start_line": 7,
           "end_line": 9,
-          "text_sha256": "da0781063be5c07b8be38870b4ee5550d55f5c76be21394c0e830004084a3cde",
-          "chars": 65
+          "text_sha256": "e63d335d811bbd5db949192f8678954921b769fcd98ce6fd8b7a05f31fe06a3e",
+          "chars": 61
         },
         {
           "id": "D13-3",
@@ -3735,7 +3663,7 @@
           "section": "4.1. `if` 语句",
           "start_line": 11,
           "end_line": 34,
-          "text_sha256": "e0ddd5009ad29e35df0d3bd17d806d0ee259cdf9a58df7003e92b799de4bf0ab",
+          "text_sha256": "9c7b3eb015e573628040476e7e2042987529bcdd11c0a0583ad3e6c0cda27015",
           "chars": 500
         },
         {
@@ -3744,8 +3672,8 @@
           "section": "4.1. `if` 语句",
           "start_line": 32,
           "end_line": 34,
-          "text_sha256": "e758b73fade413bf49204c885836ec914b5f119e54c52103ffae1937ab375b06",
-          "chars": 126
+          "text_sha256": "0416f27d1e95f9c2035506ddb5b35b6d7761230404523844ae27fac6cc976386",
+          "chars": 101
         },
         {
           "id": "D13-5",
@@ -3753,7 +3681,7 @@
           "section": "4.2. `for` 语句",
           "start_line": 36,
           "end_line": 59,
-          "text_sha256": "03168f1fdcf222bb58d15fb194f932f4c9ed483e0dd67573d1ac0f8cc44fc864",
+          "text_sha256": "54497ee625b8e5847c6af0d374cd49fca23dde7e7d131607040c17a3d41cbd1e",
           "chars": 500
         },
         {
@@ -3762,25 +3690,25 @@
           "section": "4.2. `for` 语句",
           "start_line": 56,
           "end_line": 69,
-          "text_sha256": "0944f1ac727c7406777863ae587386120dfa466d464d65edf9cfd8f0a76d3316",
-          "chars": 319
+          "text_sha256": "bbb70be7abdc2ddc7e5eaeeb197ad0a88f821740a5df4a7f51990f05379519f7",
+          "chars": 284
         },
         {
           "id": "D13-7",
           "source": "05_Python_控制流.md",
           "section": "4.3. `range()` 函数",
           "start_line": 71,
-          "end_line": 105,
-          "text_sha256": "0695e036e0e190aac95b59f7898fce7dc0684267cc27a5c9fb47fbff584b1d7f",
+          "end_line": 107,
+          "text_sha256": "30ebf9085a0da7614ac7fba378eba0f68fb2776939da36d22b5413f488e17677",
           "chars": 500
         },
         {
           "id": "D13-8",
           "source": "05_Python_控制流.md",
           "section": "4.3. `range()` 函数",
-          "start_line": 101,
-          "end_line": 128,
-          "text_sha256": "c8a3b8ab76261e191292f30ecde7b762d1bd7b0b06dcc9cca26cfc893762a705",
+          "start_line": 104,
+          "end_line": 136,
+          "text_sha256": "9112601185feba5cba38fd23a937035e5ce6e82ee34922cf617b8eaa59558bfe",
           "chars": 500
         },
         {
@@ -3789,8 +3717,8 @@
           "section": "4.3. `range()` 函数",
           "start_line": 128,
           "end_line": 136,
-          "text_sha256": "daf58d9098a55f1f994bfb7539cb2d7e6e538f93d59822dde1a948b76c1c931a",
-          "chars": 209
+          "text_sha256": "c3c1d91baad9a3aa72defa08488eb525f963136237338487d9e3fe07d91844f5",
+          "chars": 142
         },
         {
           "id": "D13-10",
@@ -3798,34 +3726,34 @@
           "section": "4.4. `break` 和 `continue` 语句",
           "start_line": 138,
           "end_line": 163,
-          "text_sha256": "b29c7f240ff0bd01ed1b64c091f1c64fe2718e5beb081f842b4f0b0337a6a69d",
+          "text_sha256": "c530ed002b75d1621c73b49e004e5ad34a74934ea8be26bca27eb9933650b25b",
           "chars": 500
         },
         {
           "id": "D13-11",
           "source": "05_Python_控制流.md",
           "section": "4.4. `break` 和 `continue` 语句",
-          "start_line": 160,
+          "start_line": 161,
           "end_line": 174,
-          "text_sha256": "5411bc33539927e6057e441d6d3ceeb7bfade14567d6775f7664d880059b6f87",
-          "chars": 320
+          "text_sha256": "edd3ce248a02c2c8bdfba088c7c4a258f983bd02a724ea30ae029dce0f7734f4",
+          "chars": 282
         },
         {
           "id": "D13-12",
           "source": "05_Python_控制流.md",
           "section": "4.5. 循环的 `else` 子句",
           "start_line": 176,
-          "end_line": 193,
-          "text_sha256": "b744165aa9cb45c40e3d7817c8b9f3ca793c47669dc6902b70aea676931e1327",
+          "end_line": 194,
+          "text_sha256": "87a4a88a24b3df3232482330bc59ee482595d5e4ae0ebc42a9c02ff2d092596e",
           "chars": 500
         },
         {
           "id": "D13-13",
           "source": "05_Python_控制流.md",
           "section": "4.5. 循环的 `else` 子句",
-          "start_line": 191,
-          "end_line": 211,
-          "text_sha256": "c628af3f31361c721a0da0c3e678e7838f3fc1228866bb5b2f2cffd827b90043",
+          "start_line": 192,
+          "end_line": 213,
+          "text_sha256": "2b1265a0952715fffd8b5ab934e3b8529be9399c7f41ab42e0bafc3df7260906",
           "chars": 500
         },
         {
@@ -3834,8 +3762,8 @@
           "section": "4.5. 循环的 `else` 子句",
           "start_line": 211,
           "end_line": 213,
-          "text_sha256": "bb03ab20ee25556ce184fd7b868bf2893b0f04783a681da2c726d640dee69c99",
-          "chars": 272
+          "text_sha256": "1ec541dfa604463a0d1e8404cffa6611240d81ba6db6c15886e85fd112771772",
+          "chars": 233
         },
         {
           "id": "D13-15",
@@ -3843,8 +3771,8 @@
           "section": "4.6. `pass` 语句",
           "start_line": 215,
           "end_line": 244,
-          "text_sha256": "89e96b5f86db545a94ff96adcb4ddb0e6928837a9176f999a593de2934beafe7",
-          "chars": 487
+          "text_sha256": "01d4fc5bbf22683bbcdd2d97cb91f18f1a773f27ab34d28b6723552b6a2df200",
+          "chars": 456
         },
         {
           "id": "D13-16",
@@ -3852,34 +3780,34 @@
           "section": "4.7. `match` 语句",
           "start_line": 246,
           "end_line": 262,
-          "text_sha256": "d543153307ac88a19ec3c6f418716d80e9d45c88538ad77aea3c25e3392dd168",
+          "text_sha256": "5e5b89d87be2470ac1791d0c8f625eb1f51ff4492e65c741e3c986ebae0fb538",
           "chars": 500
         },
         {
           "id": "D13-17",
           "source": "05_Python_控制流.md",
           "section": "4.7. `match` 语句",
-          "start_line": 259,
-          "end_line": 288,
-          "text_sha256": "94e46c8c277b238a133139d495a3991c13b364cd864e24a51396a40b5daf307e",
+          "start_line": 260,
+          "end_line": 290,
+          "text_sha256": "361fd7d5264f2f0531bffed8d718913170a9fdb299e1a857a0cf612f0742e3d3",
           "chars": 500
         },
         {
           "id": "D13-18",
           "source": "05_Python_控制流.md",
           "section": "4.7. `match` 语句",
-          "start_line": 284,
-          "end_line": 306,
-          "text_sha256": "d59d04640374fbeb29bbbd2e436620e8e0f7254284f97a60a6e9d644b148d47e",
+          "start_line": 286,
+          "end_line": 308,
+          "text_sha256": "b0f2aa087a0548e881fa910b4e9d2b4b7bf108d9a85f2e02dff102f121be0638",
           "chars": 500
         },
         {
           "id": "D13-19",
           "source": "05_Python_控制流.md",
           "section": "4.7. `match` 语句",
-          "start_line": 302,
-          "end_line": 319,
-          "text_sha256": "1aa2bf85e8a18b76518364d04f8ab647c8b1b9693e4eea174b88e084c1b626ef",
+          "start_line": 306,
+          "end_line": 325,
+          "text_sha256": "956f94f6fa34e24283191416c1ec0e10e9b8ba75c19f359bfa911748aee64326",
           "chars": 500
         },
         {
@@ -3887,45 +3815,45 @@
           "source": "05_Python_控制流.md",
           "section": "4.7. `match` 语句",
           "start_line": 319,
-          "end_line": 336,
-          "text_sha256": "37caadecfdedb66de06ef6e7fdc8df6e400fe6f8dcf8579e12316953f13a3809",
+          "end_line": 342,
+          "text_sha256": "f8cfd8796a2fc3708d3c77138aaedfcd047828f1bb77d25f152813c9bc34b243",
           "chars": 500
         },
         {
           "id": "D13-21",
           "source": "05_Python_控制流.md",
           "section": "4.7. `match` 语句",
-          "start_line": 331,
-          "end_line": 354,
-          "text_sha256": "f45c9f228e9dd245788e534e66db44a52f825d08258ff0c0047d3d057cbba027",
+          "start_line": 336,
+          "end_line": 359,
+          "text_sha256": "b913468f9811776916f839cfafd3df3b35bd500b2ec568ad03b37621630f6d8d",
           "chars": 500
         },
         {
           "id": "D13-22",
           "source": "05_Python_控制流.md",
           "section": "4.7. `match` 语句",
-          "start_line": 350,
+          "start_line": 354,
           "end_line": 374,
-          "text_sha256": "9733508ed00762657ec1ba295da6863cfcd4eb26f07b446dd3182804ed0b0efa",
+          "text_sha256": "6ad91fffd728e96c1ed0ebbc0b844cac78d10f94a5b616e20fa0a5464ddcfbbf",
           "chars": 500
         },
         {
           "id": "D13-23",
           "source": "05_Python_控制流.md",
           "section": "4.7. `match` 语句",
-          "start_line": 371,
-          "end_line": 394,
-          "text_sha256": "68737d52a5636c946ccb99c5003cf222d23a8eb33ba661119096f34de70bf106",
+          "start_line": 374,
+          "end_line": 402,
+          "text_sha256": "29501083063cadef23542f1e2a3d2bc7c61cecbbbf80963b56c273a9f199a72c",
           "chars": 500
         },
         {
           "id": "D13-24",
           "source": "05_Python_控制流.md",
           "section": "4.7. `match` 语句",
-          "start_line": 390,
+          "start_line": 399,
           "end_line": 411,
-          "text_sha256": "5ca6b78aecadc2b857513be1a9e7360f83959e301d8585a7ef1190e04a6d45a0",
-          "chars": 446
+          "text_sha256": "56f0e5edd486c19e2dfc47a12d8e40d99b082ce1a945530a9591f3b70e4feb1b",
+          "chars": 279
         },
         {
           "id": "D13-25",
@@ -3933,44 +3861,44 @@
           "section": "4.8. 定义函数",
           "start_line": 413,
           "end_line": 434,
-          "text_sha256": "1d18db9896b6a6dae014da0916f350736f98ec2eafc1fa816406ccc8631783ca",
+          "text_sha256": "2987d94ecbbf28b9ba86fcf273f4fcbf015c83b7efcab56129fd2cb3bfe9a49a",
           "chars": 500
         },
         {
           "id": "D13-26",
           "source": "05_Python_控制流.md",
           "section": "4.8. 定义函数",
-          "start_line": 432,
-          "end_line": 440,
-          "text_sha256": "0e247b3f89c8ecf8a87d5a89dfdf9c8291075946c1a5833abdb8c58067497932",
+          "start_line": 434,
+          "end_line": 444,
+          "text_sha256": "5e399c33496f262302df9e5c3c8c94a1f5723b557ae8907730c5eca966d84112",
           "chars": 500
         },
         {
           "id": "D13-27",
           "source": "05_Python_控制流.md",
           "section": "4.8. 定义函数",
-          "start_line": 438,
-          "end_line": 463,
-          "text_sha256": "1bfe1de387ce55695e39b9782d2a30697379754d617a400b999d2c2c494d18ad",
+          "start_line": 440,
+          "end_line": 464,
+          "text_sha256": "31605baf78f4990bf87f3c7fe90dee7615452ec22585d16cc2554ad5b2650ab2",
           "chars": 500
         },
         {
           "id": "D13-28",
           "source": "05_Python_控制流.md",
           "section": "4.8. 定义函数",
-          "start_line": 460,
-          "end_line": 481,
-          "text_sha256": "f2bbf88f022f31ecf802b03d901664efbb16a38eb6be18e2b8b14ce3b06f736d",
+          "start_line": 463,
+          "end_line": 484,
+          "text_sha256": "9ee7b561e6a760327afc89b0f3870380b49a847c5092e4110e9c8ff00c3f0fdf",
           "chars": 500
         },
         {
           "id": "D13-29",
           "source": "05_Python_控制流.md",
           "section": "4.8. 定义函数",
-          "start_line": 477,
+          "start_line": 481,
           "end_line": 484,
-          "text_sha256": "616202e4e92f5be8c3e3e43920de705196de212e1b4de6cb1bc5a9785b41ad22",
-          "chars": 398
+          "text_sha256": "626c9206cffb46aa0292bbccafc0b88130d094ba6e7f9ccdc4d86b9e8d6d17cb",
+          "chars": 325
         },
         {
           "id": "D13-30",
@@ -3978,8 +3906,8 @@
           "section": "4.9. 函数定义详解",
           "start_line": 486,
           "end_line": 488,
-          "text_sha256": "02a4febce84ddee0f434c133b0fca84b5873927b327f924c6099ab18c8675b24",
-          "chars": 52
+          "text_sha256": "9e5e578cec12dd8822081ba60837fc3f2cf13416021ce1a2d90adccb4f63a9f4",
+          "chars": 48
         },
         {
           "id": "D13-31",
@@ -3987,16 +3915,16 @@
           "section": "4.9.1. 默认值参数",
           "start_line": 490,
           "end_line": 512,
-          "text_sha256": "aa379bf810ca4f6ae7fa26dd4f7f50a8f24bcf985b7c90edf3493a7033cc4da7",
+          "text_sha256": "bc4dfe328ecf2b620ce052b39bf42f646506e80a778e693a4b6e53057449db80",
           "chars": 500
         },
         {
           "id": "D13-32",
           "source": "05_Python_控制流.md",
           "section": "4.9.1. 默认值参数",
-          "start_line": 504,
-          "end_line": 540,
-          "text_sha256": "eb3a2566d6c0b2f4138d5571d6803db7fd964ee049513d1d4aca164380a0115d",
+          "start_line": 505,
+          "end_line": 545,
+          "text_sha256": "9395d984c1b44e44d26e1f25078a549c7443090a31c6ec39eb807b868ca9555b",
           "chars": 500
         },
         {
@@ -4005,8 +3933,8 @@
           "section": "4.9.1. 默认值参数",
           "start_line": 537,
           "end_line": 568,
-          "text_sha256": "7a89bfeca48c44449823cf70bb860a8a2514234a601829bbbcaf8b904879d32c",
-          "chars": 356
+          "text_sha256": "c7ecc4254c978fce0807927b2882d6c94f724dacf474e007e56b0863ab0c3aff",
+          "chars": 276
         },
         {
           "id": "D13-34",
@@ -4014,53 +3942,53 @@
           "section": "4.9.2. 关键字参数",
           "start_line": 570,
           "end_line": 587,
-          "text_sha256": "c96f6dca64c5d141edcef1e0e083faa3948fe875310a60aae04eac3ad84297c7",
+          "text_sha256": "c49280d9249aacef2e3e3bd73301832a691c83f07c9d4e39c04d75b2edb2b7d5",
           "chars": 500
         },
         {
           "id": "D13-35",
           "source": "05_Python_控制流.md",
           "section": "4.9.2. 关键字参数",
-          "start_line": 583,
+          "start_line": 586,
           "end_line": 599,
-          "text_sha256": "c2570177a65f9fc68f055792e5206e8d0e184627cd789ab34e7290abea00ea4b",
+          "text_sha256": "00122dbd1c0515c1ee858d394bb3b9ac94fe9143e38ef3ec394e487622985072",
           "chars": 500
         },
         {
           "id": "D13-36",
           "source": "05_Python_控制流.md",
           "section": "4.9.2. 关键字参数",
-          "start_line": 593,
-          "end_line": 613,
-          "text_sha256": "f94e55806124c812e34f4c70dccb5f194f8c92483cc279da702aa4f3b5b26b2b",
+          "start_line": 597,
+          "end_line": 614,
+          "text_sha256": "4841b06a6eee6349f1397d9518d98e249b838b9bc5c02321315b1cc135b2471d",
           "chars": 500
         },
         {
           "id": "D13-37",
           "source": "05_Python_控制流.md",
           "section": "4.9.2. 关键字参数",
-          "start_line": 609,
-          "end_line": 623,
-          "text_sha256": "46d241478b055edf236314ab641d4d59f7712774d396693f9008faef11033102",
+          "start_line": 612,
+          "end_line": 625,
+          "text_sha256": "6ecdf067e8d48078e9a95cd51628aa6f06989a6b405abd8e14f18cde7c0c676f",
           "chars": 500
         },
         {
           "id": "D13-38",
           "source": "05_Python_控制流.md",
           "section": "4.9.2. 关键字参数",
-          "start_line": 621,
-          "end_line": 643,
-          "text_sha256": "ba14a2aa9bfa44cbcefdefb93de15f268f15a517af22f6d57409d65bf901c167",
+          "start_line": 623,
+          "end_line": 647,
+          "text_sha256": "38718571dcbdc9df066c09a78c5a031cabac9ab5f87d4fc3358dfd8f2251c6a3",
           "chars": 500
         },
         {
           "id": "D13-39",
           "source": "05_Python_控制流.md",
           "section": "4.9.2. 关键字参数",
-          "start_line": 638,
+          "start_line": 642,
           "end_line": 657,
-          "text_sha256": "02219d343014a4870c438690d28da0193c1243626cba6ba13e1e9a20db7102ca",
-          "chars": 390
+          "text_sha256": "04544c3dad39d5a3c284804964a1354f4c5625cf7debf402b32f009ab11addbc",
+          "chars": 301
         },
         {
           "id": "D13-40",
@@ -4068,8 +3996,8 @@
           "section": "4.9.3. 特殊参数",
           "start_line": 659,
           "end_line": 675,
-          "text_sha256": "e72df42ca0374666adcce0ec1d1fae1d4e810ce15ae25f4cdffa07017c783551",
-          "chars": 459
+          "text_sha256": "391b986417b3dc2b09d5955e88bd87107ba6affa8d91798e158ba6dda6dfe488",
+          "chars": 441
         },
         {
           "id": "D13-41",
@@ -4077,8 +4005,8 @@
           "section": "4.9.3.1. 位置或关键字参数",
           "start_line": 677,
           "end_line": 679,
-          "text_sha256": "4e1aebb0369d7ea8b730d13c88ce9507527720976b95cfaab578bc1596ba2e10",
-          "chars": 68
+          "text_sha256": "1c3cbdfcde589853b1d773cc5dd5a5b0a9932bbc5002ff64c195f4447113b273",
+          "chars": 64
         },
         {
           "id": "D13-42",
@@ -4086,8 +4014,8 @@
           "section": "4.9.3.2. 仅位置参数",
           "start_line": 681,
           "end_line": 685,
-          "text_sha256": "0ec2a18383e53aece2817158fd50fadc8fa6c4cf560ab1254b4794a45534f5a7",
-          "chars": 184
+          "text_sha256": "2fcb59f4a04325f28b50d3b13a784861b611727e81c4835bf68a718c3e63c470",
+          "chars": 178
         },
         {
           "id": "D13-43",
@@ -4095,179 +4023,161 @@
           "section": "4.9.3.3. 仅限关键字参数",
           "start_line": 687,
           "end_line": 689,
-          "text_sha256": "3e54de33f5f40b8c882fc6f2aaf448b593c901cd79385519907328cb502ca4e7",
-          "chars": 87
+          "text_sha256": "ef9424ba7ee7184a7011cf2b1419f6ffc35240d17e055caa91b4f5fdf5b939a9",
+          "chars": 83
         },
         {
           "id": "D13-44",
           "source": "05_Python_控制流.md",
           "section": "4.9.3.4. 函数示例",
           "start_line": 691,
-          "end_line": 721,
-          "text_sha256": "411d706d6392341232687819f2b8495fc715d7d4460222ef8b40cf6fcf6a2cce",
+          "end_line": 723,
+          "text_sha256": "0446a0eadffd9c298f3792b6e10b5a1be5da65f25f6694b6f3428152d025fbb0",
           "chars": 500
         },
         {
           "id": "D13-45",
           "source": "05_Python_控制流.md",
           "section": "4.9.3.4. 函数示例",
-          "start_line": 713,
-          "end_line": 739,
-          "text_sha256": "7df211f7819593d168bef111181542cfd71ab2057d02cfd8c7c61ff9d3d2806f",
+          "start_line": 716,
+          "end_line": 740,
+          "text_sha256": "49353d0d1dfb61bbf6fb5b34e353161f161e64c27292ab72a4f023c66a8870aa",
           "chars": 500
         },
         {
           "id": "D13-46",
           "source": "05_Python_控制流.md",
           "section": "4.9.3.4. 函数示例",
-          "start_line": 737,
-          "end_line": 758,
-          "text_sha256": "56646ad39158976d662ee5c28d2e1cbd3b5d31aad3b03447d079663b25dea5eb",
+          "start_line": 739,
+          "end_line": 761,
+          "text_sha256": "576a195a16cfdff81b5938db452ae3ec216cbce7cb2e1770704d6ea7af04fe29",
           "chars": 500
         },
         {
           "id": "D13-47",
           "source": "05_Python_控制流.md",
           "section": "4.9.3.4. 函数示例",
-          "start_line": 753,
-          "end_line": 776,
-          "text_sha256": "95a35ba80230a2a3b0fb349fd6f579d8786637ddd910ecc45d3d9934c8be1072",
+          "start_line": 758,
+          "end_line": 780,
+          "text_sha256": "6632de1ac465813d07dfa6677ecfdaeb2e97a4d8be275a9b0c9721eb1ce9916c",
           "chars": 500
         },
         {
           "id": "D13-48",
           "source": "05_Python_控制流.md",
           "section": "4.9.3.4. 函数示例",
-          "start_line": 770,
+          "start_line": 776,
           "end_line": 798,
-          "text_sha256": "83bd3b79e61d69b9a346830dff7f3de0f95702ebafd0a7440d8960ee0587da75",
-          "chars": 500
+          "text_sha256": "54f96b72cc519348d1fd9c7289da4abfc0777586d0e772aeb853bf5be25609a2",
+          "chars": 421
         },
         {
           "id": "D13-49",
           "source": "05_Python_控制流.md",
-          "section": "4.9.3.4. 函数示例",
-          "start_line": 791,
-          "end_line": 798,
-          "text_sha256": "77efa183fa9deee88134bb29a5750462a6dc8be9bfad8c890a477d3b26028fa6",
-          "chars": 110
+          "section": "4.9.3.5. 小结",
+          "start_line": 800,
+          "end_line": 818,
+          "text_sha256": "0ecec551d6009cdf88f657e160e1d26311439570a60376949b83605ee4cd092b",
+          "chars": 280
         },
         {
           "id": "D13-50",
           "source": "05_Python_控制流.md",
-          "section": "4.9.3.5. 小结",
-          "start_line": 800,
-          "end_line": 818,
-          "text_sha256": "dfb568fb768e9afb5718fc1a42b4cc6bd770df46e03bc19d052a983f98a986d7",
-          "chars": 300
+          "section": "4.9.4. 任意实参列表",
+          "start_line": 820,
+          "end_line": 841,
+          "text_sha256": "2f43e743882feaff556048d9592f3c4f7f59c6c71302b1f8cf9a0e54fcc08c4e",
+          "chars": 485
         },
         {
           "id": "D13-51",
           "source": "05_Python_控制流.md",
-          "section": "4.9.4. 任意实参列表",
-          "start_line": 820,
-          "end_line": 839,
-          "text_sha256": "0a8ad3ebdb2a618b8f77061f942edbd51cb91cf128931090d8f1d98f8dcb4fbe",
+          "section": "4.9.5. 解包实参列表",
+          "start_line": 843,
+          "end_line": 861,
+          "text_sha256": "3752cc7109947dc300eb4ec81c77390220e34537fdb26b8a22fc395edc16f3cc",
           "chars": 500
         },
         {
           "id": "D13-52",
           "source": "05_Python_控制流.md",
-          "section": "4.9.4. 任意实参列表",
-          "start_line": 837,
-          "end_line": 841,
-          "text_sha256": "aceb6152d2d5ca62b3affef2a0791d289690deefc5c4a5af52b075f953a89671",
-          "chars": 88
+          "section": "4.9.5. 解包实参列表",
+          "start_line": 860,
+          "end_line": 868,
+          "text_sha256": "1611db73469e69ddb2e5e67d132c1a062bd50823fcfac33bf03f26c9c04e2e95",
+          "chars": 325
         },
         {
           "id": "D13-53",
           "source": "05_Python_控制流.md",
-          "section": "4.9.5. 解包实参列表",
-          "start_line": 843,
-          "end_line": 861,
-          "text_sha256": "3bc8c7b5fc159b49616c68056b4e8b050c995b3c97b1217fa98b45324134a39a",
+          "section": "4.9.6. Lambda 表达式",
+          "start_line": 870,
+          "end_line": 890,
+          "text_sha256": "617815a70b44518a7b7858033e1d9545ca6664453b3ccf96be1e7d47ffde5d9f",
           "chars": 500
         },
         {
           "id": "D13-54",
           "source": "05_Python_控制流.md",
-          "section": "4.9.5. 解包实参列表",
-          "start_line": 860,
-          "end_line": 868,
-          "text_sha256": "53e7a8f2a90c612aea6adf8851ce16b073f3dba48baf163595432f8ba34e5be6",
-          "chars": 352
+          "section": "4.9.6. Lambda 表达式",
+          "start_line": 889,
+          "end_line": 894,
+          "text_sha256": "1e4b63cf8750ae4a5831a848f1352d8ff71c8f4107ae82d185291379eb3a946b",
+          "chars": 154
         },
         {
           "id": "D13-55",
           "source": "05_Python_控制流.md",
-          "section": "4.9.6. Lambda 表达式",
-          "start_line": 870,
-          "end_line": 890,
-          "text_sha256": "bec28c7ea72837c6b4d3f89f50ee69ef06bd0c066405f8e1538527b0b21c55e9",
+          "section": "4.9.7. 文档字符串",
+          "start_line": 896,
+          "end_line": 920,
+          "text_sha256": "3d81ca929fe7540748a7092a775951a07609c9459ab59517a8feb0c088d390d4",
           "chars": 500
         },
         {
           "id": "D13-56",
           "source": "05_Python_控制流.md",
-          "section": "4.9.6. Lambda 表达式",
-          "start_line": 889,
-          "end_line": 894,
-          "text_sha256": "ab4994f3c380df89e319537676f4af1ad1326acfa79163f2b5f9be56f2e50ddb",
-          "chars": 180
+          "section": "4.9.7. 文档字符串",
+          "start_line": 915,
+          "end_line": 927,
+          "text_sha256": "859ab92ae4c5fdd7f6bfa45052192282be2449a35c9f25718e2f9b8162788eec",
+          "chars": 170
         },
         {
           "id": "D13-57",
           "source": "05_Python_控制流.md",
-          "section": "4.9.7. 文档字符串",
-          "start_line": 896,
-          "end_line": 919,
-          "text_sha256": "8d433455800df323985db4dca6a878e0a24e80ec3aa43a367c994b35462ea802",
+          "section": "4.9.8. 函数注解",
+          "start_line": 929,
+          "end_line": 942,
+          "text_sha256": "a74bc0073a4cd891d8aa10068c10c383a4952c53ee8d60e9af8c3a746ed12070",
           "chars": 500
         },
         {
           "id": "D13-58",
           "source": "05_Python_控制流.md",
-          "section": "4.9.7. 文档字符串",
-          "start_line": 914,
-          "end_line": 927,
-          "text_sha256": "e0803f5bfb7d18d04da2628d102ede962425958c1d795edcb12a3917d225e15a",
-          "chars": 203
+          "section": "4.9.8. 函数注解",
+          "start_line": 939,
+          "end_line": 946,
+          "text_sha256": "e04853dd9633111e1ad353fcf6faee1df4937c6665614d99015c1e2148126efd",
+          "chars": 159
         },
         {
           "id": "D13-59",
           "source": "05_Python_控制流.md",
-          "section": "4.9.8. 函数注解",
-          "start_line": 929,
-          "end_line": 942,
-          "text_sha256": "fa443a50d22b6a76e2a1d710fd1ff451a623f15533c2a4fa4e415be050435239",
+          "section": "4.10. 小插曲：编码风格",
+          "start_line": 948,
+          "end_line": 977,
+          "text_sha256": "57506d1877b12dbca6293133cbea68a665743a6309ace89c1598b76c3c3008c3",
           "chars": 500
         },
         {
           "id": "D13-60",
           "source": "05_Python_控制流.md",
-          "section": "4.9.8. 函数注解",
-          "start_line": 939,
-          "end_line": 946,
-          "text_sha256": "281c32f2499e34c166ba58af5a77a0e0a3697ae8fd36f31c9ac1fb5531409a27",
-          "chars": 178
-        },
-        {
-          "id": "D13-61",
-          "source": "05_Python_控制流.md",
           "section": "4.10. 小插曲：编码风格",
-          "start_line": 948,
-          "end_line": 975,
-          "text_sha256": "09a2d8ecc5d5147f02744493a336e715eab512da2dcff42050492361da373893",
-          "chars": 500
-        },
-        {
-          "id": "D13-62",
-          "source": "05_Python_控制流.md",
-          "section": "4.10. 小插曲：编码风格",
-          "start_line": 968,
+          "start_line": 974,
           "end_line": 987,
-          "text_sha256": "e306eb3a3a212502617427db45ea21420b76f34e5454f381815f272ee30fb16d",
-          "chars": 379
+          "text_sha256": "f8d5ec02c3f0ff53c600bf8d4ff253dcd377b93b0ba506d85adbcdf96f09e10d",
+          "chars": 339
         }
       ],
       "queries": [
@@ -4278,15 +4188,15 @@
           "hits": [
             {
               "id": "D3-3",
-              "score": 0.2661668234946985
+              "score": 0.26691456348007914
             },
             {
               "id": "D9-11",
-              "score": 0.17891346086883864
+              "score": 0.1878041926927234
             },
             {
               "id": "D3-4",
-              "score": 0.17353761558654796
+              "score": 0.17390657373007853
             }
           ]
         },
@@ -4297,15 +4207,15 @@
           "hits": [
             {
               "id": "D4-2",
-              "score": 0.23221631191116734
+              "score": 0.23680101508241835
             },
             {
               "id": "D4-4",
-              "score": 0.13729314883430732
+              "score": 0.1358753864143828
             },
             {
-              "id": "D4-5",
-              "score": 0.09424529929657685
+              "id": "D9-11",
+              "score": 0.09604223864983447
             }
           ]
         },
@@ -4316,15 +4226,15 @@
           "hits": [
             {
               "id": "D9-6",
-              "score": 0.13747955438906181
+              "score": 0.139959862640121
             },
             {
               "id": "D9-27",
-              "score": 0.10900622744699508
+              "score": 0.10725802374042401
             },
             {
               "id": "D9-2",
-              "score": 0.09737566359884249
+              "score": 0.09793740375774079
             }
           ]
         },
@@ -4335,11 +4245,11 @@
           "hits": [
             {
               "id": "D12-8",
-              "score": 0.20615712490710852
+              "score": 0.2036184169783144
             },
             {
               "id": "D12-9",
-              "score": 0.10673731786189393
+              "score": 0.10532404933318516
             }
           ]
         },
@@ -4350,15 +4260,15 @@
           "hits": [
             {
               "id": "D5-2",
-              "score": 0.3471021724319529
+              "score": 0.34539299456001793
             },
             {
               "id": "D1-3",
-              "score": 0.2102128426288748
+              "score": 0.20870096341046027
             },
             {
               "id": "D7-6",
-              "score": 0.10789870556030193
+              "score": 0.10569055199254006
             }
           ]
         },

@@ -48,14 +48,15 @@ class BuildSiteTests(unittest.TestCase):
             self.assertFalse((output / "notes").exists())
             self.assertFalse(any(output.rglob("*.py")))
 
-    def test_notes_keep_original_line_endings(self):
-        """read_text 会把 CRLF 变成 LF，浏览器据此分段的字符偏移就会与 Python 不一致。"""
+    def test_notes_normalise_line_endings(self):
+        """Windows 检出是 CRLF、CI 是 LF，必须归一到同一种换行，分段才可跨平台复现。"""
         with tempfile.TemporaryDirectory() as directory:
             (Path(directory) / "笔记.md").write_bytes("# 标题\r\n正文\r\n".encode("utf-8"))
             (Path(directory) / "README.md").write_bytes(b"# readme\r\n")
             files = self.build_site._read_notes(Path(directory))
             self.assertEqual([file["name"] for file in files], ["笔记.md"])
-            self.assertIn("\r\n", files[0]["text"])
+            self.assertNotIn("\r", files[0]["text"])
+            self.assertEqual(files[0]["text"], "# 标题\n正文\n")
 
     def test_refuses_to_overwrite_repository_or_web_sources(self):
         for target in (ROOT, ROOT / "web"):

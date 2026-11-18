@@ -124,6 +124,16 @@ test("文件数量与总大小限制与 Python 基线一致", () => {
   assert.throws(() => loadDocuments(big), /2 MB/);
 });
 
+test("CRLF 与 LF 得到相同的分段和行号", () => {
+  const body = "# 标题\n第一段。\n\n## 小节\n第二段。\n";
+  const lf = parseDocument("lf.md", encoder.encode(body), "D1");
+  const crlf = parseDocument("crlf.md", encoder.encode(body.replace(/\n/g, "\r\n")), "D1");
+  assert.deepEqual(
+    crlf.map((chunk) => [chunk.section, chunk.startLine, chunk.endLine, chunk.text]),
+    lf.map((chunk) => [chunk.section, chunk.startLine, chunk.endLine, chunk.text]),
+  );
+});
+
 test("UTF-8 BOM 会被去掉，标题仍然生效", () => {
   const chunks = parseDocument("bom.md", encoder.encode("\ufeff# 标题\n正文内容。\n"), "D1");
   assert.equal(chunks[0].section, "标题");

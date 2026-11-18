@@ -69,8 +69,13 @@ def main() -> None:
     summary = {
         "source_commit": args.source_commit,
         "configuration": {"top_k": args.top_k, "min_score": args.min_score},
-        "corpus_sha256": hashlib.sha256(b"".join(name.encode("utf-8") + b"\0" + data for name, data in files)).hexdigest(),
-        "questions_sha256": hashlib.sha256((ROOT / "evaluation/questions.csv").read_bytes()).hexdigest(),
+        "corpus_sha256": hashlib.sha256(b"".join(
+            name.encode("utf-8") + b"\0" + data.replace(b"\r\n", b"\n").replace(b"\r", b"\n")
+            for name, data in files
+        )).hexdigest(),
+        "questions_sha256": hashlib.sha256(
+            (ROOT / "evaluation/questions.csv").read_bytes().replace(b"\r\n", b"\n").replace(b"\r", b"\n")
+        ).hexdigest(),
         "question_count": len(rows),
         "single_hit": {"passed": single_hit, "total": single, "rate": single_hit / single if single else None},
         "multi_all_evidence": {"passed": multi_all, "total": multi, "rate": multi_all / multi if multi else None},

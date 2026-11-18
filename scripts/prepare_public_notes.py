@@ -195,7 +195,7 @@ def main() -> None:
     for name, content in notes.items():
         if len(content.encode("utf-8")) > 512 * 1024:
             raise SystemExit(f"{name} 超过单文件上限，请缩小节选范围。")
-        (OUTPUT / name).write_text(content, encoding="utf-8")
+        (OUTPUT / name).write_text(content, encoding="utf-8", newline="\n")
     total = sum((OUTPUT / name).stat().st_size for name in notes)
     print(f"已写入 {len(notes)} 份公开资料，共 {total} 字节。")
 

@@ -119,6 +119,8 @@ export function parseDocument(name, bytes, docId) {
   if (!content.trim() || content.includes("\x00")) {
     throw new Error(`${name} 为空或不是正常文本。`);
   }
+  // 与 Python 基线一致：CRLF 与 LF 归一到 LF，分段和行号不随检出设置变化。
+  content = content.replace(/\r\n?/g, "\n");
 
   const chunks = [];
   let section = "正文";
