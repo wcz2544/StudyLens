@@ -51,6 +51,25 @@ class AppTests(unittest.TestCase):
         self.assertEqual(len(app.exception), 0)
         self.assertTrue(any("请上传" in item.value for item in app.info))
 
+    def test_open_corpus_option_loads_bundled_notes(self):
+        app = AppTest.from_file(str(APP)).run(timeout=30)
+        source = next(r for r in app.radio if r.label == "笔记来源")
+        self.assertIn("使用开放虚构语料", source.options)
+        source.set_value("使用开放虚构语料").run()
+        self.assertEqual(len(app.exception), 0)
+        captions = " ".join(item.value for item in app.caption)
+        self.assertIn("5 份笔记", captions)
+        self.assertTrue(any("灯塔调度导论" in item.value for item in app.caption))
+        # 内置语料不需要上传控件，避免用户以为必须再选文件。
+        self.assertTrue(next(f for f in app.get("file_uploader") if f.label == "上传自己的笔记").disabled)
+
+        next(i for i in app.text_input if i.label == "你想了解什么？").set_value("LBS 的英文全称是什么？")
+        next(b for b in app.button if b.label == "查找并回答").click()
+        app.run()
+        self.assertEqual(len(app.exception), 0)
+        self.assertGreater(len(app.expander), 0)
+        self.assertIn("01_术语与角色.md", app.expander[0].label)
+
     def test_ai_requires_consent_and_config(self):
         app = AppTest.from_file(str(APP)).run(timeout=30)
         next(r for r in app.radio if r.label == "笔记来源").set_value("使用内置示例笔记").run()

@@ -4,11 +4,13 @@ GitHub Actions 会在部署前执行本脚本；本地预览同样先构建再�
 
     python scripts/build_site.py --serve
 
-构建只复制文件、读取 data/sample_notes 并写入 samples.json，不执行任何网络请求。
+构建只复制文件、读取 data/sample_notes 与 data/open_corpus 并写入 samples.json，
+不执行任何网络请求。
 """
 from __future__ import annotations
 
 import argparse
+import csv
 import json
 import shutil
 import sys
@@ -18,7 +20,16 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 WEB = ROOT / "web"
 SAMPLE_NOTES = ROOT / "data" / "sample_notes"
+OPEN_CORPUS = ROOT / "data" / "open_corpus"
 REQUIRED = ("index.html", "assets/app.js", "assets/core.js", "assets/model.js", "assets/styles.css")
+
+# 问句示例只用于按钮，不代表评测口径；真正的评测仍按 questions.csv 全量执行。
+SAMPLE_NOTE_QUESTIONS = (
+    "SC 和 SCL 译码有什么区别？",
+    "分段长度和重叠是多少？",
+    "误比特率 BER 和误帧率 FER 有什么区别？",
+)
+MAX_CORPUS_QUESTIONS = 6
 
 
 def _check_target(output: Path) -> None:
@@ -27,15 +38,54 @@ def _check_target(output: Path) -> None:
         raise SystemExit(f"拒绝写入 {resolved}：输出目录不能是仓库根目录或 web/ 本身。")
 
 
-def _sample_payload() -> dict:
-    if not SAMPLE_NOTES.is_dir():
-        raise SystemExit(f"找不到示例笔记目录：{SAMPLE_NOTES}")
-    files = []
-    for path in sorted(SAMPLE_NOTES.glob("*.md")):
-        files.append({"name": path.name, "text": path.read_text(encoding="utf-8")})
+def _read_notes(directory: Path) -> list[dict]:
+    if not directory.is_dir():
+        raise SystemExit(f"找不到笔记目录：{directory}")
+    files = [
+        {"name": path.name, "text": path.read_text(encoding="utf-8")}
+        for path in sorted(directory.glob("*.md"))
+    ]
     if not files:
-        raise SystemExit("示例笔记目录为空，静态版的默认体验会失效。")
-    return {"generated_from": "data/sample_notes", "files": files}
+        raise SystemExit(f"笔记目录为空：{directory}")
+    return files
+
+
+def _open_corpus_questions() -> list[str]:
+    path = OPEN_CORPUS / "questions.csv"
+    if not path.is_file():
+        return []
+    questions: list[str] = []
+    # 优先取有明确证据的单段题与多段题；缺证题留作人工体验，不放进示例按钮。
+    for kind in ("single", "multi"):
+        with path.open(encoding="utf-8-sig", newline="") as stream:
+            for row in csv.DictReader(stream):
+                question = (row.get("question") or "").strip()
+                if row.get("kind") == kind and question and question not in questions:
+                    questions.append(question)
+                if len(questions) >= MAX_CORPUS_QUESTIONS:
+                    return questions
+    return questions
+
+
+def _corpora_payload() -> dict:
+    corpora = [
+        {
+            "id": "sample_notes",
+            "label": "内置示例笔记（3 份）",
+            "description": "项目自带的学习、检索与译码笔记，用于快速体验。",
+            "questions": list(SAMPLE_NOTE_QUESTIONS),
+            "files": _read_notes(SAMPLE_NOTES),
+        }
+    ]
+    if (OPEN_CORPUS / "notes").is_dir():
+        corpora.append({
+            "id": "open_corpus",
+            "label": "开放虚构语料 · 灯塔调度导论（5 份）",
+            "description": "虚构课程讲义，覆盖术语、调度周期、告警、实验记录与答疑；以 CC0 发布。",
+            "questions": _open_corpus_questions(),
+            "files": _read_notes(OPEN_CORPUS / "notes"),
+        })
+    return {"generated_from": "data/sample_notes + data/open_corpus", "corpora": corpora}
 
 
 def build(output: Path) -> int:
@@ -46,7 +96,7 @@ def build(output: Path) -> int:
         shutil.rmtree(output)
     shutil.copytree(WEB, output)
 
-    payload = _sample_payload()
+    payload = _corpora_payload()
     (output / "samples.json").write_text(
         json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
     )
@@ -59,7 +109,8 @@ def build(output: Path) -> int:
         raise SystemExit(f"构建产物缺少文件：{', '.join(missing)}")
 
     count = sum(1 for path in output.rglob("*") if path.is_file())
-    print(f"已生成 {output}：{count} 个文件，示例笔记 {len(payload['files'])} 份。")
+    summary = "、".join(f"{item['label']} {len(item['files'])} 份" for item in payload["corpora"])
+    print(f"已生成 {output}：{count} 个文件；内置语料：{summary}。")
     return count
 
 

@@ -21,6 +21,7 @@ from studylens.retrieval import Retriever  # noqa: E402
 
 FIXTURE = ROOT / "tests" / "static" / "fixtures" / "retrieval.json"
 SAMPLE_NOTES = ROOT / "data" / "sample_notes"
+OPEN_CORPUS = ROOT / "data" / "open_corpus"
 
 SAMPLE_QUERIES = [
     ("SC 和 SCL 译码有什么区别？", 3, 0.08),
@@ -93,35 +94,63 @@ def _case(name: str, files: list[tuple[str, bytes]], queries: list[tuple[str, in
     }
 
 
+def _open_corpus_case() -> dict | None:
+    """开放虚构语料同样要与浏览器实现对齐，否则页面上的示例答案会与评测不一致。"""
+    directory = OPEN_CORPUS / "notes"
+    if not directory.is_dir():
+        return None
+    files = [(path.name, path.read_bytes()) for path in sorted(directory.glob("*.md"))]
+    if not files:
+        return None
+    queries = []
+    questions = OPEN_CORPUS / "questions.csv"
+    if questions.is_file():
+        import csv
+
+        with questions.open(encoding="utf-8-sig", newline="") as stream:
+            for row in csv.DictReader(stream):
+                if row.get("kind") in {"single", "multi"} and (row.get("question") or "").strip():
+                    queries.append((row["question"].strip(), 3, 0.08))
+                if len(queries) >= 5:
+                    break
+    if not queries:
+        queries = [("LBS 的英文全称是什么？", 3, 0.08)]
+    return _case("open_corpus", files, queries)
+
+
 def build_payload() -> dict:
     import sklearn
 
     sample_files = _sample_files()
     if not sample_files:
         raise SystemExit("data/sample_notes 为空，无法生成对照数据。")
+    cases = [
+        _case("sample_notes", sample_files, SAMPLE_QUERIES),
+        _case(
+            "synthetic_markdown",
+            [("合成样例.md", SYNTHETIC_MARKDOWN.encode("utf-8"))],
+            [
+                ("码点偏移", 3, 0.05),
+                ("代码里的井号", 3, 0.0),
+                ("结尾行号", 2, 0.0),
+            ],
+        ),
+        _case(
+            "plain_text",
+            [("plain.txt", SYNTHETIC_TEXT.encode("utf-8"))],
+            [
+                ("看起来像标题", 2, 0.0),
+                ("第二行", 2, 0.0),
+            ],
+        ),
+    ]
+    open_case = _open_corpus_case()
+    if open_case is not None:
+        cases.append(open_case)
     return {
         "generated_by": "scripts/export_web_fixtures.py",
         "sklearn_version": sklearn.__version__,
-        "cases": [
-            _case("sample_notes", sample_files, SAMPLE_QUERIES),
-            _case(
-                "synthetic_markdown",
-                [("合成样例.md", SYNTHETIC_MARKDOWN.encode("utf-8"))],
-                [
-                    ("码点偏移", 3, 0.05),
-                    ("代码里的井号", 3, 0.0),
-                    ("结尾行号", 2, 0.0),
-                ],
-            ),
-            _case(
-                "plain_text",
-                [("plain.txt", SYNTHETIC_TEXT.encode("utf-8"))],
-                [
-                    ("看起来像标题", 2, 0.0),
-                    ("第二行", 2, 0.0),
-                ],
-            ),
-        ],
+        "cases": cases,
     }
 
 

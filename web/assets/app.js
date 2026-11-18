@@ -5,12 +5,6 @@
 import { loadDocuments, Retriever, isSupportedTextFile } from "./core.js";
 import { ModelError, generateAnswer } from "./model.js";
 
-const SAMPLE_QUESTIONS = [
-  "SC 和 SCL 译码有什么区别？",
-  "分段长度和重叠是多少？",
-  "误比特率 BER 和误帧率 FER 有什么区别？",
-];
-
 const $ = (selector) => document.querySelector(selector);
 
 const dom = {
@@ -18,6 +12,7 @@ const dom = {
   alerts: $("#alerts"),
   workspace: $("#workspace"),
   sourceRadios: [...document.querySelectorAll('input[name="source-mode"]')],
+  corpusHint: $("#corpus-hint"),
   uploadArea: $("#upload-area"),
   fileInput: $("#file-input"),
   fileList: $("#file-list"),
@@ -41,7 +36,7 @@ const dom = {
 };
 
 const state = {
-  sampleFiles: null,
+  corpora: new Map(),
   retriever: null,
   corpusHash: null,
   corpusNames: [],
@@ -101,7 +96,7 @@ function setBusy(message) {
 const paint = () => new Promise((resolve) => { setTimeout(resolve, 20); });
 
 function selectedSource() {
-  return dom.sourceRadios.find((radio) => radio.checked)?.value || "sample";
+  return dom.sourceRadios.find((radio) => radio.checked)?.value || "sample_notes";
 }
 
 function selectedMode() {
@@ -163,7 +158,7 @@ async function corpusHash(records) {
 
 function updateStatus() {
   if (!state.retriever) {
-    setStatus("请上传笔记，或在“笔记来源”中选择“使用内置示例笔记”。");
+    setStatus("请选择内置语料，或上传自己的笔记。");
     return;
   }
   setStatus(`已载入 ${state.corpusNames.length} 份笔记，共 ${state.chunkCount} 个段落；检索只在这个浏览器里完成。`);
@@ -225,13 +220,15 @@ async function applyCorpus(records) {
 
 async function loadCorpusFromUI() {
   clearAlerts();
-  if (selectedSource() === "sample") {
-    if (!state.sampleFiles) {
+  const source = selectedSource();
+  if (source !== "upload") {
+    const corpus = state.corpora.get(source);
+    if (!corpus) {
       clearCorpus();
-      showAlert("warn", "示例笔记没有加载成功，请上传自己的 .md / .txt 笔记。");
+      showAlert("warn", "内置语料没有加载成功，请上传自己的 .md / .txt 笔记。");
       return;
     }
-    await applyCorpus(state.sampleFiles);
+    await applyCorpus(corpus.files);
     return;
   }
   const files = dom.fileInput.files;
@@ -437,11 +434,38 @@ async function handleSubmit(event) {
   renderFeedback();
 }
 
+function renderChips() {
+  dom.sampleQuestions.replaceChildren();
+  const corpus = state.corpora.get(selectedSource());
+  const questions = corpus?.questions || [];
+  for (const question of questions) {
+    dom.sampleQuestions.append(h("button", {
+      class: "chip",
+      type: "button",
+      text: question,
+      onclick: () => {
+        dom.question.value = question;
+        dom.question.focus();
+      },
+    }));
+  }
+}
+
+function syncSourceControls() {
+  const source = selectedSource();
+  const upload = source === "upload";
+  dom.uploadArea.hidden = !upload;
+  dom.fileInput.disabled = !upload;
+  dom.corpusHint.textContent = upload
+    ? "只接受 UTF-8 的 .txt / .md；文件不会离开这个浏览器。"
+    : (state.corpora.get(source)?.description || "正在准备内置语料…");
+}
+
 function bindEvents() {
   for (const radio of dom.sourceRadios) {
     radio.addEventListener("change", async () => {
-      dom.uploadArea.hidden = selectedSource() !== "upload";
-      dom.fileInput.disabled = selectedSource() !== "upload";
+      syncSourceControls();
+      renderChips();
       await loadCorpusFromUI();
     });
   }
@@ -474,42 +498,56 @@ function bindEvents() {
   });
 }
 
-async function loadSampleNotes() {
+async function loadCorpora() {
   const encoder = new TextEncoder();
   try {
     const response = await fetch("samples.json", { cache: "no-cache" });
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     const data = await response.json();
-    const files = (data.files || []).filter((item) => typeof item?.name === "string" && typeof item?.text === "string");
-    if (files.length === 0) throw new Error("示例笔记为空");
-    state.sampleFiles = files.map((item) => ({ name: item.name, bytes: encoder.encode(item.text) }));
+    for (const item of data.corpora || []) {
+      if (typeof item?.id !== "string" || !Array.isArray(item.files)) continue;
+      const files = item.files
+        .filter((file) => typeof file?.name === "string" && typeof file?.text === "string")
+        .map((file) => ({ name: file.name, bytes: encoder.encode(file.text) }));
+      if (files.length === 0) continue;
+      state.corpora.set(item.id, {
+        label: item.label || item.id,
+        description: item.description || "",
+        questions: Array.isArray(item.questions) ? item.questions : [],
+        files,
+      });
+    }
+    if (state.corpora.size === 0) throw new Error("内置语料为空");
+    // 配置里没有的语料（例如旧版构建）就不要出现在选择项里，避免点开是空的。
+    for (const radio of dom.sourceRadios) {
+      if (radio.value !== "upload" && !state.corpora.has(radio.value)) {
+        radio.disabled = true;
+        radio.checked = false;
+      }
+    }
+    if (!dom.sourceRadios.some((radio) => radio.checked)) {
+      dom.sourceRadios.find((radio) => radio.value === "upload").checked = true;
+    }
   } catch {
-    state.sampleFiles = null;
-    const sample = dom.sourceRadios.find((radio) => radio.value === "sample");
-    const upload = dom.sourceRadios.find((radio) => radio.value === "upload");
-    if (sample) sample.disabled = true;
-    if (upload) upload.checked = true;
-    dom.uploadArea.hidden = false;
-    showAlert("warn", "示例笔记没有加载成功（本地预览时请先运行 scripts/build_site.py）。请上传自己的 .md / .txt 笔记。");
+    state.corpora.clear();
+    for (const radio of dom.sourceRadios) {
+      if (radio.value !== "upload") {
+        radio.disabled = true;
+        radio.checked = false;
+      }
+    }
+    dom.sourceRadios.find((radio) => radio.value === "upload").checked = true;
+    showAlert("warn", "内置语料没有加载成功（本地预览时请先运行 scripts/build_site.py）。请上传自己的 .md / .txt 笔记。");
   }
 }
 
-function init() {
-  dom.fileInput.disabled = true;
+async function init() {
   dom.aiSettings.hidden = true;
-  for (const question of SAMPLE_QUESTIONS) {
-    dom.sampleQuestions.append(h("button", {
-      class: "chip",
-      type: "button",
-      text: question,
-      onclick: () => {
-        dom.question.value = question;
-        dom.question.focus();
-      },
-    }));
-  }
   bindEvents();
-  loadSampleNotes().then(loadCorpusFromUI);
+  await loadCorpora();
+  syncSourceControls();
+  renderChips();
+  await loadCorpusFromUI();
 }
 
 init();

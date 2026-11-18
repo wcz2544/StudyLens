@@ -34,13 +34,18 @@
       <fieldset class="field">
         <legend>笔记来源</legend>
         <label class="choice">
-          <input type="radio" name="source-mode" value="sample" checked>
-          <span>使用内置示例笔记</span>
+          <input type="radio" name="source-mode" value="sample_notes" checked>
+          <span>内置示例笔记（3 份）</span>
+        </label>
+        <label class="choice">
+          <input type="radio" name="source-mode" value="open_corpus">
+          <span>开放虚构语料 · 灯塔调度导论（5 份）</span>
         </label>
         <label class="choice">
           <input type="radio" name="source-mode" value="upload">
           <span>上传自己的笔记</span>
         </label>
+        <p id="corpus-hint" class="hint">项目自带的学习、检索与译码笔记，用于快速体验。</p>
       </fieldset>
 
       <div id="upload-area" class="field" hidden>

@@ -37,6 +37,7 @@ GitHub Pages 版本是纯静态页面：分段、字符 TF-IDF 检索和引用�
 静态版只有 HTML、CSS 和 JavaScript，托管在 GitHub Pages，不需要 Streamlit Cloud、Docker 或任何服务器：
 
 - 在浏览器内完成 Markdown / TXT 解析、按标题分段、字符 TF-IDF 检索和 Top-K 过滤。算法与 `studylens/documents.py`、`studylens/retrieval.py` 相同，`tests/static` 会用 Python 基线对照数据校验分段、排序和分数。
+- 内置两套语料：项目自带的 3 份示例笔记，以及 `data/open_corpus` 的开放虚构语料“灯塔调度导论”（5 份讲义 + 36 道配对题，CC0）。切换后即可直接检索，示例问题按钮取自对应题集。
 - 资料不会上传到本项目或第三方；关闭标签页后当前资料即消失。
 - AI 问答为可选功能：浏览器直接请求受支持的服务商（DeepSeek / OpenAI / SiliconFlow）。密钥只存在页面内存，服务商需允许浏览器跨域请求；DeepSeek 接口已验证可用于这种直连方式。
 - 只支持 UTF-8 的 TXT / Markdown，最多 10 份、每份 512 KiB、合计 2 MB。图片 OCR、PDF / DOCX 解析和持久知识库仍需下面的服务端版本。

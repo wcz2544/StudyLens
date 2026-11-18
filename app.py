@@ -36,12 +36,15 @@ with st.sidebar:
     st.header("资料与设置")
     source_mode = st.radio(
         "笔记来源",
-        ["上传自己的笔记", "使用内置示例笔记"],
+        ["上传自己的笔记", "使用内置示例笔记", "使用开放虚构语料"],
         help="上传自己的资料进行检索，或者使用项目自带示例快速体验。",
     )
     use_sample = source_mode == "使用内置示例笔记"
+    use_open_corpus = source_mode == "使用开放虚构语料"
     uploaded = st.file_uploader("上传自己的笔记", type=["txt", "md", "jpg", "jpeg", "png", "pdf", "docx"],
-                                accept_multiple_files=True, disabled=use_sample)
+                                accept_multiple_files=True, disabled=use_sample or use_open_corpus)
+    if use_open_corpus:
+        st.caption("北港学院 · 灯塔调度导论：虚构课程讲义，配 36 题检索开发集，以 CC0 发布。")
     st.caption("支持 TXT、Markdown、图片、PDF、DOCX；扫描页会在应用服务器识别。" + UPLOAD_HELP)
     mode = st.radio("运行模式", ["只检索原文（无需 API）", "AI 问答（需要 API）"])
     top_k = st.slider(
@@ -76,13 +79,23 @@ with st.sidebar:
         st.session_state.pop("result", None)
         st.session_state["feedback"] = []
 
-raw_files = ([(p.name, p.read_bytes()) for p in sorted((ROOT / "data" / "sample_notes").glob("*.md"))]
-             if use_sample else [(f.name, f.getvalue()) for f in (uploaded or [])])
+def _bundled_notes(relative: Path) -> list[tuple[str, bytes]]:
+    """读取仓库内置语料；目录缺失时返回空列表，由下面的提示接管。"""
+    directory = ROOT / relative
+    return [(path.name, path.read_bytes()) for path in sorted(directory.glob("*.md"))]
+
+
+if use_sample:
+    raw_files = _bundled_notes(Path("data") / "sample_notes")
+elif use_open_corpus:
+    raw_files = _bundled_notes(Path("data") / "open_corpus" / "notes")
+else:
+    raw_files = [(f.name, f.getvalue()) for f in (uploaded or [])]
 if not raw_files:
     # 删除资料时同时清除旧索引和旧答案，避免用户误以为旧内容属于新资料。
     for key in ("index", "corpus_hash", "result", "result_context", "import_previews", "import_warnings"):
         st.session_state.pop(key, None)
-    st.info("请上传笔记，或在“笔记来源”中选择“使用内置示例笔记”。")
+    st.info("请上传笔记，或在“笔记来源”中选择内置语料。")
     st.stop()
 try:
     validate_uploads(raw_files)
