@@ -9,20 +9,18 @@ on:
     branches: [main]
     paths:
       - "web/**"
-      - "scripts/build_site.py"
-      - "scripts/export_web_fixtures.py"
-      - "data/sample_notes/**"
-      - "data/open_corpus/**"
+      - "scripts/**"
+      - "data/**"
+      - "evaluation/**"
       - "tests/static/**"
       - "package.json"
       - ".github/workflows/pages.yml"
   pull_request:
     paths:
       - "web/**"
-      - "scripts/build_site.py"
-      - "scripts/export_web_fixtures.py"
-      - "data/sample_notes/**"
-      - "data/open_corpus/**"
+      - "scripts/**"
+      - "data/**"
+      - "evaluation/**"
       - "tests/static/**"
       - "package.json"
       - ".github/workflows/pages.yml"
