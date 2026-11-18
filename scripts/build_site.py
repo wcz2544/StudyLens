@@ -21,13 +21,25 @@ ROOT = Path(__file__).resolve().parents[1]
 WEB = ROOT / "web"
 SAMPLE_NOTES = ROOT / "data" / "sample_notes"
 OPEN_CORPUS = ROOT / "data" / "open_corpus"
+PUBLIC_NOTES = ROOT / "data" / "public_notes"
+NOTE_DIRS = (SAMPLE_NOTES, OPEN_CORPUS / "notes", PUBLIC_NOTES)
 REQUIRED = ("index.html", "assets/app.js", "assets/core.js", "assets/model.js", "assets/styles.css")
 
-# 问句示例只用于按钮，不代表评测口径；真正的评测仍按 questions.csv 全量执行。
+# 问句示例只用于按钮，不代表评测口径；完整评测见 scripts/evaluate_bundled.py。
 SAMPLE_NOTE_QUESTIONS = (
     "SC 和 SCL 译码有什么区别？",
     "分段长度和重叠是多少？",
     "误比特率 BER 和误帧率 FER 有什么区别？",
+)
+OPEN_CORPUS_QUESTIONS = (
+    "LBS 的英文全称是什么？",
+    "调度员、值守员和审核员分别负责什么？",
+    "每周几整理信标日志？每周几自测？",
+)
+PUBLIC_NOTE_QUESTIONS = (
+    "所有权有哪三条规则？",
+    "同一作用域里可以同时存在几个可变引用？",
+    "列表推导式的基本写法是什么？",
 )
 MAX_CORPUS_QUESTIONS = 6
 
@@ -42,15 +54,18 @@ def _read_notes(directory: Path) -> list[dict]:
     if not directory.is_dir():
         raise SystemExit(f"找不到笔记目录：{directory}")
     files = [
-        {"name": path.name, "text": path.read_text(encoding="utf-8")}
+        # 按字节读取再解码：避免 Windows 的 read_text 把 CRLF 改成 LF，导致浏览器
+        # 分段的字符偏移与 Python 基线不一致。
+        {"name": path.name, "text": path.read_bytes().decode("utf-8")}
         for path in sorted(directory.glob("*.md"))
+        if path.name.lower() != "readme.md"
     ]
     if not files:
         raise SystemExit(f"笔记目录为空：{directory}")
     return files
 
 
-def _open_corpus_questions() -> list[str]:
+def _open_corpus_questions(limit: int) -> list[str]:
     path = OPEN_CORPUS / "questions.csv"
     if not path.is_file():
         return []
@@ -62,30 +77,41 @@ def _open_corpus_questions() -> list[str]:
                 question = (row.get("question") or "").strip()
                 if row.get("kind") == kind and question and question not in questions:
                     questions.append(question)
-                if len(questions) >= MAX_CORPUS_QUESTIONS:
+                if len(questions) >= limit:
                     return questions
     return questions
 
 
 def _corpora_payload() -> dict:
-    corpora = [
-        {
-            "id": "sample_notes",
-            "label": "内置示例笔记（3 份）",
-            "description": "项目自带的学习、检索与译码笔记，用于快速体验。",
-            "questions": list(SAMPLE_NOTE_QUESTIONS),
-            "files": _read_notes(SAMPLE_NOTES),
-        }
+    """网页只提供一套内置语料：示例笔记、虚构语料与公开资料合并成一个索引。"""
+    files: list[dict] = []
+    for directory in NOTE_DIRS:
+        if directory.is_dir():
+            files.extend(_read_notes(directory))
+    if not files:
+        raise SystemExit("内置语料为空，静态版的默认体验会失效。")
+    questions = [
+        *SAMPLE_NOTE_QUESTIONS,
+        *_open_corpus_questions(2),
+        *PUBLIC_NOTE_QUESTIONS,
+        *OPEN_CORPUS_QUESTIONS[:1],
     ]
-    if (OPEN_CORPUS / "notes").is_dir():
-        corpora.append({
-            "id": "open_corpus",
-            "label": "开放虚构语料 · 灯塔调度导论（5 份）",
-            "description": "虚构课程讲义，覆盖术语、调度周期、告警、实验记录与答疑；以 CC0 发布。",
-            "questions": _open_corpus_questions(),
-            "files": _read_notes(OPEN_CORPUS / "notes"),
-        })
-    return {"generated_from": "data/sample_notes + data/open_corpus", "corpora": corpora}
+    unique: list[str] = []
+    for question in questions:
+        if question not in unique:
+            unique.append(question)
+    return {
+        "generated_from": " + ".join(str(directory.relative_to(ROOT)).replace("\\", "/") for directory in NOTE_DIRS),
+        "corpora": [
+            {
+                "id": "sample_notes",
+                "label": "内置示例笔记",
+                "description": "项目自带的示例笔记与公开资料：学习方法、检索实验、译码入门、灯塔调度、Rust 与 Python 教程。",
+                "questions": unique,
+                "files": files,
+            }
+        ],
+    }
 
 
 def build(output: Path) -> int:

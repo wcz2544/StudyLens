@@ -37,6 +37,13 @@ jobs:
           python -B -m unittest discover -s tests -p "test_security.py" -v
       - name: Compare 30-question retrieval baseline
         run: python -B evaluate.py --output evaluation/ci_baseline.csv --summary evaluation/ci_baseline.json --check-baseline evaluation/baseline_2026-10-31.json --source-commit "${{ github.sha }}"
+      - name: Compare bundled-corpus retrieval baseline
+        run: python -B scripts/evaluate_bundled.py --check-baseline evaluation/bundled_baseline.json --summary evaluation/ci_bundled.json --csv evaluation/ci_bundled.csv --source-commit "${{ github.sha }}"
+      - name: Static site build and browser-parity tests
+        run: |
+          node --test tests/static/core.test.mjs tests/static/model.test.mjs
+          python -B scripts/export_web_fixtures.py --check
+          python -B scripts/build_site.py --output _site
       - uses: actions/upload-artifact@v4
         if: always()
         with:

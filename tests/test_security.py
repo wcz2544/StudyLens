@@ -48,7 +48,7 @@ class SecurityTests(unittest.TestCase):
     def test_upload_type_count_and_size_limits(self):
         validate_uploads([("photo.jpg", b"x" * (3 * 1024 * 1024))])
         validate_uploads([("book.pdf", b"x" * (12 * 1024 * 1024))])
-        for files in [[], [("n.txt", b"x")] * 11, [("a.exe", b"x")],
+        for files in [[], [("n.txt", b"x")] * 21, [("a.exe", b"x")],
                       [("a.txt", b"x" * (512 * 1024 + 1))],
                       [("a.png", b"x" * (8 * 1024 * 1024 + 1))],
                       [("a.pdf", b"x" * (12 * 1024 * 1024 + 1))],

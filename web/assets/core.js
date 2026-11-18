@@ -11,7 +11,7 @@
 
 export const MAX_FILE_BYTES = 512 * 1024;
 export const MAX_TOTAL_BYTES = 2 * 1024 * 1024;
-export const MAX_FILES = 10;
+export const MAX_FILES = 20;
 export const CHUNK_SIZE = 500;
 export const OVERLAP = 80;
 export const MAX_FEATURES = 50000;
@@ -149,7 +149,7 @@ export function parseDocument(name, bytes, docId) {
 /** 与 documents.load_documents 相同的校验顺序与提示语。 */
 export function loadDocuments(files) {
   if (!Array.isArray(files) || files.length === 0 || files.length > MAX_FILES) {
-    throw new Error("请选择 1～10 份笔记。");
+    throw new Error("请选择 1～20 份笔记。");
   }
   let total = 0;
   for (const file of files) total += file.bytes.length;

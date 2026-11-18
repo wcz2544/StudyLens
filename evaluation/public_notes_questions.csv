@@ -1,0 +1,32 @@
+id,kind,question,expected_sections
+P01,single,所有权有哪三条规则？,01_Rust_所有权.md::所有权规则
+P02,single,变量从什么位置开始到作用域结束都有效？,01_Rust_所有权.md::变量作用域
+P03,single,String 在堆上分配内存、离开作用域时释放,01_Rust_所有权.md::内存与分配
+P04,multi,所有权与函数、返回值与作用域之间是什么关系？,01_Rust_所有权.md::所有权与函数|01_Rust_所有权.md::返回值与作用域
+P05,multi,变量与数据交互的方式有哪些？移动和克隆,01_Rust_所有权.md::变量与数据交互的方式（一）：移动|01_Rust_所有权.md::变量与数据交互的方式（二）：克隆
+P06,single,实现了 Copy 的类型有什么特点？,01_Rust_所有权.md::只在栈上的数据：拷贝
+P07,single,Rust 中引用与借用是什么？,02_Rust_借用与引用.md::引用与借用
+P08,single,同一作用域里可以同时存在几个可变引用？,02_Rust_借用与引用.md::可变引用
+P09,single,悬垂引用为什么会被编译器拒绝？,02_Rust_借用与引用.md::悬垂引用（Dangling References）
+P10,single,引用的规则有哪两条？,02_Rust_借用与引用.md::引用的规则
+P11,single,字符串 slice 用什么语法表示范围？,03_Rust_切片.md::字符串 slice
+P12,single,字符串字面量在 Rust 里是什么类型？,03_Rust_切片.md::字符串字面量就是 slice
+P13,single,为什么函数参数更适合用 &str 而不是 &String？,03_Rust_切片.md::字符串 slice 作为参数
+P14,single,除了字符串还可以对哪些类型做切片？,03_Rust_切片.md::其他类型的 slice
+P15,single,用列表实现堆栈时用什么方法实现后进先出？,04_Python_数据结构.md::5.1.1. 用列表实现堆栈
+P16,single,用列表实现队列为什么效率不高？,04_Python_数据结构.md::5.1.2. 用列表实现队列
+P17,single,列表推导式的基本写法是什么？,04_Python_数据结构.md::5.1.3. 列表推导式
+P18,single,del 语句可以删除哪些东西？,04_Python_数据结构.md::5.2. `del` 语句
+P19,single,集合支持哪些运算？,04_Python_数据结构.md::5.4. 集合
+P20,single,遍历字典时怎样同时取出键和值？,04_Python_数据结构.md::5.6. 循环的技巧
+P21,single,怎样同时取得序列的索引和对应的值？,04_Python_数据结构.md::5.6. 循环的技巧
+P22,single,比较两个序列时按照什么规则决定大小？,04_Python_数据结构.md::5.8. 序列和其他类型的比较
+P23,single,range() 函数返回什么？,05_Python_控制流.md::4.3. `range()` 函数
+P24,single,循环的 else 子句在什么情况下执行？,05_Python_控制流.md::4.5. 循环的 `else` 子句
+P25,single,默认值参数为什么不要使用可变对象？,05_Python_控制流.md::4.9.1. 默认值参数
+P26,single,什么是仅限关键字参数？,05_Python_控制流.md::4.9.3.3. 仅限关键字参数
+P27,single,Lambda 表达式能做什么？,05_Python_控制流.md::4.9.6. Lambda 表达式
+P28,single,函数注解有什么作用？,05_Python_控制流.md::4.9.8. 函数注解
+P29,unanswerable,借用检查器如何判断引用有效？,
+P30,unanswerable,贝多芬第九交响曲有几个乐章？,
+P31,unanswerable,番茄炒蛋需要放多少盐？,

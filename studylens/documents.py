@@ -5,7 +5,7 @@ import re
 
 MAX_FILE_BYTES = 512 * 1024
 MAX_TOTAL_BYTES = 2 * 1024 * 1024
-MAX_FILES = 10
+MAX_FILES = 20
 
 
 @dataclass(frozen=True)
@@ -75,7 +75,7 @@ def parse_document(name: str, data: bytes, doc_id: str,
 
 def load_documents(files: list[tuple[str, bytes]]) -> list[Chunk]:
     if not files or len(files) > MAX_FILES:
-        raise ValueError("请选择 1～10 份笔记。")
+        raise ValueError("请选择 1～20 份笔记。")
     if sum(len(data) for _, data in files) > MAX_TOTAL_BYTES:
         raise ValueError("文件总大小不能超过 2 MB。")
     chunks = []

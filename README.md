@@ -37,10 +37,10 @@ GitHub Pages 版本是纯静态页面：分段、字符 TF-IDF 检索和引用�
 静态版只有 HTML、CSS 和 JavaScript，托管在 GitHub Pages，不需要 Streamlit Cloud、Docker 或任何服务器：
 
 - 在浏览器内完成 Markdown / TXT 解析、按标题分段、字符 TF-IDF 检索和 Top-K 过滤。算法与 `studylens/documents.py`、`studylens/retrieval.py` 相同，`tests/static` 会用 Python 基线对照数据校验分段、排序和分数。
-- 内置两套语料：项目自带的 3 份示例笔记，以及 `data/open_corpus` 的开放虚构语料“灯塔调度导论”（5 份讲义 + 36 道配对题，CC0）。切换后即可直接检索，示例问题按钮取自对应题集。
+- 一个内置入口：项目自带的示例笔记、`data/open_corpus` 的虚构语料“灯塔调度导论”，以及 `data/public_notes` 的公开文档（Rust 书中译版、Python 官方中文教程），共 13 份、216 个段落，打开即可检索。
 - 资料不会上传到本项目或第三方；关闭标签页后当前资料即消失。
 - AI 问答为可选功能：浏览器直接请求受支持的服务商（DeepSeek / OpenAI / SiliconFlow）。密钥只存在页面内存，服务商需允许浏览器跨域请求；DeepSeek 接口已验证可用于这种直连方式。
-- 只支持 UTF-8 的 TXT / Markdown，最多 10 份、每份 512 KiB、合计 2 MB。图片 OCR、PDF / DOCX 解析和持久知识库仍需下面的服务端版本。
+- 只支持 UTF-8 的 TXT / Markdown，最多 20 份、每份 512 KiB、合计 2 MB。图片 OCR、PDF / DOCX 解析和持久知识库仍需下面的服务端版本。
 
 本地构建与预览：
 
@@ -72,7 +72,7 @@ python -m venv .venv
 
 打开终端提示的本地地址。文字版文件无需 OCR 系统组件；图片和扫描 PDF 需要另装 Tesseract 及 `chi_sim`、`eng` 语言包。仅安装 pytesseract 不等于安装了识别程序。容器和 Streamlit Cloud 的系统依赖已声明。
 
-上传限制：最多10份；文字512KiB/份、图片8MiB/份、PDF/DOCX 12MiB/份，原文件合计24MiB；提取文字512KiB/份、合计2MiB。持久知识库服务每次导入一份，使用同一格式限制。
+上传限制：最多20份；文字512KiB/份、图片8MiB/份、PDF/DOCX 12MiB/份，原文件合计24MiB；提取文字512KiB/份、合计2MiB。持久知识库服务每次导入一份，使用同一格式限制。
 
 ## 运行完整知识库
 
@@ -92,11 +92,21 @@ docker compose --env-file .env.rag -f deploy/compose.yml up -d --build
 
 新增18题开发集覆盖同义、跨语言、多证据、歧义、缺证、冲突、更新、删除、闲聊。基础检索在其中12道有答案题的 Recall@5 为10/12（83.33%）。真实混合检索提升和模型回答准确率需要外部服务与人工标注，未用模拟结果代替。
 
+网页“内置示例笔记”把三类资料合成一个索引（13 份文件、216 个段落），因此另有一套合并口径的离线评测，覆盖 97 道题（30 道示例题 + 36 道虚构语料题 + 31 道公开资料题）：
+
+```powershell
+python -B scripts/evaluate_bundled.py --write-baseline evaluation/bundled_baseline.json
+python -B scripts/evaluate_bundled.py --check-baseline evaluation/bundled_baseline.json
+```
+
+2026-11-18 实测（`top_k=3`、`min_score=0.08`）：单段命中 56/56，多段全部证据 23/24，无答案空检索 3/17。合并语料后 `Q23` 因竞争更多资料而未命中；「无答案空检索」不是模型拒答正确率。公开资料的来源与许可见 [data/public_notes](data/public_notes/README.md)。
+
 ```powershell
 .\.venv\Scripts\python.exe -m pip install -r requirements-rag.txt
 .\.venv\Scripts\python.exe -B -m unittest discover -s tests -v
 node --test tests/static/core.test.mjs tests/static/model.test.mjs
 .\.venv\Scripts\python.exe scripts\export_web_fixtures.py --check
+.\.venv\Scripts\python.exe scripts\evaluate_bundled.py --check-baseline evaluation/bundled_baseline.json
 .\.venv\Scripts\python.exe -B evaluate.py --output evaluation/results.csv
 .\.venv\Scripts\python.exe -B evaluate_rag.py --backend baseline
 ```

@@ -53,6 +53,8 @@ jobs:
         run: node --test tests/static/core.test.mjs tests/static/model.test.mjs
       - name: Check parity fixtures are current
         run: python -B scripts/export_web_fixtures.py --check
+      - name: Check bundled retrieval baseline
+        run: python -B scripts/evaluate_bundled.py --check-baseline evaluation/bundled_baseline.json --summary evaluation/ci_bundled.json --csv evaluation/ci_bundled.csv
       - name: Build static site
         run: python -B scripts/build_site.py --output _site
       - uses: actions/configure-pages@v5

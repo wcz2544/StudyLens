@@ -4,6 +4,7 @@
  */
 import test from "node:test";
 import assert from "node:assert/strict";
+import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -11,40 +12,63 @@ import { fileURLToPath } from "node:url";
 import { loadDocuments, Retriever, parseDocument } from "../../web/assets/core.js";
 
 const here = dirname(fileURLToPath(import.meta.url));
+const repo = join(here, "..", "..");
 const fixture = JSON.parse(readFileSync(join(here, "fixtures", "retrieval.json"), "utf8"));
 const encoder = new TextEncoder();
 
+const sha256 = (text) => createHash("sha256").update(text, "utf8").digest("hex");
+
+/** 内置笔记按相对路径读取，合成样例直接写在对照数据里。 */
 function recordsOf(files) {
-  return files.map((file) => ({ name: file.name, bytes: encoder.encode(file.text) }));
+  return files.map((file) => ({
+    name: file.name,
+    bytes: flagBytes(file),
+  }));
 }
 
-function viewChunk(chunk) {
+function flagBytes(file) {
+  if (typeof file.path === "string") return readFileSync(join(repo, file.path));
+  return encoder.encode(file.text);
+}
+
+function viewChunk(chunk, text) {
   return {
     id: chunk.id,
     source: chunk.source,
     section: chunk.section,
     startLine: chunk.startLine,
     endLine: chunk.endLine,
-    text: chunk.text,
+    textHash: sha256(text),
+    chars: Array.from(text).length,
   };
 }
 
-test("对照数据包含可用的样例和查询", () => {
-  assert.ok(fixture.cases.length >= 2);
-  assert.ok(fixture.cases.every((item) => item.chunks.length > 0 && item.queries.length > 0));
+test("对照数据包含全部内置语料与查询", () => {
+  const names = fixture.cases.map((item) => item.name);
+  for (const name of ["sample_notes", "open_corpus", "public_notes", "bundled", "synthetic_markdown", "plain_text"]) {
+    assert.ok(names.includes(name), `缺少样例 ${name}`);
+  }
+  for (const item of fixture.cases) {
+    assert.ok(item.chunks.length > 0 && item.queries.length > 0, item.name);
+    for (const file of item.files) {
+      assert.ok(file.path || file.text, `${item.name} 的文件缺少来源`);
+    }
+  }
 });
 
 for (const item of fixture.cases) {
   test(`分段与 Python 基线一致：${item.name}`, () => {
-    const chunks = loadDocuments(recordsOf(item.files)).map(viewChunk);
-    assert.deepEqual(chunks, item.chunks.map((chunk) => ({
-      id: chunk.id,
-      source: chunk.source,
-      section: chunk.section,
-      startLine: chunk.start_line,
-      endLine: chunk.end_line,
-      text: chunk.text,
-    })));
+    const chunks = loadDocuments(recordsOf(item.files)).map((chunk) => viewChunk(chunk, chunk.text));
+    assert.equal(chunks.length, item.chunks.length, "段落数量不一致");
+    chunks.forEach((chunk, index) => {
+      const expected = item.chunks[index];
+      assert.deepEqual(
+        { id: chunk.id, source: chunk.source, section: chunk.section, startLine: chunk.startLine, endLine: chunk.endLine, chars: chunk.chars },
+        { id: expected.id, source: expected.source, section: expected.section, startLine: expected.start_line, endLine: expected.end_line, chars: expected.chars },
+        `第 ${index + 1} 段元数据不一致`,
+      );
+      assert.equal(chunk.textHash, expected.text_sha256, `第 ${index + 1} 段正文不一致`);
+    });
   });
 
   test(`检索排序与分数与 Python 基线一致：${item.name}`, () => {
@@ -86,12 +110,12 @@ test("拒绝不支持的格式、超限文件和非法编码", () => {
 });
 
 test("文件数量与总大小限制与 Python 基线一致", () => {
-  const many = Array.from({ length: 11 }, (_, index) => ({
+  const many = Array.from({ length: 21 }, (_, index) => ({
     name: `笔记${index}.md`,
     bytes: encoder.encode("内容"),
   }));
-  assert.throws(() => loadDocuments(many), /1～10 份笔记/);
-  assert.throws(() => loadDocuments([]), /1～10 份笔记/);
+  assert.throws(() => loadDocuments(many), /1～20 份笔记/);
+  assert.throws(() => loadDocuments([]), /1～20 份笔记/);
 
   const big = Array.from({ length: 5 }, (_, index) => ({
     name: `大${index}.md`,

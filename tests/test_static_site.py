@@ -21,26 +21,17 @@ class BuildSiteTests(unittest.TestCase):
     def setUpClass(cls):
         cls.build_site = load_build_site()
 
-    def test_payload_contains_both_bundled_corpora(self):
+    def test_payload_merges_every_bundled_source(self):
         payload = self.build_site._corpora_payload()
-        corpora = {item["id"]: item for item in payload["corpora"]}
-        self.assertIn("sample_notes", corpora)
-        self.assertIn("open_corpus", corpora)
-        self.assertEqual(len(corpora["sample_notes"]["files"]), 3)
-        self.assertEqual(len(corpora["open_corpus"]["files"]), 5)
-        for item in corpora.values():
-            self.assertTrue(item["label"])
-            self.assertTrue(item["questions"], item["id"])
-            for file in item["files"]:
-                self.assertTrue(file["name"].endswith(".md"))
-                self.assertTrue(file["text"].strip())
-
-    def test_open_corpus_questions_come_from_the_paired_set(self):
-        corpora = {item["id"]: item for item in self.build_site._corpora_payload()["corpora"]}
-        questions = corpora["open_corpus"]["questions"]
-        self.assertLessEqual(len(questions), 6, "示例按钮不宜过多")
-        self.assertIn("LBS 的英文全称是什么？", questions)
-        self.assertEqual(len(set(questions)), len(questions))
+        self.assertEqual(len(payload["corpora"]), 1, "网页只保留一个内置入口")
+        corpus = payload["corpora"][0]
+        self.assertEqual(corpus["label"], "内置示例笔记")
+        self.assertEqual(len(corpus["files"]), 13)
+        names = {file["name"] for file in corpus["files"]}
+        for expected in ("01_学习方法.md", "01_术语与角色.md", "01_Rust_所有权.md", "05_Python_控制流.md"):
+            self.assertIn(expected, names)
+        self.assertTrue(corpus["questions"])
+        self.assertEqual(len(corpus["questions"]), len(set(corpus["questions"])))
 
     def test_build_writes_deployable_site(self):
         with tempfile.TemporaryDirectory() as directory:
@@ -50,10 +41,21 @@ class BuildSiteTests(unittest.TestCase):
                 self.assertTrue((output / name).is_file(), name)
             self.assertTrue((output / ".nojekyll").is_file())
             samples = json.loads((output / "samples.json").read_text(encoding="utf-8"))
-            self.assertEqual({item["id"] for item in samples["corpora"]}, {"sample_notes", "open_corpus"})
-            # 页面只从 samples.json 取资料，不能把笔记目录或测试文件带进发布产物。
+            self.assertEqual([item["id"] for item in samples["corpora"]], ["sample_notes"])
+            published = samples["corpora"][0]
+            self.assertEqual(len(published["files"]), 13)
+            # 页面只从 samples.json 取资料，不能把笔记目录或脚本带进发布产物。
             self.assertFalse((output / "notes").exists())
             self.assertFalse(any(output.rglob("*.py")))
+
+    def test_notes_keep_original_line_endings(self):
+        """read_text 会把 CRLF 变成 LF，浏览器据此分段的字符偏移就会与 Python 不一致。"""
+        with tempfile.TemporaryDirectory() as directory:
+            (Path(directory) / "笔记.md").write_bytes("# 标题\r\n正文\r\n".encode("utf-8"))
+            (Path(directory) / "README.md").write_bytes(b"# readme\r\n")
+            files = self.build_site._read_notes(Path(directory))
+            self.assertEqual([file["name"] for file in files], ["笔记.md"])
+            self.assertIn("\r\n", files[0]["text"])
 
     def test_refuses_to_overwrite_repository_or_web_sources(self):
         for target in (ROOT, ROOT / "web"):

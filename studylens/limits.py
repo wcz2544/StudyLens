@@ -6,13 +6,13 @@ MAX_IMAGE_BYTES = 8 * 1024 * 1024
 MAX_OFFICE_BYTES = 12 * 1024 * 1024
 MAX_RAW_TOTAL_BYTES = 24 * 1024 * 1024
 MAX_TOTAL_UPLOAD_BYTES = MAX_RAW_TOTAL_BYTES
-UPLOAD_HELP = "最多 10 份；文本 512 KiB/份，图片 8 MiB/份，PDF/DOCX 12 MiB/份，原文件总计 24 MiB。提取文字每份最多 512 KiB、总计 2 MiB。"
+UPLOAD_HELP = "最多 20 份；文本 512 KiB/份，图片 8 MiB/份，PDF/DOCX 12 MiB/份，原文件总计 24 MiB。提取文字每份最多 512 KiB、总计 2 MiB。"
 
 
 def validate_uploads(files: list[tuple[str, bytes]]) -> None:
     """在 OCR 或 PDF 渲染前拒绝超限输入，避免先消耗资源再提示失败。"""
     if not files or len(files) > MAX_FILES:
-        raise ValueError("请选择 1～10 份笔记。")
+        raise ValueError("请选择 1～20 份笔记。")
     if sum(len(data) for _, data in files) > MAX_RAW_TOTAL_BYTES:
         raise ValueError("上传原文件总大小不能超过 24 MiB，请分批处理。")
     for name, data in files:

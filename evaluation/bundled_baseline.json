@@ -1,0 +1,1703 @@
+{
+  "source_commit": "working-tree",
+  "configuration": {
+    "top_k": 3,
+    "min_score": 0.08
+  },
+  "corpus": {
+    "files": 13,
+    "chunks": 216,
+    "sha256": "7faf48e15e2894619f23071f410220e94e4868afeb211b6b27184bb866176850",
+    "sources": [
+      "data\\sample_notes",
+      "data\\open_corpus\\notes",
+      "data\\public_notes"
+    ]
+  },
+  "question_sets": {
+    "sample_notes": {
+      "path": "evaluation\\questions.csv",
+      "sha256": "c82a401c0402981b1bc10d26a90ce50f352ece8f479a46c92e573d479f565f92"
+    },
+    "open_corpus": {
+      "path": "data\\open_corpus\\questions.csv",
+      "sha256": "39422849b268484d10765c47c391b5851d9e956bd661865b720c658abe5e797f"
+    },
+    "public_notes": {
+      "path": "evaluation\\public_notes_questions.csv",
+      "sha256": "8fefb5116ace4255adc56dd654898a993d91e74a58c21478ed2452351f056fc7"
+    }
+  },
+  "summary": {
+    "sample_notes": {
+      "single": {
+        "passed": 15,
+        "total": 15,
+        "rate": 1.0
+      },
+      "multi": {
+        "passed": 9,
+        "total": 10,
+        "rate": 0.9
+      },
+      "unanswerable": {
+        "passed": 0,
+        "total": 5,
+        "rate": 0.0
+      },
+      "question_count": 30,
+      "failure_ids": [
+        "Q23",
+        "Q26",
+        "Q27",
+        "Q28",
+        "Q29",
+        "Q30"
+      ]
+    },
+    "open_corpus": {
+      "single": {
+        "passed": 15,
+        "total": 15,
+        "rate": 1.0
+      },
+      "multi": {
+        "passed": 12,
+        "total": 12,
+        "rate": 1.0
+      },
+      "unanswerable": {
+        "passed": 0,
+        "total": 9,
+        "rate": 0.0
+      },
+      "question_count": 36,
+      "failure_ids": [
+        "O28",
+        "O29",
+        "O30",
+        "O31",
+        "O32",
+        "O33",
+        "O34",
+        "O35",
+        "O36"
+      ]
+    },
+    "public_notes": {
+      "single": {
+        "passed": 26,
+        "total": 26,
+        "rate": 1.0
+      },
+      "multi": {
+        "passed": 2,
+        "total": 2,
+        "rate": 1.0
+      },
+      "unanswerable": {
+        "passed": 3,
+        "total": 3,
+        "rate": 1.0
+      },
+      "question_count": 31,
+      "failure_ids": []
+    },
+    "overall": {
+      "single": {
+        "passed": 56,
+        "total": 56,
+        "rate": 1.0
+      },
+      "multi": {
+        "passed": 23,
+        "total": 24,
+        "rate": 0.9583333333333334
+      },
+      "unanswerable": {
+        "passed": 3,
+        "total": 17,
+        "rate": 0.17647058823529413
+      },
+      "question_count": 97
+    }
+  },
+  "details": {
+    "sample_notes": {
+      "counts": {
+        "single": {
+          "passed": 15,
+          "total": 15
+        },
+        "multi": {
+          "passed": 9,
+          "total": 10
+        },
+        "unanswerable": {
+          "passed": 0,
+          "total": 5
+        }
+      },
+      "questions": [
+        {
+          "id": "Q01",
+          "kind": "single",
+          "question": "复习卡片包含哪三个字段？",
+          "expected_sections": "01_学习方法.md::复习卡片",
+          "retrieved": [
+            "01_学习方法.md::复习卡片",
+            "02_检索实验.md::字符特征"
+          ],
+          "scores": [
+            0.4459,
+            0.0866
+          ],
+          "passed": 1
+        },
+        {
+          "id": "Q02",
+          "kind": "single",
+          "question": "每周几整理笔记？",
+          "expected_sections": "01_学习方法.md::学习周期",
+          "retrieved": [
+            "01_学习方法.md::学习周期",
+            "02_调度周期.md::周节奏",
+            "01_学习方法.md::课程学习笔记"
+          ],
+          "scores": [
+            0.2927,
+            0.1555,
+            0.1118
+          ],
+          "passed": 1
+        },
+        {
+          "id": "Q03",
+          "kind": "single",
+          "question": "每次自测选取几个问题？",
+          "expected_sections": "01_学习方法.md::学习周期",
+          "retrieved": [
+            "01_学习方法.md::学习周期",
+            "02_调度周期.md::周节奏"
+          ],
+          "scores": [
+            0.3705,
+            0.3298
+          ],
+          "passed": 1
+        },
+        {
+          "id": "Q04",
+          "kind": "single",
+          "question": "资料没有说明的内容应该怎么处理？",
+          "expected_sections": "01_学习方法.md::问答规则",
+          "retrieved": [
+            "01_学习方法.md::问答规则"
+          ],
+          "scores": [
+            0.2771
+          ],
+          "passed": 1
+        },
+        {
+          "id": "Q05",
+          "kind": "single",
+          "question": "第一版支持什么文件格式和编码？",
+          "expected_sections": "01_学习方法.md::文件格式",
+          "retrieved": [
+            "01_学习方法.md::文件格式"
+          ],
+          "scores": [
+            0.3611
+          ],
+          "passed": 1
+        },
+        {
+          "id": "Q06",
+          "kind": "single",
+          "question": "关闭会话前如何保存反馈？",
+          "expected_sections": "01_学习方法.md::反馈记录",
+          "retrieved": [
+            "05_答疑与提交通知.md::反馈保存",
+            "01_学习方法.md::反馈记录"
+          ],
+          "scores": [
+            0.3068,
+            0.2814
+          ],
+          "passed": 1
+        },
+        {
+          "id": "Q07",
+          "kind": "single",
+          "question": "字符 TF-IDF 是否需要下载嵌入模型？",
+          "expected_sections": "02_检索实验.md::字符特征",
+          "retrieved": [
+            "02_检索实验.md::字符特征"
+          ],
+          "scores": [
+            0.4732
+          ],
+          "passed": 1
+        },
+        {
+          "id": "Q08",
+          "kind": "single",
+          "question": "L2 归一化后向量点积等于什么？",
+          "expected_sections": "02_检索实验.md::相似度",
+          "retrieved": [
+            "02_检索实验.md::相似度"
+          ],
+          "scores": [
+            0.4005
+          ],
+          "passed": 1
+        },
+        {
+          "id": "Q09",
+          "kind": "single",
+          "question": "相似度是否代表答案正确的概率？",
+          "expected_sections": "02_检索实验.md::相似度",
+          "retrieved": [
+            "02_检索实验.md::相似度"
+          ],
+          "scores": [
+            0.4637
+          ],
+          "passed": 1
+        },
+        {
+          "id": "Q10",
+          "kind": "single",
+          "question": "初始分段长度和窗口重叠是多少？",
+          "expected_sections": "02_检索实验.md::分段设置",
+          "retrieved": [
+            "02_检索实验.md::分段设置"
+          ],
+          "scores": [
+            0.3612
+          ],
+          "passed": 1
+        },
+        {
+          "id": "Q11",
+          "kind": "single",
+          "question": "默认取几个候选段落？",
+          "expected_sections": "02_检索实验.md::候选数量",
+          "retrieved": [
+            "02_检索实验.md::候选数量",
+            "02_调度周期.md::候选数量"
+          ],
+          "scores": [
+            0.2919,
+            0.1223
+          ],
+          "passed": 1
+        },
+        {
+          "id": "Q12",
+          "kind": "single",
+          "question": "调参使用什么数据集？",
+          "expected_sections": "02_检索实验.md::评测原则",
+          "retrieved": [
+            "02_检索实验.md::评测原则"
+          ],
+          "scores": [
+            0.2195
+          ],
+          "passed": 1
+        },
+        {
+          "id": "Q13",
+          "kind": "single",
+          "question": "SC 的英文全称是什么？",
+          "expected_sections": "03_译码入门.md::SC 译码",
+          "retrieved": [
+            "03_译码入门.md::SC 译码",
+            "03_译码入门.md::SCL 译码",
+            "01_Rust_所有权.md::`String` 类型"
+          ],
+          "scores": [
+            0.1511,
+            0.1143,
+            0.0987
+          ],
+          "passed": 1
+        },
+        {
+          "id": "Q14",
+          "kind": "single",
+          "question": "SCL 最多保留多少条候选路径？",
+          "expected_sections": "03_译码入门.md::SCL 译码",
+          "retrieved": [
+            "03_译码入门.md::SCL 译码",
+            "01_术语与角色.md::路径保留规则",
+            "03_译码入门.md::CRC 辅助"
+          ],
+          "scores": [
+            0.4016,
+            0.2318,
+            0.1795
+          ],
+          "passed": 1
+        },
+        {
+          "id": "Q15",
+          "kind": "single",
+          "question": "CRC 检验在列表译码中有什么用途？",
+          "expected_sections": "03_译码入门.md::CRC 辅助",
+          "retrieved": [
+            "03_译码入门.md::CRC 辅助",
+            "03_译码入门.md::SCL 译码",
+            "02_检索实验.md::检索实验记录"
+          ],
+          "scores": [
+            0.2577,
+            0.1237,
+            0.0986
+          ],
+          "passed": 1
+        },
+        {
+          "id": "Q16",
+          "kind": "multi",
+          "question": "复习卡片字段有哪些以及每周何时自测？",
+          "expected_sections": "01_学习方法.md::复习卡片|01_学习方法.md::学习周期",
+          "retrieved": [
+            "01_学习方法.md::复习卡片",
+            "01_学习方法.md::学习周期",
+            "02_调度周期.md::周节奏"
+          ],
+          "scores": [
+            0.3674,
+            0.1557,
+            0.1348
+          ],
+          "passed": 1
+        },
+        {
+          "id": "Q17",
+          "kind": "multi",
+          "question": "支持什么文件格式以及反馈怎么保存？",
+          "expected_sections": "01_学习方法.md::文件格式|01_学习方法.md::反馈记录",
+          "retrieved": [
+            "05_答疑与提交通知.md::反馈保存",
+            "01_学习方法.md::文件格式",
+            "01_学习方法.md::反馈记录"
+          ],
+          "scores": [
+            0.1697,
+            0.1554,
+            0.152
+          ],
+          "passed": 1
+        },
+        {
+          "id": "Q18",
+          "kind": "multi",
+          "question": "检索采用什么字符特征以及如何计算相似度？",
+          "expected_sections": "02_检索实验.md::字符特征|02_检索实验.md::相似度",
+          "retrieved": [
+            "02_检索实验.md::字符特征",
+            "02_检索实验.md::相似度",
+            "03_Rust_切片.md::字符串字面量就是 slice"
+          ],
+          "scores": [
+            0.1783,
+            0.1539,
+            0.0881
+          ],
+          "passed": 1
+        },
+        {
+          "id": "Q19",
+          "kind": "multi",
+          "question": "分段长度和候选段落数量分别是多少？",
+          "expected_sections": "02_检索实验.md::分段设置|02_检索实验.md::候选数量",
+          "retrieved": [
+            "02_检索实验.md::候选数量",
+            "02_检索实验.md::分段设置",
+            "01_Rust_所有权.md::变量与数据交互的方式（一）：移动"
+          ],
+          "scores": [
+            0.23,
+            0.1571,
+            0.0944
+          ],
+          "passed": 1
+        },
+        {
+          "id": "Q20",
+          "kind": "multi",
+          "question": "SC 和 SCL 的英文全称分别是什么？",
+          "expected_sections": "03_译码入门.md::SC 译码|03_译码入门.md::SCL 译码",
+          "retrieved": [
+            "03_译码入门.md::SCL 译码",
+            "03_译码入门.md::SC 译码",
+            "03_译码入门.md::CRC 辅助"
+          ],
+          "scores": [
+            0.248,
+            0.15,
+            0.1371
+          ],
+          "passed": 1
+        },
+        {
+          "id": "Q21",
+          "kind": "multi",
+          "question": "SCL 保留候选路径后 CRC 有什么作用？",
+          "expected_sections": "03_译码入门.md::SCL 译码|03_译码入门.md::CRC 辅助",
+          "retrieved": [
+            "03_译码入门.md::CRC 辅助",
+            "03_译码入门.md::SCL 译码",
+            "01_术语与角色.md::校验辅助"
+          ],
+          "scores": [
+            0.328,
+            0.3064,
+            0.1866
+          ],
+          "passed": 1
+        },
+        {
+          "id": "Q22",
+          "kind": "multi",
+          "question": "比较译码实验要核对哪些条件以及区分哪些错误率？",
+          "expected_sections": "03_译码入门.md::比较条件|03_译码入门.md::性能记录",
+          "retrieved": [
+            "03_译码入门.md::比较条件",
+            "04_实验记录规范.md::比较条件",
+            "03_译码入门.md::性能记录"
+          ],
+          "scores": [
+            0.2445,
+            0.1489,
+            0.1385
+          ],
+          "passed": 1
+        },
+        {
+          "id": "Q23",
+          "kind": "multi",
+          "question": "如何划分评测数据以及记录用户反馈？",
+          "expected_sections": "02_检索实验.md::评测原则|01_学习方法.md::反馈记录",
+          "retrieved": [
+            "01_学习方法.md::反馈记录",
+            "05_答疑与提交通知.md::反馈保存",
+            "02_检索实验.md::检索实验记录"
+          ],
+          "scores": [
+            0.1842,
+            0.1519,
+            0.0885
+          ],
+          "passed": 0
+        },
+        {
+          "id": "Q24",
+          "kind": "multi",
+          "question": "没有证据时应怎样回答以及相似度能否保证正确？",
+          "expected_sections": "01_学习方法.md::问答规则|02_检索实验.md::相似度",
+          "retrieved": [
+            "02_检索实验.md::相似度",
+            "01_学习方法.md::问答规则"
+          ],
+          "scores": [
+            0.2122,
+            0.0813
+          ],
+          "passed": 1
+        },
+        {
+          "id": "Q25",
+          "kind": "multi",
+          "question": "SC 如何判决以及 CRC 如何帮助 SCL？",
+          "expected_sections": "03_译码入门.md::SC 译码|03_译码入门.md::CRC 辅助",
+          "retrieved": [
+            "03_译码入门.md::CRC 辅助",
+            "03_译码入门.md::SC 译码",
+            "03_译码入门.md::SCL 译码"
+          ],
+          "scores": [
+            0.2725,
+            0.2004,
+            0.1908
+          ],
+          "passed": 1
+        },
+        {
+          "id": "Q26",
+          "kind": "unanswerable",
+          "question": "课程期末考试日期是哪一天？",
+          "expected_sections": "",
+          "retrieved": [
+            "01_学习方法.md::课程学习笔记",
+            "01_术语与角色.md::术语边界"
+          ],
+          "scores": [
+            0.1524,
+            0.0901
+          ],
+          "passed": 0
+        },
+        {
+          "id": "Q27",
+          "kind": "unanswerable",
+          "question": "这次 Polar 实验在 2 dB 时的 FER 具体是多少？",
+          "expected_sections": "",
+          "retrieved": [
+            "03_信号与告警.md::信号边界",
+            "03_信号与告警.md::BER 与 FER"
+          ],
+          "scores": [
+            0.257,
+            0.1014
+          ],
+          "passed": 0
+        },
+        {
+          "id": "Q28",
+          "kind": "unanswerable",
+          "question": "列表大小为 32 时比 SC 提升多少 dB？",
+          "expected_sections": "",
+          "retrieved": [
+            "03_信号与告警.md::信号边界",
+            "03_译码入门.md::SCL 译码",
+            "03_译码入门.md::CRC 辅助"
+          ],
+          "scores": [
+            0.3155,
+            0.1336,
+            0.1301
+          ],
+          "passed": 0
+        },
+        {
+          "id": "Q29",
+          "kind": "unanswerable",
+          "question": "本课程授课老师的邮箱是什么？",
+          "expected_sections": "",
+          "retrieved": [
+            "05_答疑与提交通知.md::助教邮箱",
+            "01_学习方法.md::课程学习笔记",
+            "02_调度周期.md::周节奏"
+          ],
+          "scores": [
+            0.2009,
+            0.162,
+            0.1062
+          ],
+          "passed": 0
+        },
+        {
+          "id": "Q30",
+          "kind": "unanswerable",
+          "question": "神经网络训练使用什么学习率？",
+          "expected_sections": "",
+          "retrieved": [
+            "01_学习方法.md::课程学习笔记",
+            "03_译码入门.md::译码术语练习笔记",
+            "01_学习方法.md::学习周期"
+          ],
+          "scores": [
+            0.1711,
+            0.1229,
+            0.1083
+          ],
+          "passed": 0
+        }
+      ]
+    },
+    "open_corpus": {
+      "counts": {
+        "single": {
+          "passed": 15,
+          "total": 15
+        },
+        "multi": {
+          "passed": 12,
+          "total": 12
+        },
+        "unanswerable": {
+          "passed": 0,
+          "total": 9
+        }
+      },
+      "questions": [
+        {
+          "id": "O01",
+          "kind": "single",
+          "question": "LBS 的英文全称是什么？",
+          "expected_sections": "01_术语与角色.md::LBS 定义",
+          "retrieved": [
+            "01_术语与角色.md::LBS 定义",
+            "01_术语与角色.md::路径保留规则",
+            "01_术语与角色.md::校验辅助"
+          ],
+          "scores": [
+            0.2322,
+            0.1373,
+            0.0942
+          ],
+          "passed": 1
+        },
+        {
+          "id": "O02",
+          "kind": "single",
+          "question": "调度员、值守员和审核员分别负责什么？",
+          "expected_sections": "01_术语与角色.md::角色分工",
+          "retrieved": [
+            "01_术语与角色.md::角色分工"
+          ],
+          "scores": [
+            0.3654
+          ],
+          "passed": 1
+        },
+        {
+          "id": "O03",
+          "kind": "single",
+          "question": "LBS-List 示例默认最多保留几条路径？",
+          "expected_sections": "01_术语与角色.md::路径保留规则",
+          "retrieved": [
+            "01_术语与角色.md::路径保留规则",
+            "03_译码入门.md::SCL 译码",
+            "01_术语与角色.md::校验辅助"
+          ],
+          "scores": [
+            0.4179,
+            0.1737,
+            0.1579
+          ],
+          "passed": 1
+        },
+        {
+          "id": "O04",
+          "kind": "single",
+          "question": "CRC 辅助选择在 LBS-List 中起什么作用？",
+          "expected_sections": "01_术语与角色.md::校验辅助",
+          "retrieved": [
+            "01_术语与角色.md::校验辅助",
+            "03_译码入门.md::CRC 辅助",
+            "01_术语与角色.md::路径保留规则"
+          ],
+          "scores": [
+            0.3977,
+            0.321,
+            0.1913
+          ],
+          "passed": 1
+        },
+        {
+          "id": "O05",
+          "kind": "single",
+          "question": "每周几整理信标日志？每周几自测？",
+          "expected_sections": "02_调度周期.md::周节奏",
+          "retrieved": [
+            "02_调度周期.md::周节奏",
+            "01_学习方法.md::学习周期",
+            "04_实验记录规范.md::周报栏目"
+          ],
+          "scores": [
+            0.3471,
+            0.2102,
+            0.1079
+          ],
+          "passed": 1
+        },
+        {
+          "id": "O06",
+          "kind": "single",
+          "question": "每次模拟自测选取几个问题？",
+          "expected_sections": "02_调度周期.md::周节奏",
+          "retrieved": [
+            "02_调度周期.md::周节奏",
+            "01_学习方法.md::学习周期"
+          ],
+          "scores": [
+            0.3873,
+            0.2368
+          ],
+          "passed": 1
+        },
+        {
+          "id": "O07",
+          "kind": "single",
+          "question": "正式排班的发布窗口是几点到几点？",
+          "expected_sections": "02_调度周期.md::发布窗口",
+          "retrieved": [
+            "02_调度周期.md::发布窗口",
+            "03_信号与告警.md::告警等级"
+          ],
+          "scores": [
+            0.3262,
+            0.1587
+          ],
+          "passed": 1
+        },
+        {
+          "id": "O08",
+          "kind": "single",
+          "question": "答疑助手默认最多取几个日志片段？",
+          "expected_sections": "02_调度周期.md::候选数量",
+          "retrieved": [
+            "02_调度周期.md::候选数量",
+            "02_检索实验.md::候选数量",
+            "05_答疑与提交通知.md::答疑教室"
+          ],
+          "scores": [
+            0.4086,
+            0.1505,
+            0.0867
+          ],
+          "passed": 1
+        },
+        {
+          "id": "O09",
+          "kind": "single",
+          "question": "主动核对清单建议怎样巩固安排记忆？",
+          "expected_sections": "02_调度周期.md::主动核对",
+          "retrieved": [
+            "02_调度周期.md::主动核对"
+          ],
+          "scores": [
+            0.4833
+          ],
+          "passed": 1
+        },
+        {
+          "id": "O10",
+          "kind": "single",
+          "question": "BER 和 FER 分别表示什么？",
+          "expected_sections": "03_信号与告警.md::BER 与 FER",
+          "retrieved": [
+            "03_信号与告警.md::BER 与 FER",
+            "03_译码入门.md::性能记录",
+            "05_Python_控制流.md::4.4. `break` 和 `continue` 语句"
+          ],
+          "scores": [
+            0.2798,
+            0.1775,
+            0.1537
+          ],
+          "passed": 1
+        },
+        {
+          "id": "O11",
+          "kind": "single",
+          "question": "黄灯告警和红灯告警分别表示什么？",
+          "expected_sections": "03_信号与告警.md::告警等级",
+          "retrieved": [
+            "03_信号与告警.md::告警等级",
+            "03_信号与告警.md::北港学院 · 灯塔调度导论：信号与告警"
+          ],
+          "scores": [
+            0.4681,
+            0.1048
+          ],
+          "passed": 1
+        },
+        {
+          "id": "O12",
+          "kind": "single",
+          "question": "教学参数表中实验 B 的码率是多少？",
+          "expected_sections": "03_信号与告警.md::教学参数表",
+          "retrieved": [
+            "03_信号与告警.md::教学参数表",
+            "03_译码入门.md::比较条件",
+            "02_检索实验.md::检索实验记录"
+          ],
+          "scores": [
+            0.2604,
+            0.0868,
+            0.0805
+          ],
+          "passed": 1
+        },
+        {
+          "id": "O13",
+          "kind": "single",
+          "question": "环境信息需要包含哪些内容？",
+          "expected_sections": "04_实验记录规范.md::环境信息",
+          "retrieved": [
+            "04_实验记录规范.md::环境信息",
+            "04_实验记录规范.md::性能信息",
+            "04_Python_数据结构.md::5. 数据结构"
+          ],
+          "scores": [
+            0.3229,
+            0.1344,
+            0.1012
+          ],
+          "passed": 1
+        },
+        {
+          "id": "O14",
+          "kind": "single",
+          "question": "统计停止条件是什么？",
+          "expected_sections": "04_实验记录规范.md::统计停止",
+          "retrieved": [
+            "04_实验记录规范.md::比较条件",
+            "03_译码入门.md::比较条件",
+            "04_实验记录规范.md::统计停止"
+          ],
+          "scores": [
+            0.2837,
+            0.2783,
+            0.2009
+          ],
+          "passed": 1
+        },
+        {
+          "id": "O15",
+          "kind": "single",
+          "question": "周报截止时间是什么时候？",
+          "expected_sections": "05_答疑与提交通知.md::周报截止",
+          "retrieved": [
+            "05_答疑与提交通知.md::周报截止",
+            "04_实验记录规范.md::周报栏目"
+          ],
+          "scores": [
+            0.4463,
+            0.1068
+          ],
+          "passed": 1
+        },
+        {
+          "id": "O16",
+          "kind": "multi",
+          "question": "LBS 全称是什么以及 LBS-Basic 与 LBS-List 各保留多少路径？",
+          "expected_sections": "01_术语与角色.md::LBS 定义|01_术语与角色.md::路径保留规则",
+          "retrieved": [
+            "01_术语与角色.md::路径保留规则",
+            "01_术语与角色.md::校验辅助",
+            "01_术语与角色.md::LBS 定义"
+          ],
+          "scores": [
+            0.4154,
+            0.2038,
+            0.1828
+          ],
+          "passed": 1
+        },
+        {
+          "id": "O17",
+          "kind": "multi",
+          "question": "角色分工如何划分以及 CRC 如何辅助选路？",
+          "expected_sections": "01_术语与角色.md::角色分工|01_术语与角色.md::校验辅助",
+          "retrieved": [
+            "03_译码入门.md::CRC 辅助",
+            "01_术语与角色.md::校验辅助",
+            "01_术语与角色.md::角色分工"
+          ],
+          "scores": [
+            0.2829,
+            0.1994,
+            0.1294
+          ],
+          "passed": 1
+        },
+        {
+          "id": "O18",
+          "kind": "multi",
+          "question": "周节奏安排和发布窗口分别是什么？",
+          "expected_sections": "02_调度周期.md::周节奏|02_调度周期.md::发布窗口",
+          "retrieved": [
+            "02_调度周期.md::发布窗口",
+            "03_信号与告警.md::告警等级",
+            "02_调度周期.md::周节奏"
+          ],
+          "scores": [
+            0.2115,
+            0.1382,
+            0.128
+          ],
+          "passed": 1
+        },
+        {
+          "id": "O19",
+          "kind": "multi",
+          "question": "候选数量默认取几个以及主动核对怎样做？",
+          "expected_sections": "02_调度周期.md::候选数量|02_调度周期.md::主动核对",
+          "retrieved": [
+            "02_调度周期.md::主动核对",
+            "02_检索实验.md::候选数量",
+            "02_调度周期.md::候选数量"
+          ],
+          "scores": [
+            0.2187,
+            0.1592,
+            0.1588
+          ],
+          "passed": 1
+        },
+        {
+          "id": "O20",
+          "kind": "multi",
+          "question": "BER 与 FER 含义以及黄灯红灯告警分别指什么？",
+          "expected_sections": "03_信号与告警.md::BER 与 FER|03_信号与告警.md::告警等级",
+          "retrieved": [
+            "03_信号与告警.md::告警等级",
+            "03_信号与告警.md::BER 与 FER",
+            "03_译码入门.md::性能记录"
+          ],
+          "scores": [
+            0.3034,
+            0.2214,
+            0.1154
+          ],
+          "passed": 1
+        },
+        {
+          "id": "O21",
+          "kind": "multi",
+          "question": "环境信息与性能信息分别记录哪些字段？",
+          "expected_sections": "04_实验记录规范.md::环境信息|04_实验记录规范.md::性能信息",
+          "retrieved": [
+            "04_实验记录规范.md::性能信息",
+            "04_实验记录规范.md::环境信息"
+          ],
+          "scores": [
+            0.3895,
+            0.298
+          ],
+          "passed": 1
+        },
+        {
+          "id": "O22",
+          "kind": "multi",
+          "question": "统计停止规则是什么以及比较实验前要核对哪些条件？",
+          "expected_sections": "04_实验记录规范.md::统计停止|04_实验记录规范.md::比较条件",
+          "retrieved": [
+            "04_实验记录规范.md::比较条件",
+            "03_译码入门.md::比较条件",
+            "04_实验记录规范.md::统计停止"
+          ],
+          "scores": [
+            0.3281,
+            0.3218,
+            0.2018
+          ],
+          "passed": 1
+        },
+        {
+          "id": "O23",
+          "kind": "multi",
+          "question": "周报截止时间与助教邮箱分别是什么？",
+          "expected_sections": "05_答疑与提交通知.md::周报截止|05_答疑与提交通知.md::助教邮箱",
+          "retrieved": [
+            "05_答疑与提交通知.md::周报截止",
+            "05_答疑与提交通知.md::助教邮箱",
+            "04_实验记录规范.md::周报栏目"
+          ],
+          "scores": [
+            0.3501,
+            0.2675,
+            0.0877
+          ],
+          "passed": 1
+        },
+        {
+          "id": "O24",
+          "kind": "multi",
+          "question": "当面答疑教室在哪以及反馈如何保存？",
+          "expected_sections": "05_答疑与提交通知.md::答疑教室|05_答疑与提交通知.md::反馈保存",
+          "retrieved": [
+            "05_答疑与提交通知.md::答疑教室",
+            "05_答疑与提交通知.md::反馈保存",
+            "01_学习方法.md::反馈记录"
+          ],
+          "scores": [
+            0.3602,
+            0.1636,
+            0.1484
+          ],
+          "passed": 1
+        },
+        {
+          "id": "O25",
+          "kind": "multi",
+          "question": "LBS-List 默认 K 值是多少以及教学表中实验 A 的码长是多少？",
+          "expected_sections": "01_术语与角色.md::路径保留规则|03_信号与告警.md::教学参数表",
+          "retrieved": [
+            "01_术语与角色.md::路径保留规则",
+            "01_术语与角色.md::校验辅助",
+            "03_信号与告警.md::教学参数表"
+          ],
+          "scores": [
+            0.2265,
+            0.1705,
+            0.1124
+          ],
+          "passed": 1
+        },
+        {
+          "id": "O26",
+          "kind": "multi",
+          "question": "如何减少布置过却想不起来以及周报栏目写什么？",
+          "expected_sections": "02_调度周期.md::主动核对|04_实验记录规范.md::周报栏目",
+          "retrieved": [
+            "02_调度周期.md::主动核对",
+            "04_实验记录规范.md::周报栏目"
+          ],
+          "scores": [
+            0.2671,
+            0.1847
+          ],
+          "passed": 1
+        },
+        {
+          "id": "O27",
+          "kind": "multi",
+          "question": "只写错误率有何问题以及性能信息应单独记录哪些指标？",
+          "expected_sections": "03_信号与告警.md::BER 与 FER|04_实验记录规范.md::性能信息",
+          "retrieved": [
+            "04_实验记录规范.md::性能信息",
+            "03_译码入门.md::性能记录",
+            "03_信号与告警.md::BER 与 FER"
+          ],
+          "scores": [
+            0.3541,
+            0.1949,
+            0.151
+          ],
+          "passed": 1
+        },
+        {
+          "id": "O28",
+          "kind": "unanswerable",
+          "question": "本课程期末考试日期是哪一天？",
+          "expected_sections": "",
+          "retrieved": [
+            "01_学习方法.md::课程学习笔记",
+            "02_调度周期.md::周节奏",
+            "01_学习方法.md::复习卡片"
+          ],
+          "scores": [
+            0.1377,
+            0.1192,
+            0.1029
+          ],
+          "passed": 0
+        },
+        {
+          "id": "O29",
+          "kind": "unanswerable",
+          "question": "这次实验在 2 dB 时的 FER 精确值是多少？",
+          "expected_sections": "",
+          "retrieved": [
+            "03_信号与告警.md::信号边界",
+            "03_信号与告警.md::BER 与 FER"
+          ],
+          "scores": [
+            0.3857,
+            0.0973
+          ],
+          "passed": 0
+        },
+        {
+          "id": "O30",
+          "kind": "unanswerable",
+          "question": "列表大小 32 比列表大小 8 提高多少 dB？",
+          "expected_sections": "",
+          "retrieved": [
+            "03_信号与告警.md::信号边界",
+            "03_信号与告警.md::不可信附注",
+            "03_译码入门.md::CRC 辅助"
+          ],
+          "scores": [
+            0.485,
+            0.1103,
+            0.1103
+          ],
+          "passed": 0
+        },
+        {
+          "id": "O31",
+          "kind": "unanswerable",
+          "question": "神经网络训练使用什么学习率？",
+          "expected_sections": "",
+          "retrieved": [
+            "01_学习方法.md::课程学习笔记",
+            "03_译码入门.md::译码术语练习笔记",
+            "01_学习方法.md::学习周期"
+          ],
+          "scores": [
+            0.1711,
+            0.1229,
+            0.1083
+          ],
+          "passed": 0
+        },
+        {
+          "id": "O32",
+          "kind": "unanswerable",
+          "question": "线上答疑的会议室号是多少？",
+          "expected_sections": "",
+          "retrieved": [
+            "05_答疑与提交通知.md::答疑教室"
+          ],
+          "scores": [
+            0.4377
+          ],
+          "passed": 0
+        },
+        {
+          "id": "O33",
+          "kind": "unanswerable",
+          "question": "假期特批流程需要找谁签字？",
+          "expected_sections": "",
+          "retrieved": [
+            "02_调度周期.md::周期边界"
+          ],
+          "scores": [
+            0.3705
+          ],
+          "passed": 0
+        },
+        {
+          "id": "O34",
+          "kind": "unanswerable",
+          "question": "真实港口昨晚的延误分钟数是多少？",
+          "expected_sections": "",
+          "retrieved": [
+            "02_调度周期.md::周期边界",
+            "01_术语与角色.md::术语边界"
+          ],
+          "scores": [
+            0.2651,
+            0.1421
+          ],
+          "passed": 0
+        },
+        {
+          "id": "O35",
+          "kind": "unanswerable",
+          "question": "本课程授课老师的个人手机号是什么？",
+          "expected_sections": "",
+          "retrieved": [
+            "01_学习方法.md::课程学习笔记",
+            "01_学习方法.md::复习卡片",
+            "02_调度周期.md::周节奏"
+          ],
+          "scores": [
+            0.1776,
+            0.1198,
+            0.1185
+          ],
+          "passed": 0
+        },
+        {
+          "id": "O36",
+          "kind": "unanswerable",
+          "question": "LBS-List 在 K=64 时的实测延误曲线峰值是多少？",
+          "expected_sections": "",
+          "retrieved": [
+            "01_术语与角色.md::校验辅助",
+            "01_术语与角色.md::路径保留规则"
+          ],
+          "scores": [
+            0.3144,
+            0.1968
+          ],
+          "passed": 0
+        }
+      ]
+    },
+    "public_notes": {
+      "counts": {
+        "single": {
+          "passed": 26,
+          "total": 26
+        },
+        "multi": {
+          "passed": 2,
+          "total": 2
+        },
+        "unanswerable": {
+          "passed": 3,
+          "total": 3
+        }
+      },
+      "questions": [
+        {
+          "id": "P01",
+          "kind": "single",
+          "question": "所有权有哪三条规则？",
+          "expected_sections": "01_Rust_所有权.md::所有权规则",
+          "retrieved": [
+            "01_Rust_所有权.md::所有权规则",
+            "01_Rust_所有权.md::返回值与作用域",
+            "01_Rust_所有权.md::什么是所有权？"
+          ],
+          "scores": [
+            0.1375,
+            0.109,
+            0.0974
+          ],
+          "passed": 1
+        },
+        {
+          "id": "P02",
+          "kind": "single",
+          "question": "变量从什么位置开始到作用域结束都有效？",
+          "expected_sections": "01_Rust_所有权.md::变量作用域",
+          "retrieved": [
+            "01_Rust_所有权.md::变量作用域",
+            "02_Rust_借用与引用.md::可变引用",
+            "01_Rust_所有权.md::变量作用域"
+          ],
+          "scores": [
+            0.1299,
+            0.1122,
+            0.1096
+          ],
+          "passed": 1
+        },
+        {
+          "id": "P03",
+          "kind": "single",
+          "question": "String 在堆上分配内存、离开作用域时释放",
+          "expected_sections": "01_Rust_所有权.md::内存与分配",
+          "retrieved": [
+            "01_Rust_所有权.md::内存与分配",
+            "01_Rust_所有权.md::什么是所有权？",
+            "01_Rust_所有权.md::内存与分配"
+          ],
+          "scores": [
+            0.1975,
+            0.1758,
+            0.1613
+          ],
+          "passed": 1
+        },
+        {
+          "id": "P04",
+          "kind": "multi",
+          "question": "所有权与函数、返回值与作用域之间是什么关系？",
+          "expected_sections": "01_Rust_所有权.md::所有权与函数|01_Rust_所有权.md::返回值与作用域",
+          "retrieved": [
+            "01_Rust_所有权.md::返回值与作用域",
+            "01_Rust_所有权.md::所有权与函数",
+            "01_Rust_所有权.md::变量作用域"
+          ],
+          "scores": [
+            0.1703,
+            0.1248,
+            0.1074
+          ],
+          "passed": 1
+        },
+        {
+          "id": "P05",
+          "kind": "multi",
+          "question": "变量与数据交互的方式有哪些？移动和克隆",
+          "expected_sections": "01_Rust_所有权.md::变量与数据交互的方式（一）：移动|01_Rust_所有权.md::变量与数据交互的方式（二）：克隆",
+          "retrieved": [
+            "01_Rust_所有权.md::变量与数据交互的方式（一）：移动",
+            "01_Rust_所有权.md::变量与数据交互的方式（二）：克隆"
+          ],
+          "scores": [
+            0.1864,
+            0.1699
+          ],
+          "passed": 1
+        },
+        {
+          "id": "P06",
+          "kind": "single",
+          "question": "实现了 Copy 的类型有什么特点？",
+          "expected_sections": "01_Rust_所有权.md::只在栈上的数据：拷贝",
+          "retrieved": [
+            "01_Rust_所有权.md::只在栈上的数据：拷贝",
+            "01_Rust_所有权.md::只在栈上的数据：拷贝",
+            "01_Rust_所有权.md::只在栈上的数据：拷贝"
+          ],
+          "scores": [
+            0.2332,
+            0.2099,
+            0.1643
+          ],
+          "passed": 1
+        },
+        {
+          "id": "P07",
+          "kind": "single",
+          "question": "Rust 中引用与借用是什么？",
+          "expected_sections": "02_Rust_借用与引用.md::引用与借用",
+          "retrieved": [
+            "02_Rust_借用与引用.md::Rust 程序设计语言 · 引用与借用",
+            "02_Rust_借用与引用.md::引用与借用",
+            "01_Rust_所有权.md::`String` 类型"
+          ],
+          "scores": [
+            0.1912,
+            0.1251,
+            0.1069
+          ],
+          "passed": 1
+        },
+        {
+          "id": "P08",
+          "kind": "single",
+          "question": "同一作用域里可以同时存在几个可变引用？",
+          "expected_sections": "02_Rust_借用与引用.md::可变引用",
+          "retrieved": [
+            "03_Rust_切片.md::字符串 slice",
+            "02_Rust_借用与引用.md::可变引用",
+            "02_Rust_借用与引用.md::可变引用"
+          ],
+          "scores": [
+            0.1659,
+            0.1307,
+            0.1205
+          ],
+          "passed": 1
+        },
+        {
+          "id": "P09",
+          "kind": "single",
+          "question": "悬垂引用为什么会被编译器拒绝？",
+          "expected_sections": "02_Rust_借用与引用.md::悬垂引用（Dangling References）",
+          "retrieved": [
+            "02_Rust_借用与引用.md::悬垂引用（Dangling References）"
+          ],
+          "scores": [
+            0.2123
+          ],
+          "passed": 1
+        },
+        {
+          "id": "P10",
+          "kind": "single",
+          "question": "引用的规则有哪两条？",
+          "expected_sections": "02_Rust_借用与引用.md::引用的规则",
+          "retrieved": [
+            "02_Rust_借用与引用.md::引用的规则",
+            "01_Rust_所有权.md::所有权规则"
+          ],
+          "scores": [
+            0.1273,
+            0.0959
+          ],
+          "passed": 1
+        },
+        {
+          "id": "P11",
+          "kind": "single",
+          "question": "字符串 slice 用什么语法表示范围？",
+          "expected_sections": "03_Rust_切片.md::字符串 slice",
+          "retrieved": [
+            "03_Rust_切片.md::其他类型的 slice",
+            "03_Rust_切片.md::字符串 slice",
+            "03_Rust_切片.md::字符串字面量就是 slice"
+          ],
+          "scores": [
+            0.2112,
+            0.211,
+            0.21
+          ],
+          "passed": 1
+        },
+        {
+          "id": "P12",
+          "kind": "single",
+          "question": "字符串字面量在 Rust 里是什么类型？",
+          "expected_sections": "03_Rust_切片.md::字符串字面量就是 slice",
+          "retrieved": [
+            "03_Rust_切片.md::字符串字面量就是 slice",
+            "01_Rust_所有权.md::`String` 类型",
+            "01_Rust_所有权.md::`String` 类型"
+          ],
+          "scores": [
+            0.2953,
+            0.1932,
+            0.1706
+          ],
+          "passed": 1
+        },
+        {
+          "id": "P13",
+          "kind": "single",
+          "question": "为什么函数参数更适合用 &str 而不是 &String？",
+          "expected_sections": "03_Rust_切片.md::字符串 slice 作为参数",
+          "retrieved": [
+            "03_Rust_切片.md::字符串 slice 作为参数",
+            "02_Rust_借用与引用.md::引用与借用",
+            "02_Rust_借用与引用.md::引用与借用"
+          ],
+          "scores": [
+            0.1672,
+            0.1518,
+            0.1473
+          ],
+          "passed": 1
+        },
+        {
+          "id": "P14",
+          "kind": "single",
+          "question": "除了字符串还可以对哪些类型做切片？",
+          "expected_sections": "03_Rust_切片.md::其他类型的 slice",
+          "retrieved": [
+            "03_Rust_切片.md::其他类型的 slice",
+            "01_Rust_所有权.md::只在栈上的数据：拷贝"
+          ],
+          "scores": [
+            0.0871,
+            0.0848
+          ],
+          "passed": 1
+        },
+        {
+          "id": "P15",
+          "kind": "single",
+          "question": "用列表实现堆栈时用什么方法实现后进先出？",
+          "expected_sections": "04_Python_数据结构.md::5.1.1. 用列表实现堆栈",
+          "retrieved": [
+            "04_Python_数据结构.md::5.1.1. 用列表实现堆栈",
+            "04_Python_数据结构.md::5.1.2. 用列表实现队列"
+          ],
+          "scores": [
+            0.2062,
+            0.1067
+          ],
+          "passed": 1
+        },
+        {
+          "id": "P16",
+          "kind": "single",
+          "question": "用列表实现队列为什么效率不高？",
+          "expected_sections": "04_Python_数据结构.md::5.1.2. 用列表实现队列",
+          "retrieved": [
+            "04_Python_数据结构.md::5.1.2. 用列表实现队列",
+            "04_Python_数据结构.md::5.1.1. 用列表实现堆栈"
+          ],
+          "scores": [
+            0.1587,
+            0.0829
+          ],
+          "passed": 1
+        },
+        {
+          "id": "P17",
+          "kind": "single",
+          "question": "列表推导式的基本写法是什么？",
+          "expected_sections": "04_Python_数据结构.md::5.1.3. 列表推导式",
+          "retrieved": [
+            "04_Python_数据结构.md::5.1.3. 列表推导式",
+            "04_Python_数据结构.md::5.1.4. 嵌套的列表推导式",
+            "04_Python_数据结构.md::5.1.3. 列表推导式"
+          ],
+          "scores": [
+            0.1539,
+            0.1538,
+            0.1368
+          ],
+          "passed": 1
+        },
+        {
+          "id": "P18",
+          "kind": "single",
+          "question": "del 语句可以删除哪些东西？",
+          "expected_sections": "04_Python_数据结构.md::5.2. `del` 语句",
+          "retrieved": [
+            "04_Python_数据结构.md::5.2. `del` 语句"
+          ],
+          "scores": [
+            0.1289
+          ],
+          "passed": 1
+        },
+        {
+          "id": "P19",
+          "kind": "single",
+          "question": "集合支持哪些运算？",
+          "expected_sections": "04_Python_数据结构.md::5.4. 集合",
+          "retrieved": [
+            "04_Python_数据结构.md::5.4. 集合",
+            "05_Python_控制流.md::4.9. 函数定义详解",
+            "04_Python_数据结构.md::5.7. 深入条件控制"
+          ],
+          "scores": [
+            0.1095,
+            0.086,
+            0.0841
+          ],
+          "passed": 1
+        },
+        {
+          "id": "P20",
+          "kind": "single",
+          "question": "遍历字典时怎样同时取出键和值？",
+          "expected_sections": "04_Python_数据结构.md::5.6. 循环的技巧",
+          "retrieved": [
+            "04_Python_数据结构.md::5.6. 循环的技巧"
+          ],
+          "scores": [
+            0.0977
+          ],
+          "passed": 1
+        },
+        {
+          "id": "P21",
+          "kind": "single",
+          "question": "怎样同时取得序列的索引和对应的值？",
+          "expected_sections": "04_Python_数据结构.md::5.6. 循环的技巧",
+          "retrieved": [
+            "04_Python_数据结构.md::5.6. 循环的技巧"
+          ],
+          "scores": [
+            0.173
+          ],
+          "passed": 1
+        },
+        {
+          "id": "P22",
+          "kind": "single",
+          "question": "比较两个序列时按照什么规则决定大小？",
+          "expected_sections": "04_Python_数据结构.md::5.8. 序列和其他类型的比较",
+          "retrieved": [
+            "04_Python_数据结构.md::5.8. 序列和其他类型的比较",
+            "04_实验记录规范.md::比较条件",
+            "03_译码入门.md::比较条件"
+          ],
+          "scores": [
+            0.1274,
+            0.0841,
+            0.0825
+          ],
+          "passed": 1
+        },
+        {
+          "id": "P23",
+          "kind": "single",
+          "question": "range() 函数返回什么？",
+          "expected_sections": "05_Python_控制流.md::4.3. `range()` 函数",
+          "retrieved": [
+            "05_Python_控制流.md::4.3. `range()` 函数",
+            "05_Python_控制流.md::4.3. `range()` 函数",
+            "04_Python_数据结构.md::5.6. 循环的技巧"
+          ],
+          "scores": [
+            0.1511,
+            0.1309,
+            0.1238
+          ],
+          "passed": 1
+        },
+        {
+          "id": "P24",
+          "kind": "single",
+          "question": "循环的 else 子句在什么情况下执行？",
+          "expected_sections": "05_Python_控制流.md::4.5. 循环的 `else` 子句",
+          "retrieved": [
+            "05_Python_控制流.md::4.5. 循环的 `else` 子句",
+            "05_Python_控制流.md::4.5. 循环的 `else` 子句",
+            "05_Python_控制流.md::4.5. 循环的 `else` 子句"
+          ],
+          "scores": [
+            0.2901,
+            0.2609,
+            0.2012
+          ],
+          "passed": 1
+        },
+        {
+          "id": "P25",
+          "kind": "single",
+          "question": "默认值参数为什么不要使用可变对象？",
+          "expected_sections": "05_Python_控制流.md::4.9.1. 默认值参数",
+          "retrieved": [
+            "05_Python_控制流.md::4.9.1. 默认值参数",
+            "05_Python_控制流.md::4.9.1. 默认值参数",
+            "05_Python_控制流.md::4.9.1. 默认值参数"
+          ],
+          "scores": [
+            0.0968,
+            0.0941,
+            0.091
+          ],
+          "passed": 1
+        },
+        {
+          "id": "P26",
+          "kind": "single",
+          "question": "什么是仅限关键字参数？",
+          "expected_sections": "05_Python_控制流.md::4.9.3.3. 仅限关键字参数",
+          "retrieved": [
+            "05_Python_控制流.md::4.9.3.3. 仅限关键字参数",
+            "05_Python_控制流.md::4.9.3.2. 仅位置参数",
+            "05_Python_控制流.md::4.9.3. 特殊参数"
+          ],
+          "scores": [
+            0.3621,
+            0.1669,
+            0.1633
+          ],
+          "passed": 1
+        },
+        {
+          "id": "P27",
+          "kind": "single",
+          "question": "Lambda 表达式能做什么？",
+          "expected_sections": "05_Python_控制流.md::4.9.6. Lambda 表达式",
+          "retrieved": [
+            "05_Python_控制流.md::4.9.6. Lambda 表达式",
+            "05_Python_控制流.md::4.9.6. Lambda 表达式",
+            "04_Python_数据结构.md::5.1.3. 列表推导式"
+          ],
+          "scores": [
+            0.3105,
+            0.1264,
+            0.101
+          ],
+          "passed": 1
+        },
+        {
+          "id": "P28",
+          "kind": "single",
+          "question": "函数注解有什么作用？",
+          "expected_sections": "05_Python_控制流.md::4.9.8. 函数注解",
+          "retrieved": [
+            "05_Python_控制流.md::4.9.8. 函数注解",
+            "01_Rust_所有权.md::`String` 类型"
+          ],
+          "scores": [
+            0.1173,
+            0.1093
+          ],
+          "passed": 1
+        },
+        {
+          "id": "P29",
+          "kind": "unanswerable",
+          "question": "借用检查器如何判断引用有效？",
+          "expected_sections": "",
+          "retrieved": [],
+          "scores": [],
+          "passed": 1
+        },
+        {
+          "id": "P30",
+          "kind": "unanswerable",
+          "question": "贝多芬第九交响曲有几个乐章？",
+          "expected_sections": "",
+          "retrieved": [],
+          "scores": [],
+          "passed": 1
+        },
+        {
+          "id": "P31",
+          "kind": "unanswerable",
+          "question": "番茄炒蛋需要放多少盐？",
+          "expected_sections": "",
+          "retrieved": [],
+          "scores": [],
+          "passed": 1
+        }
+      ]
+    }
+  },
+  "scope": "离线检索评测：未调用模型，未测回答正确率。分数只反映字符 TF-IDF 在这些开发集上的行为。"
+}
