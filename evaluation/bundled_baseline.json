@@ -9,22 +9,22 @@
     "chunks": 211,
     "sha256": "41dc05c042af7e7d1b984da12ff7a30a7a3e5d92890c6ef120eef79033ac078d",
     "sources": [
-      "data\\sample_notes",
-      "data\\open_corpus\\notes",
-      "data\\public_notes"
+      "data/sample_notes",
+      "data/open_corpus/notes",
+      "data/public_notes"
     ]
   },
   "question_sets": {
     "sample_notes": {
-      "path": "evaluation\\questions.csv",
+      "path": "evaluation/questions.csv",
       "sha256": "c82a401c0402981b1bc10d26a90ce50f352ece8f479a46c92e573d479f565f92"
     },
     "open_corpus": {
-      "path": "data\\open_corpus\\questions.csv",
+      "path": "data/open_corpus/questions.csv",
       "sha256": "39422849b268484d10765c47c391b5851d9e956bd661865b720c658abe5e797f"
     },
     "public_notes": {
-      "path": "evaluation\\public_notes_questions.csv",
+      "path": "evaluation/public_notes_questions.csv",
       "sha256": "4ca45931876c54cde16933dede41c0135aedc8c7d19e17686037250b877862fc"
     }
   },

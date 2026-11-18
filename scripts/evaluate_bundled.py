@@ -161,11 +161,12 @@ def main() -> None:
             "files": len(note_files),
             "chunks": len(index.chunks),
             "sha256": digest(note_paths),
-            "sources": [str(directory.relative_to(ROOT)) for directory in NOTE_DIRS],
+            # 用 POSIX 分隔符，避免 Windows 与 Linux 的基线字符串不一致。
+            "sources": [directory.relative_to(ROOT).as_posix() for directory in NOTE_DIRS],
         },
         "question_sets": {
             name: {
-                "path": str(path.relative_to(ROOT)),
+                "path": path.relative_to(ROOT).as_posix(),
                 "sha256": hashlib.sha256(
                     path.read_bytes().replace(b"\r\n", b"\n").replace(b"\r", b"\n")
                 ).hexdigest(),
