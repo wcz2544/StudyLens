@@ -16,3 +16,5 @@ volumes/
 .pytest_cache/
 .venv-*/
 笔记/
+node_modules/
+_site/

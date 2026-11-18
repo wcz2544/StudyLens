@@ -2,15 +2,18 @@
 
 [![Checks](https://github.com/wcz2544/StudyLens/actions/workflows/ci.yml/badge.svg)](https://github.com/wcz2544/StudyLens/actions/workflows/ci.yml)
 
-[打开在线网页](https://studylens-mqwruhmf4vdeystbecevds.streamlit.app/) · [非技术流程讲解](docs/项目流程讲解_非技术版.md) · [部署与运维](docs/部署与运维.md) · [验证记录](docs/升级验证记录.md)
+[打开在线网页（GitHub Pages 静态版）](https://wcz2544.github.io/StudyLens/) · [Streamlit 版（服务端，含持久知识库）](https://studylens-mqwruhmf4vdeystbecevds.streamlit.app/) · [非技术流程讲解](docs/项目流程讲解_非技术版.md) · [部署与运维](docs/部署与运维.md) · [验证记录](docs/升级验证记录.md)
 
 面向学生与小型团队的资料检索问答项目。支持 TXT、Markdown、图片、PDF、DOCX。新增 LangChain + Milvus 持久知识库、混合检索、重排和受限 Agent，并保留原有无需 API 的临时笔记检索。
 
+GitHub Pages 版本是纯静态页面：分段、字符 TF-IDF 检索和引用都在浏览器里完成，不依赖 Streamlit 或任何后端服务。图片 OCR、PDF / DOCX 解析、持久知识库仍需要服务端版本。
+
 这是针对单组织、单服务进程设计的工程版本。代码与自动化测试不能替代真实模型质量、并发容量和正式环境验收；当前验证范围见验证记录。
 
-## 两种使用方式
+## 三种使用方式
 
-- **临时笔记**：资料保存在当前会话，字符 TF-IDF 检索不调用模型；AI 回答使用用户填写的、部署者允许的服务商接口。
+- **静态网页（GitHub Pages）**：资料只在浏览器内处理，支持 UTF-8 的 TXT / Markdown；检索完全离线，AI 问答由浏览器直接请求受支持的服务商。
+- **Streamlit 临时笔记**：资料保存在当前会话，字符 TF-IDF 检索不调用模型；AI 回答使用用户填写的、部署者允许的服务商接口。
 - **持久知识库**：部署者连接知识库服务后，用户输入只读或管理凭据。支持资料新增、替换、删除；问答采用关键词与向量双路召回、重排、证据审核。该模式会使用部署者配置的模型额度。
 
 在线网页是否已连接知识库服务，以页面提示为准。更新 GitHub 不会自动替你创建 Milvus 服务器或取得模型密钥。
@@ -27,7 +30,36 @@
 - 精确引文必须出现在本次证据中，语义审核不通过则拒答；仍不保证消灭幻觉。
 - API 区分管理/只读凭据，限制请求大小、速度和并发任务，日志不记录原始笔记或密钥。
 
-## 快速运行基础网页
+## 静态网页：挂在 GitHub Pages 上，不依赖 Streamlit
+
+**在线地址：<https://wcz2544.github.io/StudyLens/>**
+
+静态版只有 HTML、CSS 和 JavaScript，托管在 GitHub Pages，不需要 Streamlit Cloud、Docker 或任何服务器：
+
+- 在浏览器内完成 Markdown / TXT 解析、按标题分段、字符 TF-IDF 检索和 Top-K 过滤。算法与 `studylens/documents.py`、`studylens/retrieval.py` 相同，`tests/static` 会用 Python 基线对照数据校验分段、排序和分数。
+- 资料不会上传到本项目或第三方；关闭标签页后当前资料即消失。
+- AI 问答为可选功能：浏览器直接请求受支持的服务商（DeepSeek / OpenAI / SiliconFlow）。密钥只存在页面内存，服务商需允许浏览器跨域请求；DeepSeek 接口已验证可用于这种直连方式。
+- 只支持 UTF-8 的 TXT / Markdown，最多 10 份、每份 512 KiB、合计 2 MB。图片 OCR、PDF / DOCX 解析和持久知识库仍需下面的服务端版本。
+
+本地构建与预览：
+
+```powershell
+.\.venv\Scripts\python.exe scripts\build_site.py --serve
+```
+
+页面源码在 `web/`，构建脚本会把 `web/` 和 `data/sample_notes/` 组装成 `_site/`（已加入 `.gitignore`）。
+
+### 发布到 GitHub Pages
+
+仓库自带 `.github/workflows/pages.yml`。首次发布时：
+
+1. 打开 GitHub 仓库的 Settings → Pages → Build and deployment；
+2. Source 选择 **GitHub Actions**；
+3. 推送到 `main`（或手动运行 “Deploy static site” 工作流）。
+
+工作流会先运行浏览器端测试、校验对照数据没有过期，再把 `_site/` 发布到 Pages。站点地址形如 `https://<用户名>.github.io/StudyLens/`；本仓库为 <https://wcz2544.github.io/StudyLens/>。若要换地址，可以在仓库 Settings → Pages 绑定自定义域名，或在 README 与仓库 About 中修改链接。
+
+## 快速运行 Streamlit 页面（服务端版本）
 
 Python 3.10 或 3.11，建议使用项目虚拟环境：
 
@@ -62,11 +94,15 @@ docker compose --env-file .env.rag -f deploy/compose.yml up -d --build
 ```powershell
 .\.venv\Scripts\python.exe -m pip install -r requirements-rag.txt
 .\.venv\Scripts\python.exe -B -m unittest discover -s tests -v
+node --test tests/static/core.test.mjs tests/static/model.test.mjs
+.\.venv\Scripts\python.exe scripts\export_web_fixtures.py --check
 .\.venv\Scripts\python.exe -B evaluate.py --output evaluation/results.csv
 .\.venv\Scripts\python.exe -B evaluate_rag.py --backend baseline
 ```
 
-GitHub Actions 包含基础回归、离线 Agent/检索/API 测试和真实 Milvus 集成；集成使用确定性测试向量，不代表真实语义质量。评测口径与人工标注见 [评测说明](docs/评测说明.md)。
+浏览器端测试需要 Node.js 20 以上；`scripts/export_web_fixtures.py` 用 Python 基线生成对照数据，`--check` 会在两者不一致时失败。
+
+GitHub Actions 包含基础回归、离线 Agent/检索/API 测试、真实 Milvus 集成，以及静态版的 Python/JavaScript 一致性检查；集成使用确定性测试向量，不代表真实语义质量。评测口径与人工标注见 [评测说明](docs/评测说明.md)。
 
 ## 边界与协作
 

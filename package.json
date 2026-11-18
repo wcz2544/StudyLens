@@ -1,0 +1,11 @@
+{
+  "name": "studylens-static-site",
+  "private": true,
+  "type": "module",
+  "description": "StudyLens 的 GitHub Pages 静态版：浏览器内完成分段、字符 TF-IDF 检索与可选 AI 问答",
+  "scripts": {
+    "test": "node --test tests/static/core.test.mjs tests/static/model.test.mjs",
+    "build": "python scripts/build_site.py",
+    "preview": "python scripts/build_site.py --serve"
+  }
+}
